@@ -17,22 +17,27 @@ use Illuminate\Validation\ValidationException;
 Route::get('/', function () {
     return view('login');
 })->name('login')->middleware('guest');
-Route::get('/servers', function () {
-    return view('servers');
-})->middleware('auth');
+
+//Route::get('/servers', function () {
+//    return view('servers');
+//})->middleware('auth');
+
 Route::get('/domains', function () {
     return view('domains');
 })->middleware('auth');
+
 Route::get('/backups', function () {
     return view('backups');
 })->middleware('auth');
+
 Route::get('/newserver', function () {
     return view('newserver');
 })->middleware('auth');
+
 Route::post('/', 'App\Http\Controllers\Auth\LoginController@login');
 Route::post('/logout', 'App\Http\Controllers\Auth\LoginController@logout');
 
-Route::post('newserver');
-
+Route::post('/newserver', 'App\Http\Controllers\ServerController@store')->name('servers.store');
+Route::get('/servers', 'App\Http\Controllers\ServerController@read')->name('servers.read')->middleware('auth');
 
 

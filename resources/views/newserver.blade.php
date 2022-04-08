@@ -12,12 +12,11 @@
     <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-xl-9">
-
+                <form method="post" action="{{ route('servers.store') }}">
+                    @csrf
                 <h1 class="text-white mb-4">Añadir Servidor</h1>
-
                 <div class="card" style="border-radius: 15px;">
                     <div class="card-body">
-
                         <div class="row align-items-center pt-4 pb-3">
                             <div class="col-md-3 ps-5">
 
@@ -26,7 +25,7 @@
                             </div>
                             <div class="col-md-9 pe-5">
 
-                                <input type="text" class="form-control form-control-lg"/>
+                                <input type="url" name="url" class="form-control form-control-lg"/>
                                 <div class="small text-muted mt-2">Debes poner la ruta entera: http...</div>
 
                             </div>
@@ -42,7 +41,7 @@
                             </div>
                             <div class="col-md-9 pe-5">
 
-                                <input type="email" class="form-control form-control-lg" />
+                                <input type="text" name="name" class="form-control form-control-lg" />
 
                             </div>
                         </div>
@@ -57,7 +56,7 @@
                             </div>
                             <div class="col-md-9 pe-5">
 
-                                <input type="email" class="form-control form-control-lg" />
+                                <input type="password" name="password" class="form-control form-control-lg" />
 
                             </div>
                         </div>
@@ -65,12 +64,12 @@
                         <hr class="mx-n3">
 
                         <div class="px-5 py-4 text-center">
-                            <button type="submit" class="mx-auto btn btn-primary btn-lg">Enviar</button>
+                            <button type="submit" class="mx-auto btn btn-primary btn-lg">Guardar</button>
                         </div>
 
                     </div>
                 </div>
-
+                </form>
             </div>
         </div>
     </div>
