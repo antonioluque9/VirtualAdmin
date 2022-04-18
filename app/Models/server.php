@@ -9,6 +9,8 @@ class server extends Model
 {
     use HasFactory;
 
-
-
+    protected $table = 'servers';
+    protected $fillable = ['url', 'name'];
+    protected $hidden = 'password';
+    protected $guarded = 'id';
 }

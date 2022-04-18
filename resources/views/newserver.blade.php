@@ -25,7 +25,7 @@
                             </div>
                             <div class="col-md-9 pe-5">
 
-                                <input type="url" name="url" class="form-control form-control-lg"/>
+                                <input type="url" required autofocus name="url" class="form-control form-control-lg"/>
                                 <div class="small text-muted mt-2">Debes poner la ruta entera: http...</div>
 
                             </div>
@@ -41,7 +41,7 @@
                             </div>
                             <div class="col-md-9 pe-5">
 
-                                <input type="text" name="name" class="form-control form-control-lg" />
+                                <input type="text" required name="name" class="form-control form-control-lg" />
 
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                             </div>
                             <div class="col-md-9 pe-5">
 
-                                <input type="password" name="password" class="form-control form-control-lg" />
+                                <input type="password" required name="password" class="form-control form-control-lg" />
 
                             </div>
                         </div>

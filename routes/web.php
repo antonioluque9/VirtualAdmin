@@ -26,7 +26,7 @@ Route::get('/domains', function () {
     return view('domains');
 })->middleware('auth');
 
-Route::get('/backups', function () {
+Route::get('/backups', function () { //Todavia falta añadir la ruta del controlador
     return view('backups');
 })->middleware('auth');
 
@@ -37,7 +37,5 @@ Route::get('/newserver', function () {
 Route::post('/', 'App\Http\Controllers\Auth\LoginController@login');
 Route::post('/logout', 'App\Http\Controllers\Auth\LoginController@logout');
 
-Route::post('/newserver', 'App\Http\Controllers\ServerController@store')->name('servers.store');
-Route::get('/servers', 'App\Http\Controllers\ServerController@read')->name('servers.read')->middleware('auth');
-
-
+Route::post('/newserver', 'App\Http\Controllers\ServerController@store')->middleware('auth');
+Route::get('/servers', 'App\Http\Controllers\ServerController@read')->middleware('auth');
