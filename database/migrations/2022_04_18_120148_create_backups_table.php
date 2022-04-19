@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('backups', function (Blueprint $table) {
             $table->id();
-            $table->string('state');
+            $table->string('domain');
+            $table->string('');
             $table->timestamps();
         });
     }

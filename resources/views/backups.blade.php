@@ -9,47 +9,47 @@
     </head>
     <body>
         @include('partials.nav')
-        <div class="container-xl">
-            <table class="table align-middle mb-0 mt-5 bg-white">
-                <thead class="bg-light">
-                <tr>
-                    <th>Dominio</th>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Estado</th>
-                    <th>Acciones</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($servers as $server)
-                    <tr>
-                        <td>
-                            <div class="d-flex align-items-center">
-                                <div class="ms-3">
-                                    <p class="fw-bold mb-1">Dominio</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <p class="fw-normal mb-1">Nombre</p>
-                        </td>
-                        <td>
-                            <p class="fw-normal mb-1">Descripcion</p>
-                        </td>
-                        <td>
-                            <span class="badge badge-success rounded-pill d-inline">{{status($server->url)}}</span>
-                        </td>
-                        <td>
-                            <form method="post" action="">
-                                <button type="button" class="btn btn-link btn-sm btn-rounded">
-                                    Editar
-                                </button>
-                            </form>
-                        </td>
-                    </tr>
-                @endforeach
-                </tbody>
-            </table>
-        </div>
+{{--        <div class="container-xl">--}}
+{{--            <table class="table align-middle mb-0 mt-5 bg-white">--}}
+{{--                <thead class="bg-light">--}}
+{{--                <tr>--}}
+{{--                    <th>Dominio</th>--}}
+{{--                    <th>Nombre</th>--}}
+{{--                    <th>Descripción</th>--}}
+{{--                    <th>Estado</th>--}}
+{{--                    <th>Acciones</th>--}}
+{{--                </tr>--}}
+{{--                </thead>--}}
+{{--                <tbody>--}}
+{{--                @foreach($servers as $server)--}}
+{{--                    <tr>--}}
+{{--                        <td>--}}
+{{--                            <div class="d-flex align-items-center">--}}
+{{--                                <div class="ms-3">--}}
+{{--                                    <p class="fw-bold mb-1">Dominio</p>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </td>--}}
+{{--                        <td>--}}
+{{--                            <p class="fw-normal mb-1">Nombre</p>--}}
+{{--                        </td>--}}
+{{--                        <td>--}}
+{{--                            <p class="fw-normal mb-1">Descripcion</p>--}}
+{{--                        </td>--}}
+{{--                        <td>--}}
+{{--                            <span class="badge badge-success rounded-pill d-inline">{{status($server->url)}}</span>--}}
+{{--                        </td>--}}
+{{--                        <td>--}}
+{{--                            <form method="post" action="">--}}
+{{--                                <button type="button" class="btn btn-link btn-sm btn-rounded">--}}
+{{--                                    Editar--}}
+{{--                                </button>--}}
+{{--                            </form>--}}
+{{--                        </td>--}}
+{{--                    </tr>--}}
+{{--                @endforeach--}}
+{{--                </tbody>--}}
+{{--            </table>--}}
+{{--        </div>--}}
     </body>
 </html>

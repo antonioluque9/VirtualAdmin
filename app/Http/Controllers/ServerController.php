@@ -12,14 +12,7 @@ use Illuminate\Support\Facades\Crypt;
 class ServerController extends Controller
 {
     public function read(){
-        //Hay que terminar de hacer algunos ajustes para que con foreach y un solo comando sea capaz de hacer todos los
-        //wget(tanto a los diferentes servidores, como las diferentes funciones)
         $servers = App\Models\server::all();
-
-        foreach($servers as $server){
-            $serverpassword = Crypt::decryptString($server->password);
-        shell_exec("wget --http-user=". $server->name ." --http-passwd=". $serverpassword ." 'https://". $server->url ."/virtual-server/remote.cgi?program=list-domains&&json=1'");
-        }
         return view('servers', compact('servers'));
     }
 
@@ -35,5 +28,11 @@ class ServerController extends Controller
 
         return redirect('servers');
 
+    }
+    //Ejemplo de como actualizar informacion
+    public function edit(){
+        $server = server::find();
+        $server->name = "algo";
+        $server->save();
     }
 }
