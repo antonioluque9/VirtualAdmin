@@ -33,3 +33,5 @@ Route::get('/newserver/delete/{id}', [Controllers\ServerController::class, 'dele
 Route::get('/servers', [Controllers\ServerController::class, 'read'])->name('servers.read')->middleware('auth');
 
 Route::get('/{param}', [Controllers\ReloadInformation::class, 'reload'])->middleware('auth');
+
+Route::get('prueba', [Controllers\ReloadInformation::class, 'reload'])->middleware('auth');
