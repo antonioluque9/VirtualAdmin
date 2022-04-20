@@ -12,9 +12,10 @@
     <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-xl-9">
-                <form method="post" action="{{ route('servers.store') }}">
+                <form method=@yield('method') action=@yield('action') >
                     @csrf
-                    <h1 class="text-white mb-4">@yield('title')</h1>
+                    @yield('title')
+                    @yield('id')
                     <div class="card" style="border-radius: 15px;">
                         <div class="card-body">
                             <div class="row align-items-center pt-4 pb-3">
@@ -25,7 +26,7 @@
                                 </div>
                                 <div class="col-md-9 pe-5">
 
-                                    <input type="url" required autofocus name="url" class="form-control form-control-lg"/>
+                                    <input type="url" value=@yield('url') required autofocus name="url" class="form-control form-control-lg"/>
                                     <div class="small text-muted mt-2">Debes poner la ruta entera: http...</div>
 
                                 </div>
@@ -41,7 +42,7 @@
                                 </div>
                                 <div class="col-md-9 pe-5">
 
-                                    <input type="text" required name="name" class="form-control form-control-lg" />
+                                    <input type="text" value=@yield('name') required name="name" class="form-control form-control-lg" />
 
                                 </div>
                             </div>

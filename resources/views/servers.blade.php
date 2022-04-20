@@ -34,11 +34,14 @@
                         </td>
                         <td>
                             <form method="post" action="">
-                            <button type="button" class="btn btn-link btn-sm btn-rounded">
-                                <a href="{{$server->url}}">Acceder</a>
-                            </button>
                                 <button type="button" class="btn btn-link btn-sm btn-rounded">
-                                    <a href="/newserver/edit">Editar</a>
+                                    <a href="{{$server->url}}">Acceder</a>
+                                </button>
+                                <button type="button" class="btn btn-link btn-sm btn-rounded">
+                                    <a href="/newserver/edit/{{{$server->id}}}">Editar</a>
+                                </button>
+                                <button type="button" class="btn btn-link btn-sm btn-rounded">
+                                    <a href="/newserver/delete/{{{$server->id}}}" onclick="return confirm('Seguro que deseas elimiar el servidor {{$server->url}}')">Borrar</a>
                                 </button>
                             </form>
                         </td>

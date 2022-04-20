@@ -24,14 +24,12 @@ Route::get('/domains', function () {return view('domains');})->middleware('auth'
 
 Route::get('/backups', function () { return view('backups');})->middleware('auth');
 
-//Me falta crear un layout o algo similar para poder reproducir la misma pagina en edit pero cambiando algunos detalles
 Route::get('/newserver/create', function () {return view('newserver');})->middleware('auth');
 Route::post('/newserver/create', [Controllers\ServerController::class, 'store'])->name('servers.store')->middleware('auth');
-Route::get('/newserver/edit', function () {return view('editserver');})->middleware('auth');
-Route::post('/newserver/edit', [Controllers\ServerController::class, 'edit'])->name('servers.edit')->middleware('auth');
+Route::get('/newserver/edit/{id}', [Controllers\ServerController::class, 'edit'])->middleware('auth');
+Route::post('/newserver/update', [Controllers\ServerController::class, 'update'])->name('servers.update')->middleware('auth');
+Route::get('/newserver/delete/{id}', [Controllers\ServerController::class, 'delete'])->middleware('auth');
 
 Route::get('/servers', [Controllers\ServerController::class, 'read'])->name('servers.read')->middleware('auth');
 
 Route::get('/{param}', [Controllers\ReloadInformation::class, 'reload'])->middleware('auth');
-
-

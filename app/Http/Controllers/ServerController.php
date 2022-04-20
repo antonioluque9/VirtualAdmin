@@ -3,9 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use Symfony\Component\Console\Input\Input;
-use Symfony\Component\Console\Input\InputArgument;
 use App;
 use Illuminate\Support\Facades\Crypt;
 
@@ -29,10 +26,27 @@ class ServerController extends Controller
         return redirect('servers');
 
     }
-    //Ejemplo de como actualizar informacion
-    public function edit(){
-        $server = server::find();
-        $server->name = "algo";
+
+    public function edit($id){
+        $server = App\Models\server::find($id);
+        return view('editserver', compact('server'));
+    }
+
+    public function update(Request $request){
+        $server = App\Models\server::find($request->input('id'));
+        $server->url = $request->input('url');
+        $server->name = $request->input('name');
+        $password = $request->input('password');
+        $server->password = Crypt::encryptString($password);
+
         $server->save();
+
+        return redirect('servers');
+    }
+
+    public function delete($id){
+        $server = App\Models\server::find($id);
+        $server -> delete();
+        return redirect('servers');
     }
 }
