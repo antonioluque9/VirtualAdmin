@@ -7,27 +7,25 @@ use Illuminate\Http\Request;
 
 class ReloadInformation extends Controller
 {
-    //wget --quiet --http-user=root --http-passwd=admin-123 -O prueba
-    // 'http://192.168.1.108:10000/virtual-server/remote.cgi?program=list-domains&multiline=&json=1'
-    // && mv prueba /home/VirtualAdmin/jsonfiles/prueba
-
     public function reload($route){
         $servers = App\Models\server::all();
         $functions = ["list-domains", "list-backup-logs"];
         foreach($servers as $server) {
             foreach ($functions as $function){
+                $ruta = explode('/', $server->url);
+                $ruta2 = explode(':', $ruta[2]);
+                $rutasinpuntos = str_replace('.', '-', $ruta2[0]);
                 $username = $server->name;
                 $serverpassword = Crypt::decryptString($server->password);
                 $url = "'".$server->url."/virtual-server/remote.cgi?program=".$function."&multiline=&json=1'";
-                $filename = $server->url."_".$function;
-                $resultado ='bash -c "wget --quiet --http-user='.$username.' -http-passwd='.$serverpassword.' -O '
-                .$filename. ' '.$url.' && mv '.$filename.' /home/VirtualAdmin/jsonfiles/'.$filename.'"';
+                $filename = $rutasinpuntos."-".$function;
+                shell_exec('bash -c "cd /home/VirtualAdmin/jsonfiles && wget -q -b --user='.$username.' --password='.$serverpassword.' -O '
+                .$filename. ' '.$url.'"');
             }
         }
         $explode = explode('{',$route);
         $explode2 = explode('}', $explode[1]);
-        //return redirect("/$explode2[0]");
-        return $resultado;
+        return redirect("/$explode2[0]");
     }
 
     public function upload(){
