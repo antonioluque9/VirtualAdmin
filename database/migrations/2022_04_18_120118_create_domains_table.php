@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('domain');
             $table->string('username');
             $table->string('description');
-            //¿es posible meter un status?
             $table->timestamps();
         });
     }

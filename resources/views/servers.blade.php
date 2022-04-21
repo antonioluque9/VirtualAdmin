@@ -35,7 +35,7 @@
                         <td>
                             <form method="post" action="">
                                 <button type="button" class="btn btn-link btn-sm btn-rounded">
-                                    <a href="{{$server->url}}">Acceder</a>
+                                    <a target="_blank" href="{{$server->url}}">Acceder</a>
                                 </button>
                                 <button type="button" class="btn btn-link btn-sm btn-rounded">
                                     <a href="/newserver/edit/{{{$server->id}}}">Editar</a>
