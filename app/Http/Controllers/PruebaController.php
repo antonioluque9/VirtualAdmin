@@ -1,21 +1,18 @@
 <?php
 
-namespace Database\Seeders;
+namespace App\Http\Controllers;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
+use Illuminate\Http\Request;
 use File;
 use App;
+use Database;
 
-class DomainSeeder extends Seeder
+
+class PruebaController extends Controller
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
+    public function prueba()
     {
+        //Arreglar la busqueda de la columna domain para evitar la repeticion de datos
         $servers = App\Models\server::all();
         $functions = ["list-domains"];
         foreach ($servers as $server) {
@@ -27,13 +24,18 @@ class DomainSeeder extends Seeder
                 $jsonfile = File::get($filename);
                 $json = json_decode($jsonfile, true);
                 foreach ($json['data'] as $data) {
-                    if (!App\Models\Domain::where('domain',$data['name'])) {
+
+                    print($data['values']['username'][0]);
+
+                    if (!App\Models\Domain::where('domain',$data['name']) === $data['name']) {
+
                         $domain = new App\Models\Domain;
                         $domain->domain = $data['name'];
                         $domain->server = $rutasinpuntos;
                         $domain->username = $data['values']['username'][0];
                         $domain->description = $data['values']['description'][0];
                         $domain->save();
+
                     } else {
                         continue;
                     }

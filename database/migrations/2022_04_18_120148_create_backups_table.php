@@ -15,12 +15,14 @@ return new class extends Migration
     {
         Schema::create('backups', function (Blueprint $table) {
             $table->id();
+            $table->string('domain');
             $table->string('domains');
-            $table->string('size');
+            $table->string('size')->default("NULL");
             $table->string('type');
-            $table->boolean('status')->default('1');
-            $table->date('started');
-            $table->date('ended');
+            $table->string('failed');
+            $table->string('status');
+            $table->string('started');
+            $table->string('ended');
             $table->timestamps();
         });
     }

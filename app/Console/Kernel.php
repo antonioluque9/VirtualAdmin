@@ -4,6 +4,8 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Illuminate\Support\Facades\Crypt;
+use App;
 
 class Kernel extends ConsoleKernel
 {
@@ -15,7 +17,21 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $servers = App\Models\server::all();
+        $functions = ["list-domains", "list-backup-logs"];
+        foreach($servers as $server) {
+            foreach ($functions as $function){
+                $ruta = explode('/', $server->url);
+                $ruta2 = explode(':', $ruta[2]);
+                $rutasinpuntos = str_replace('.', '-', $ruta2[0]);
+                $username = $server->name;
+                $serverpassword = Crypt::decryptString($server->password);
+                $url = "'".$server->url."/virtual-server/remote.cgi?program=".$function."&multiline=&json=1'";
+                $filename = $rutasinpuntos."-".$function;
+                $schedule->exec('bash -c "cd /home/VirtualAdmin/jsonfiles && wget -q -b --user='.$username.' --password='.$serverpassword.' -O '
+                    .$filename. ' '.$url.'"')->everyFiveMinutes();
+            }
+        }
     }
 
     /**
