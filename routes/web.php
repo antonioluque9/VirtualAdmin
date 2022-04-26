@@ -34,4 +34,4 @@ Route::get('/servers', [Controllers\ServerController::class, 'read'])->name('ser
 
 //Route::get('/{param}', [Controllers\ReloadInformation::class, 'reload'])->middleware('auth');
 
-Route::get('/prueba', [Controllers\PruebaController::class, 'prueba'])->middleware('auth');
+

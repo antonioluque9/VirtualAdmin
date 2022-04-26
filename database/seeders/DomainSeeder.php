@@ -27,9 +27,9 @@ class DomainSeeder extends Seeder
                 $jsonfile = File::get($filename);
                 $json = json_decode($jsonfile, true);
                 foreach ($json['data'] as $data) {
-                    if (!App\Models\Domain::where('domain',$data['name'])) {
+                    if (!App\Models\Domain::find($data['name'])) {
                         $domain = new App\Models\Domain;
-                        $domain->domain = $data['name'];
+                        $domain->id = $data['name'];
                         $domain->server = $rutasinpuntos;
                         $domain->username = $data['values']['username'][0];
                         $domain->description = $data['values']['description'][0];
