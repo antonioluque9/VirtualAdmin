@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\DB;
 
 class ServerController extends Controller
 {
@@ -46,6 +47,24 @@ class ServerController extends Controller
 
     public function delete($id){
         $server = App\Models\server::find($id);
+        $ruta = explode('/', $server->url);
+        $ruta2 = explode(':', $ruta[2]);
+        $rutasinpuntos = str_replace('.', '-', $ruta2[0]);
+
+        $domains = DB::table('domains')->where('server', $rutasinpuntos)->get();
+        $numeroDomains = DB::table('domains')->where('server', $rutasinpuntos)->count();
+        for ($i=0;$i<$numeroDomains;$i++){
+            $domain = App\Models\Domain::find($domains[$i]->id);
+            $domain -> delete();
+        }
+
+        $backups = DB::table('backups')->where('domain', $rutasinpuntos)->get();
+        $numeroBackups = DB::table('backups')->where('domain', $rutasinpuntos)->count();
+        for ($i=0;$i<$numeroBackups;$i++){
+            $backup = App\Models\Backup::find($backups[$i]->id);
+            $backup -> delete();
+        }
+
         $server -> delete();
         return redirect('servers');
     }
