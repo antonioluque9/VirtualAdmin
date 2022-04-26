@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('type');
             $table->string('failed');
             $table->string('status');
-            $table->string('started');
-            $table->string('ended');
+            $table->datetime('started');
+            $table->datetime('ended');
             $table->timestamps();
         });
     }
