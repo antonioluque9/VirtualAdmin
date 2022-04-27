@@ -67,7 +67,7 @@
                             <div class="px-5 py-4 text-center">
                                 <button type="submit" class="mx-auto btn btn-primary btn-lg">Guardar</button>
                             </div>
-
+                            @yield('errors')
                         </div>
                     </div>
                 </form>
