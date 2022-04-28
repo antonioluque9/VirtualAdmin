@@ -22,7 +22,8 @@ Route::post('/logout', [Auth\LoginController::class, 'logout']);
 
 Route::get('/domains', function () {return view('domains');})->middleware('auth');
 
-Route::get('/backups', function () { return view('backups');})->middleware('auth');
+//Route::get('/backups', [Controllers\BackupController::class, 'read'])->name('backups.read')->middleware('auth');
+Route::get('/backups', [Controllers\BackupController::class, 'startedDesc'])->name('backups.startedDesc')->middleware('auth');
 
 Route::get('/newserver/create', function () {return view('newserver');})->middleware('auth');
 Route::post('/newserver/add', [Controllers\ServerController::class, 'store'])->name('servers.store')->middleware('auth');

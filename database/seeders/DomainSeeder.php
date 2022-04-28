@@ -20,9 +20,8 @@ class DomainSeeder extends Seeder
         $functions = ["list-domains"];
         foreach ($servers as $server) {
             foreach ($functions as $function) {
-                $ruta = explode('/', $server->url);
-                $ruta2 = explode(':', $ruta[2]);
-                $rutasinpuntos = str_replace('.', '-', $ruta2[0]);
+                $rutaSeparada = separateRoute($server->url);
+                $rutasinpuntos = str_replace('.', '-', $rutaSeparada[0]);
                 $filename = 'C:\xampp\htdocs\VirtualAdmin\database\jsonfiles\\' . $rutasinpuntos . '-' . $function;
                 $jsonfile = File::get($filename);
                 $json = json_decode($jsonfile, true);

@@ -9,47 +9,55 @@
     </head>
     <body>
         @include('partials.nav')
-{{--        <div class="container-xl">--}}
-{{--            <table class="table align-middle mb-0 mt-5 bg-white">--}}
-{{--                <thead class="bg-light">--}}
-{{--                <tr>--}}
-{{--                    <th>Dominio</th>--}}
-{{--                    <th>Nombre</th>--}}
-{{--                    <th>Descripción</th>--}}
-{{--                    <th>Estado</th>--}}
-{{--                    <th>Acciones</th>--}}
-{{--                </tr>--}}
-{{--                </thead>--}}
-{{--                <tbody>--}}
-{{--                @foreach($servers as $server)--}}
-{{--                    <tr>--}}
-{{--                        <td>--}}
-{{--                            <div class="d-flex align-items-center">--}}
-{{--                                <div class="ms-3">--}}
-{{--                                    <p class="fw-bold mb-1">Dominio</p>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </td>--}}
-{{--                        <td>--}}
-{{--                            <p class="fw-normal mb-1">Nombre</p>--}}
-{{--                        </td>--}}
-{{--                        <td>--}}
-{{--                            <p class="fw-normal mb-1">Descripcion</p>--}}
-{{--                        </td>--}}
-{{--                        <td>--}}
-{{--                            <span class="badge badge-success rounded-pill d-inline">{{status($server->url)}}</span>--}}
-{{--                        </td>--}}
-{{--                        <td>--}}
-{{--                            <form method="post" action="">--}}
-{{--                                <button type="button" class="btn btn-link btn-sm btn-rounded">--}}
-{{--                                    Editar--}}
-{{--                                </button>--}}
-{{--                            </form>--}}
-{{--                        </td>--}}
-{{--                    </tr>--}}
-{{--                @endforeach--}}
-{{--                </tbody>--}}
-{{--            </table>--}}
-{{--        </div>--}}
+        <div class="container-xl">
+            <table class="table align-middle mb-0 mt-5 bg-white">
+                <thead class="bg-light">
+                <tr>
+                    <th>Servidor</th>
+                    <th>Dominios</th>
+                    <th>Dominios fallidos</th>
+                    <th>Estado</th>
+                    <th>Tipo</th>
+                    <th>Tamaño</th>
+                    <th>Comenzó</th>
+                    <th>Finalizó</th>
+                </tr>
+                </thead>
+                <tbody>
+                    @foreach($backups as $backup)
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="ms-3">
+                                        <p class="fw-bold mb-1">{{$backup->server}}</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$backup->domains}}</p>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$backup->failed}}</p>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$backup->status}}</p>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$backup->type}}</p>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$backup->size}}</p>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$backup->started}}</p>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$backup->ended}}</p>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>
