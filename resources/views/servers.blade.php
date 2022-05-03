@@ -14,7 +14,7 @@
             <table class="table align-middle mb-0 mt-5 bg-white">
                 <thead class="bg-light">
                 <tr>
-                    <th>Ruta</th>
+                    <th>Servidor</th>
                     <th>Estado</th>
                     <th>Acciones</th>
                 </tr>

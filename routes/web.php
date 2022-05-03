@@ -20,7 +20,7 @@ Route::get('/', function () {return view('login');})->name('login')->middleware(
 Route::post('/', [Auth\LoginController::class, 'login']);
 Route::post('/logout', [Auth\LoginController::class, 'logout']);
 
-Route::get('/domains', function () {return view('domains');})->middleware('auth');
+Route::get('/domains', [Controllers\DomainController::class, 'read'])->name('domians.read')->middleware('auth');
 
 //Route::get('/backups', [Controllers\BackupController::class, 'read'])->name('backups.read')->middleware('auth');
 Route::get('/backups', [Controllers\BackupController::class, 'startedDesc'])->name('backups.startedDesc')->middleware('auth');

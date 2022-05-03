@@ -9,4 +9,7 @@ class Domain extends Model
 {
     use HasFactory;
 
+    public function getServerAttribute($value){
+        return str_replace('-', '.', $value);
+    }
 }

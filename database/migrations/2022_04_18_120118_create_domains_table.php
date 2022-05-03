@@ -14,12 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('domains', function (Blueprint $table) {
-            $table->string('id');
+            $table->id();
             $table->string('server');
+            $table->string('domain');
             $table->string('username');
             $table->string('description');
             $table->timestamps();
-            $table->primary('id');
         });
     }
 
