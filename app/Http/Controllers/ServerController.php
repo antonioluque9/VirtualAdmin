@@ -53,19 +53,18 @@ class ServerController extends Controller
 
     public function delete($id){
         $server = App\Models\server::find($id);
-        $ruta = explode('/', $server->url);
-        $ruta2 = explode(':', $ruta[2]);
-        $rutasinpuntos = str_replace('.', '-', $ruta2[0]);
+        $ruta = separateRoute($server->url);
+        $rutasinpuntos = str_replace('.', '-', $ruta[0]);
 
-        $domains = DB::table('domains')->where('server', $rutasinpuntos)->get();
-        $numeroDomains = DB::table('domains')->where('server', $rutasinpuntos)->count();
+        $domains = DB::table('domains')->where('server', $ruta[0])->get();
+        $numeroDomains = DB::table('domains')->where('server', $ruta[0])->count();
         for ($i=0;$i<$numeroDomains;$i++){
             $domain = App\Models\Domain::find($domains[$i]->id);
             $domain -> delete();
         }
 
-        $backups = DB::table('backups')->where('domain', $rutasinpuntos)->get();
-        $numeroBackups = DB::table('backups')->where('domain', $rutasinpuntos)->count();
+        $backups = DB::table('backups')->where('server', $ruta[0])->get();
+        $numeroBackups = DB::table('backups')->where('server', $ruta[0])->count();
         for ($i=0;$i<$numeroBackups;$i++){
             $backup = App\Models\Backup::find($backups[$i]->id);
             $backup -> delete();

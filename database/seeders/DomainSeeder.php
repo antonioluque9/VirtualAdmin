@@ -29,7 +29,7 @@ class DomainSeeder extends Seeder
                     if (!App\Models\Domain::find($data['values']['id'][0])) {
                         $domain = new App\Models\Domain;
                         $domain->id = $data['values']['id'][0];
-                        $domain->server = $rutasinpuntos;
+                        $domain->server = $rutaSeparada[0];
                         $domain->domain = $data['name'];
                         $domain->username = $data['values']['username'][0];
                         $domain->description = $data['values']['description'][0];

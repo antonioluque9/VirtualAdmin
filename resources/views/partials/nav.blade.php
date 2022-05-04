@@ -16,7 +16,7 @@
                 @endif
             </li>
             <li class="nav-item">
-                @if (Request::path() == ('backups'))
+                @if (Request::path() == ('backups') || Request::path() == ('backups/search'))
                     <a class="nav-link active" aria-current="page" href="/backups">Backups</a>
                 @else
                     <a class="nav-link" href="/backups">Backups</a>

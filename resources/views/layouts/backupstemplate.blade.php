@@ -13,21 +13,16 @@
             <div class="row justify-content-between mt-5 pt-4">
                 <div class="col-4">
                     <form method="get" action="{{ route('backups.search') }}">
-                        <label>Selecciona un servidor: </label>
-                        <select onchange="this.form.submit();" name="search">
-                            <option value="">Todos</option>
-                            @foreach($backups as $backup)
-                                <option value="{{$backup->server}}">{{$backup->server}}</option>
-                            @endforeach
-                        </select>
+                        <div class="input-group">
+                            <input name="search" type="search" id="form" class="form-control"/>
+                            <button type="submit" class="btn btn-primary">
+                                Buscar
+                            </button>
+                        </div>
                     </form>
                 </div>
                 <div class="pagination justify-content-end col-4">
-                    @if((count($backups)>0) && (isset($search)))
-                        {!! $backups->appends(['search' => $search])->links('pagination::bootstrap-4') !!}
-                    @else
-                        {!! $backups->links('pagination::bootstrap-4') !!}
-                    @endif
+                    {!! $backups->links('pagination::bootstrap-4') !!}
                 </div>
             </div>
             <table class="table align-middle mb-0 mt-3 bg-white">
@@ -78,6 +73,9 @@
                     @endforeach
                 </tbody>
             </table>
+            <div class="pagination mt-3 justify-content-end">
+                {!! $backups->links('pagination::bootstrap-4') !!}
+            </div>
         </div>
     </body>
 </html>

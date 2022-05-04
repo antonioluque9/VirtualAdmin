@@ -18,9 +18,6 @@ class Backup extends Model
             return $this->type = "Manual";
         }
     }
-    public function getServerAttribute($value){
-        return str_replace('-', '.', $value);
-    }
     public function getDomainsAttribute($value){
         $dominios = explode( ' ', $value);
         foreach ($dominios as $dominio){

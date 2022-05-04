@@ -38,7 +38,7 @@ class BackupSeeder extends Seeder
                         }
                         $backup = new App\Models\Backup;
                         $backup->id = $name[0];
-                        $backup->server = $rutasinpuntos;
+                        $backup->server = $rutaSeparada[0];
                         $backup->domains = $data['values']['domains'][0];
                         $backup->type = $data['values']['run_from'][0];
                         $backup->status = $status;
