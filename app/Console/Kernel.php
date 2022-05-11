@@ -32,6 +32,7 @@ class Kernel extends ConsoleKernel
                     .$filename. ' '.$url.'"')->everyFiveMinutes();
             }
         }
+
     }
 
     /**

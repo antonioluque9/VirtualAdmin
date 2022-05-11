@@ -14,12 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('servers', function (Blueprint $table) {
-            $table->string('id');
+            $table->id();
             $table->string('url');
-            $table->string('name');
+            $table->string('username');
+            $table->string('servername');
             $table->string('password');
             $table->timestamps();
-            $table->primary('id');
         });
     }
 

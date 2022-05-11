@@ -37,12 +37,27 @@
                             <div class="row align-items-center py-3">
                                 <div class="col-md-3 ps-5">
 
+                                    <h6 class="mb-0">Nombre del Servidor</h6>
+
+                                </div>
+                                <div class="col-md-9 pe-5">
+
+                                    <input type="text" value=@yield('servername') required name="servername" class="form-control form-control-lg" />
+
+                                </div>
+                            </div>
+
+                            <hr class="mx-n3">
+
+                            <div class="row align-items-center py-3">
+                                <div class="col-md-3 ps-5">
+
                                     <h6 class="mb-0">Usuario</h6>
 
                                 </div>
                                 <div class="col-md-9 pe-5">
 
-                                    <input type="text" value=@yield('name') required name="name" class="form-control form-control-lg" />
+                                    <input type="text" value=@yield('username') required name="username" class="form-control form-control-lg" />
 
                                 </div>
                             </div>
@@ -63,9 +78,11 @@
                             </div>
 
                             <hr class="mx-n3">
-
-                            <div class="px-5 py-4 text-center">
-                                <button type="submit" class="mx-auto btn btn-primary btn-lg">Guardar</button>
+                            <div class="row">
+                                <div class="col-sm-12 text-center">
+                                    @yield('buttom')
+                                    <button type="submit" class="btn btn-primary btn-lg">Guardar</button>
+                                </div>
                             </div>
                             @yield('errors')
                         </div>

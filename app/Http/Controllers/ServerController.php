@@ -17,22 +17,26 @@ class ServerController extends Controller
 
     public function store(Request $request)
     {
-        if (!App\Models\server::find(idServidor($request->input('url')))) {
-            $newserver = new App\Models\server;
-            $newserver->id = idServidor($request->input('url'));
-            $newserver->url = $request->input('url');
-            $newserver->name = $request->input('name');
-            $password = $request->input('password');
-            $newserver->password = Crypt::encryptString($password);
-            $newserver->save();
-        }else{
-            throw \Illuminate\Validation\ValidationException::withMessages([
-                'name' => ['Ese servidor ya esta incluido en la base de datos']
-            ]);
-        }
+        if (!DB::table('servers')->where('url', $request->input('url'))->first()){
+            if (!DB::table('servers')->where('servername', $request->input('servername'))->first()){
+                $newserver = new App\Models\server;
+                $newserver->url = $request->input('url');
+                $newserver->username = $request->input('username');
+                $newserver->servername = $request->input('servername');
+                $password = $request->input('password');
+                $newserver->password = Crypt::encryptString($password);
+                $newserver->save();
+                }else{
+                    throw \Illuminate\Validation\ValidationException::withMessages(
+                        ['name' => ['No se puede repetir el nombre de un servidor']]);
+                }
+            }else{
+                throw \Illuminate\Validation\ValidationException::withMessages(
+                    ['name' => ['Ese servidor ya esta incluido en la base de datos']]);
+            }
         return redirect('servers');
-
     }
+
 
     public function edit($id){
         $server = App\Models\server::find($id);
@@ -40,27 +44,36 @@ class ServerController extends Controller
     }
 
     public function update(Request $request){
-        $server = App\Models\server::find($request->input('id'));
-        $server->url = $request->input('url');
-        $server->name = $request->input('name');
-        $password = $request->input('password');
-        $server->password = Crypt::encryptString($password);
-
-        $server->save();
-
+        if (!DB::table('servers')->where('url', $request->input('url'))->whereNot('id', $request->input('id'))->first()){
+            if (!DB::table('servers')->where('servername', $request->input('servername'))->whereNot('id', $request->input('id'))->first()){
+                $server = App\Models\server::find($request->input('id'));
+                $server->url = $request->input('url');
+                $server->username = $request->input('username');
+                $server->servername = $request->input('servername');
+                $password = $request->input('password');
+                $server->password = Crypt::encryptString($password);
+                $server->save();
+                }else{
+                    throw \Illuminate\Validation\ValidationException::withMessages(
+                        ['name' => ['No se puede repetir el nombre de un servidor']]);
+                }
+            }else{
+                throw \Illuminate\Validation\ValidationException::withMessages(
+                    ['name' => ['Ese servidor ya esta incluido en la base de datos']]);
+            }
         return redirect('servers');
     }
 
     public function delete($id){
         $server = App\Models\server::find($id);
         $ruta = separateRoute($server->url);
-        $rutasinpuntos = str_replace('.', '-', $ruta[0]);
+        //$rutasinpuntos = str_replace('.', '-', $ruta[0]);
 
-        $domains = DB::table('domains')->where('server', $ruta[0])->get();
-        $numeroDomains = DB::table('domains')->where('server', $ruta[0])->count();
-        for ($i=0;$i<$numeroDomains;$i++){
-            $domain = App\Models\Domain::find($domains[$i]->id);
-            $domain -> delete();
+        $virtualhosts = DB::table('virtualhosts')->where('server', $ruta[0])->get();
+        $numeroVirtualhosts = DB::table('virtualhosts')->where('server', $ruta[0])->count();
+        for ($i=0;$i<$numeroVirtualhosts;$i++){
+            $virtualhost = App\Models\Virtualhost::find($virtualhosts[$i]->id);
+            $virtualhost -> delete();
         }
 
         $backups = DB::table('backups')->where('server', $ruta[0])->get();

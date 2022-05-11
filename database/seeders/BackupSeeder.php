@@ -40,6 +40,7 @@ class BackupSeeder extends Seeder
                         $backup->id = $name[0];
                         $backup->server = $rutaSeparada[0];
                         $backup->domains = $data['values']['domains'][0];
+                        $backup->servername = $server->servername;
                         $backup->type = $data['values']['run_from'][0];
                         $backup->status = $status;
                         $backup->failed = $data['values']['failed_domains'][0];

@@ -9,14 +9,15 @@
     </head>
     <body>
         @include('partials.nav')
-        <div class="container-xl">
+        <div class="container-xl pt-2 fs-5">
 
             <table class="table align-middle mb-0 mt-5 bg-white">
                 <thead class="bg-light">
                 <tr>
-                    <th>Servidor</th>
-                    <th>Estado</th>
-                    <th>Acciones</th>
+                    <th class="col-md-2">Servidor</th>
+                    <th class="col-md-6 text-center">Url</th>
+                    <th class="col-md-2">Estado</th>
+                    <th><div class="text-center">Acciones</div></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -25,23 +26,28 @@
                         <td>
                             <div class="d-flex align-items-center">
                                 <div class="ms-3">
-                                    <p class="mb-1">{{$server->url}}</p>
+                                    <p class="mb-1">{{$server->servername}}</p>
                                 </div>
                             </div>
                         </td>
+                        <td class="text-center">{{$server->url}}</td>
                         <td>
-                            <span class="badge badge-success rounded-pill d-inline">{{status($server->url)}}</span>
+                            @if ( status($server->url) == "Online")
+                                <span class="badge rounded-pill bg-success">Online</span>
+                            @else
+                                <span class="badge rounded-pill bg-danger">Offline</span>
+                            @endif
                         </td>
                         <td>
                             <form method="post" action="">
-                                <button type="button" class="btn btn-link btn-sm btn-rounded">
-                                    <a target="_blank" href="{{$server->url}}">Acceder</a>
+                                <button type="button" class="btn btn-success btn-sm btn-rounded">
+                                    <a class="text-decoration-none text-white" target="_blank" href="{{$server->url}}">Acceder</a>
                                 </button>
-                                <button type="button" class="btn btn-link btn-sm btn-rounded">
-                                    <a href="/newserver/edit/{{{$server->id}}}">Editar</a>
+                                <button type="button" class="btn btn-primary btn-sm btn-rounded">
+                                    <a class="text-decoration-none text-white" href="/newserver/edit/{{{$server->id}}}">Editar</a>
                                 </button>
-                                <button type="button" class="btn btn-link btn-sm btn-rounded">
-                                    <a href="/newserver/delete/{{{$server->id}}}" onclick="return confirm('Seguro que deseas elimiar el servidor {{$server->url}}')">Borrar</a>
+                                <button type="button" class="btn btn-danger btn-sm btn-rounded">
+                                    <a class="text-decoration-none text-white" href="/newserver/delete/{{{$server->id}}}" onclick="return confirm('Seguro que deseas elimiar el servidor {{$server->url}}')">Borrar</a>
                                 </button>
                             </form>
                         </td>

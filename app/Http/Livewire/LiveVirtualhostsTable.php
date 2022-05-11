@@ -3,15 +3,15 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use App\Models\Backup;
+use App\Models\Virtualhost;
 use Livewire\WithPagination;
 
-class LiveBackupsTable extends Component
+class LiveVirtualhostsTable extends Component
 {
     use WithPagination;
 
     public $search = '';
-    public $sortField = 'started';
+    public $sortField = 'server';
     public $sortDirection = 'desc';
 
     protected $paginationTheme = 'bootstrap';
@@ -31,11 +31,11 @@ class LiveBackupsTable extends Component
 
     public function render()
     {
-        return view('livewire.live-backups-table', [
-            'backups' => Backup::where('servername', 'like', '%'.$this->search.'%')
-                ->orWhere('domains', 'like', '%'.$this->search.'%')
-                ->orderBy($this->sortField, $this->sortDirection)
-                ->paginate(8)
-        ])->extends('layouts.app');
+        return view('livewire.live-virtualhosts-table', [
+        'virtualhosts' => Virtualhost::where('servername', 'like', '%'.$this->search.'%')
+            ->orWhere('virtualhost', 'like', '%'.$this->search.'%')
+            ->orderBy($this->sortField, $this->sortDirection)
+            ->paginate(10),
+    ])->extends('layouts.app');
     }
 }

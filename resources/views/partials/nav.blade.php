@@ -9,10 +9,10 @@
                 @endif
             </li>
             <li class="nav-item">
-                @if (Request::path() == ('domains'))
-                    <a class="nav-link active" aria-current="page" href="/domains">Dominios</a>
+                @if (Request::path() == ('virtualhosts'))
+                    <a class="nav-link active" aria-current="page" href="/virtualhosts">VirtualHosts</a>
                 @else
-                    <a class="nav-link" href="/domains">Dominios</a>
+                    <a class="nav-link" href="/virtualhosts">VirtualHosts</a>
                 @endif
             </li>
             <li class="nav-item">
@@ -32,13 +32,20 @@
         </ul>
     </div>
     <div class="me-2" id="navbarNav">
-        <form method="post" action="/logout">
-            <ul class="navbar-nav">
-                <li class="nav-item">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <form method="post" action="/logout">
                     @csrf
                     <a class="nav-link" href="#" onclick="this.closest('form').submit()">Cerrar Sesión</a>
-                </li>
-            </ul>
-        </form>
+                </form>
+            </li>
+{{--            <li class="nav-item mt-2">--}}
+{{--                <label>Selecciona modo: </label>--}}
+{{--                <select class="nav-item">--}}
+{{--                    <option>Administrador</option>--}}
+{{--                    <option onclick="">Lector</option>--}}
+{{--                </select>--}}
+{{--            </li>--}}
+        </ul>
     </div>
 </nav>

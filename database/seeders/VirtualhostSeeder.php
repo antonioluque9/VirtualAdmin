@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use File;
 use App;
 
-class DomainSeeder extends Seeder
+class VirtualhostSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -26,14 +26,15 @@ class DomainSeeder extends Seeder
                 $jsonfile = File::get($filename);
                 $json = json_decode($jsonfile, true);
                 foreach ($json['data'] as $data) {
-                    if (!App\Models\Domain::find($data['values']['id'][0])) {
-                        $domain = new App\Models\Domain;
-                        $domain->id = $data['values']['id'][0];
-                        $domain->server = $rutaSeparada[0];
-                        $domain->domain = $data['name'];
-                        $domain->username = $data['values']['username'][0];
-                        $domain->description = $data['values']['description'][0];
-                        $domain->save();
+                    if (!App\Models\Virtualhost::find($data['values']['id'][0])) {
+                        $virtualhost = new App\Models\Virtualhost();
+                        $virtualhost->id = $data['values']['id'][0];
+                        $virtualhost->server = $rutaSeparada[0];
+                        $virtualhost->servername = $server->servername;
+                        $virtualhost->virtualhost = $data['name'];
+                        $virtualhost->username = $data['values']['username'][0];
+                        $virtualhost->description = $data['values']['description'][0];
+                        $virtualhost->save();
                     } else {
                         continue;
                     }

@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('domains', function (Blueprint $table) {
+        Schema::create('virtualhosts', function (Blueprint $table) {
             $table->id();
             $table->string('server');
-            $table->string('domain');
+            $table->string('servername');
+            $table->string('virtualhost');
             $table->string('username');
             $table->string('description');
             $table->timestamps();
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('domains');
+        Schema::dropIfExists('virtualhosts');
     }
 };

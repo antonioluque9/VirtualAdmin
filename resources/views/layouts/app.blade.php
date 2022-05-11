@@ -12,7 +12,7 @@
 </head>
 <body>
 @include('partials.nav')
-@livewire('live-backups-table')
+@yield('content')
 @livewireScripts
 </body>
 </html>

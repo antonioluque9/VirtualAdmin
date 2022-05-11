@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('backups', function (Blueprint $table) {
             $table->id();
             $table->string('server');
+            $table->string('servername');
             $table->string('domains');
             $table->string('size')->default("NULL");
             $table->string('type');

@@ -14,7 +14,9 @@
 
 @section('url')""@endsection
 
-@section('name')""@endsection
+@section('servername')""@endsection
+
+@section('username')""@endsection
 
 @section('errors')
     <div class="mt-4">

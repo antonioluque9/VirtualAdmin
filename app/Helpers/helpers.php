@@ -4,9 +4,9 @@
         $IpPuerto = explode(':',$todo[2]);
         $estado = @fsockopen($IpPuerto[0],$IpPuerto[1],$ERROR_NO,$ERROR_STR,(float)0.5);
         if($estado){
-            echo "<font color='Green'>Online</font>";
+            return "Online";
         } else {
-            echo "<font color='Red'>Offline</font>";
+            return "Offline";
         }
     }
     function separateRoute($ruta){
@@ -25,4 +25,3 @@
         $fechaOrdenada = $separarFecha[2]."-".$meses[$mes]."-".$separarFecha[0]." ".$separarFechaHora[1];
         return $fechaOrdenada;
     }
-

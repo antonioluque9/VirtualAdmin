@@ -20,12 +20,9 @@ Route::get('/', function () {return view('login');})->name('login')->middleware(
 Route::post('/', [Auth\LoginController::class, 'login']);
 Route::post('/logout', [Auth\LoginController::class, 'logout']);
 
-Route::get('/domains', [Controllers\DomainController::class, 'read'])->name('domians.read')->middleware('auth');
+Route::get('/virtualhosts', Livewire\LiveVirtualhostsTable::class)->middleware('auth');
 
-//Route::get('/backups/search', Livewire\LiveBackupsTable::class)->name('backups.search')->middleware('auth');
 Route::any('/backups', Livewire\LiveBackupsTable::class  )->middleware('auth');
-//Route::get('/backups/desc', [Controllers\BackupController::class, 'startedDesc'])->name('backups.startedDesc')->middleware('auth');
-//Route::get('/backups/search', [Controllers\BackupController::class, 'search'])->name('backups.search')->middleware('auth');
 
 Route::get('/newserver/create', function () {return view('newserver');})->middleware('auth');
 Route::post('/newserver/add', [Controllers\ServerController::class, 'store'])->name('servers.store')->middleware('auth');
@@ -35,4 +32,4 @@ Route::get('/newserver/delete/{id}', [Controllers\ServerController::class, 'dele
 
 Route::get('/servers', [Controllers\ServerController::class, 'read'])->name('servers.read')->middleware('auth');
 
-//Route::get('/prueba', [Controllers\PruebaController::class, 'prueba'])->middleware('auth');
+Route::get('/prueba', [Controllers\Prueba::class, 'Prueba'])->middleware('auth');
