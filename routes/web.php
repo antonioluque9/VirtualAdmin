@@ -22,7 +22,7 @@ Route::post('/logout', [Auth\LoginController::class, 'logout']);
 
 Route::get('/virtualhosts', Livewire\LiveVirtualhostsTable::class)->middleware('auth');
 
-Route::any('/backups', Livewire\LiveBackupsTable::class  )->middleware('auth');
+Route::get('/backups', Livewire\LiveBackupsTable::class  )->middleware('auth');
 
 Route::get('/newserver/create', function () {return view('newserver');})->middleware('auth');
 Route::post('/newserver/add', [Controllers\ServerController::class, 'store'])->name('servers.store')->middleware('auth');
@@ -31,5 +31,3 @@ Route::post('/newserver/update', [Controllers\ServerController::class, 'update']
 Route::get('/newserver/delete/{id}', [Controllers\ServerController::class, 'delete'])->middleware('auth');
 
 Route::get('/servers', [Controllers\ServerController::class, 'read'])->name('servers.read')->middleware('auth');
-
-Route::get('/prueba', [Controllers\Prueba::class, 'Prueba'])->middleware('auth');

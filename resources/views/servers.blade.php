@@ -10,8 +10,14 @@
     <body>
         @include('partials.nav')
         <div class="container-xl pt-2 fs-5">
-
-            <table class="table align-middle mb-0 mt-5 bg-white">
+            <div class="float-end mb-3 mt-3 pt-5">
+                <button class="mx-auto btn btn-primary" type="submit">
+                    <a href="/loquesea" class="text-decoration-none text-white">
+                        Recargar Información
+                    </a>
+                </button>
+            </div>
+            <table class="table align-middle mb-0 mt-3 bg-white">
                 <thead class="bg-light">
                 <tr>
                     <th class="col-md-2">Servidor</th>

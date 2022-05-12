@@ -18,8 +18,8 @@
                             <i class="bi bi-arrow-down-up"></i>
                         </a>
                     </th>
-                    <th>Dominios</th>
-                    <th>Dominios fallidos</th>
+                    <th>VirtualHosts</th>
+                    <th class="col-2">VirtualHosts fallidos</th>
                     <th>
                         <a wire:click="sortBy('status')" role="button" href="#" class="text-decoration-none text-black">
                             Estado
@@ -70,13 +70,26 @@
                             <p class="fw-normal mb-1">{{$backup->failed}}</p>
                         </td>
                         <td>
-                            <p class="fw-normal mb-1">{{$backup->status}}</p>
+                            @if($backup->status === "OK")
+{{--                                <p class="fw-normal mb-1 text-success">{{$backup->status}}</p>--}}
+                                <span class="badge w-75 bg-success">OK</span>
+                            @elseif($backup->status === "PARTIAL")
+{{--                                <p class="fw-normal mb-1 text-warning">{{$backup->status}}</p>--}}
+                                <span class="badge w-75 bg-warning">PARTIAL</span>
+                            @else
+{{--                                <p class="fw-normal mb-1 text-danger">{{$backup->status}}</p>--}}
+                                <span class="badge w-75 bg-danger">FAILED</span>
+                            @endif
                         </td>
                         <td>
                             <p class="fw-normal mb-1">{{$backup->type}}</p>
                         </td>
                         <td>
-                            <p class="fw-normal mb-1">{{$backup->size}}</p>
+                            @if($backup->size === "NULL")
+                                <p class="fw-normal mb-1">0 MiB</p>
+                            @else
+                                <p class="fw-normal mb-1">{{$backup->size}}</p>
+                            @endif
                         </td>
                         <td>
                             <p class="fw-normal mb-1">{{$backup->started}}</p>

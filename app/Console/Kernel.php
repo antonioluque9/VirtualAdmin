@@ -2,10 +2,14 @@
 
 namespace App\Console;
 
+use App\Mail\BackupsMail;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use Illuminate\Support\Facades\Crypt;
 use App;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+use App\Console\Commands\SendEmailsCommand;
 
 class Kernel extends ConsoleKernel
 {
@@ -24,15 +28,19 @@ class Kernel extends ConsoleKernel
                 $ruta = explode('/', $server->url);
                 $ruta2 = explode(':', $ruta[2]);
                 $rutasinpuntos = str_replace('.', '-', $ruta2[0]);
-                $username = $server->name;
+                $username = $server->username;
                 $serverpassword = Crypt::decryptString($server->password);
-                $url = "'".$server->url."/virtual-server/remote.cgi?program=".$function."&multiline=&json=1'";
+                if($function === "list-domains"){
+                    $url = "'".$server->url."/virtual-server/remote.cgi?program=".$function."&json=1&simple-multiline'";
+                }else{
+                    $url = "'".$server->url."/virtual-server/remote.cgi?program=".$function."&multiline=&json=1'";
+                }
                 $filename = $rutasinpuntos."-".$function;
-                $schedule->exec('bash -c "cd /home/VirtualAdmin/jsonfiles && wget -q -b --user='.$username.' --password='.$serverpassword.' -O '
+                $schedule->exec('bash -c "cd /home/VirtualAdmin/jsonfiles && wget -q -b --no-check-certificate --user='.$username.' --password='.$serverpassword.' -O '
                     .$filename. ' '.$url.'"')->everyFiveMinutes();
             }
         }
-
+        $schedule->job(new App\Jobs\EmailSending())->dailyAt('9:00');
     }
 
     /**

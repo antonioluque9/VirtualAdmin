@@ -11,13 +11,6 @@ class Backup extends Model
 
     protected $fillable = ['type'];
 
-    public function getTypeAttribute($value){
-        if ($value == "sched"){
-            return $this->type = "Programado";
-        }else{
-            return $this->type = "Manual";
-        }
-    }
     public function getDomainsAttribute($value){
         $dominios = explode( ' ', $value);
         foreach ($dominios as $dominio){
@@ -31,5 +24,12 @@ class Backup extends Model
     public function getEndedAttribute($value){
         $ended = explode(':', $value);
         return $ended[0].":".$ended[1];
+    }
+    public function setTypeAttribute($value){
+        if ($value == "sched"){
+            $this->attributes['type'] = "Programado";
+        }else{
+            $this->attributes['type'] = "Manual";
+        }
     }
 }
