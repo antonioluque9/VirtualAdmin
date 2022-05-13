@@ -36,10 +36,12 @@ class Kernel extends ConsoleKernel
                     $url = "'".$server->url."/virtual-server/remote.cgi?program=".$function."&multiline=&json=1'";
                 }
                 $filename = $rutasinpuntos."-".$function;
-                $schedule->exec('bash -c "cd /home/VirtualAdmin/jsonfiles && wget -q -b --no-check-certificate --user='.$username.' --password='.$serverpassword.' -O '
+                $schedule->exec('bash -c "cd database/jsonfiles && wget -q -b --no-check-certificate --user='.$username.' --password='.$serverpassword.' -O '
                     .$filename. ' '.$url.'"')->everyFiveMinutes();
             }
         }
+        $schedule->command('db:seed --class=BackupSeeder')->everyFiveMinutes();
+        $schedule->command('db:seed --class=VirtualhostSeeder')->everyFiveMinutes();
         $schedule->job(new App\Jobs\EmailSending())->dailyAt('9:00');
     }
 

@@ -1,14 +1,30 @@
 {
+   "command" : "list-domains",
    "status" : "success",
    "data" : [
       {
          "name" : "Virtualminantonio.local",
          "values" : {
+            "mailbox_username_prefix" : [
+               "Virtualminantonio"
+            ],
+            "ssl_cert_file" : [
+               "/home/Virtualminantonio/ssl.cert"
+            ],
+            "template" : [
+               "Default Settings"
+            ],
+            "maximum_non-alias_servers" : [
+               "*"
+            ],
             "contact_email" : [
                "Virtualminantonio@Virtualminantonio.local"
             ],
             "plan" : [
                "Default Plan"
+            ],
+            "provisioning_for_dns" : [
+               "Local"
             ],
             "contact_address" : [
                "Virtualminantonio@Virtualminantonio.local"
@@ -16,35 +32,11 @@
             "can_rename_servers" : [
                "Yes"
             ],
-            "provisioning_for_dns" : [
-               "Local"
+            "ssl_key_file" : [
+               "/home/Virtualminantonio/ssl.key"
             ],
-            "mailbox_username_prefix" : [
-               "Virtualminantonio"
-            ],
-            "maximum_non-alias_servers" : [
-               "*"
-            ],
-            "template" : [
-               "Default Settings"
-            ],
-            "maximum_mailboxes" : [
-               "Unlimited"
-            ],
-            "error_log" : [
-               ""
-            ],
-            "created_by" : [
-               "root"
-            ],
-            "shell_command" : [
-               "/bin/bash"
-            ],
-            "created_unix_time" : [
-               "1648455435"
-            ],
-            "group_name" : [
-               "Virtualminantonio"
+            "password_storage" : [
+               "Plain text"
             ],
             "cgi_directory" : [
                "/home/Virtualminantonio/cgi-bin"
@@ -52,26 +44,29 @@
             "maximum_aliases" : [
                "Unlimited"
             ],
-            "password_storage" : [
-               "Plain text"
-            ],
             "provisioning_for_virus" : [
                "Local"
             ],
             "php_execution_mode" : [
                "mod_php"
             ],
-            "provisioning_for_spam" : [
-               "Local"
+            "created_by" : [
+               "root"
             ],
-            "server_quota" : [
-               "1 GiB"
+            "error_log" : [
+               ""
             ],
-            "maximum_sub-servers" : [
-               "Cannot create"
+            "maximum_mailboxes" : [
+               "Unlimited"
             ],
-            "external_ip_address" : [
-               "154.47.132.33"
+            "group_name" : [
+               "Virtualminantonio"
+            ],
+            "shell_command" : [
+               "/bin/bash"
+            ],
+            "created_unix_time" : [
+               "1648455435"
             ],
             "url" : [
                "http://Virtualminantonio.local/"
@@ -82,26 +77,32 @@
             "can_choose_database_names" : [
                "Yes"
             ],
+            "maximum_sub-servers" : [
+               "Cannot create"
+            ],
+            "provisioning_for_spam" : [
+               "Local"
+            ],
+            "server_quota" : [
+               "1 GiB"
+            ],
+            "external_ip_address" : [
+               "154.47.132.33"
+            ],
+            "sub-servers_cannot_be_under_other_domains" : [
+               "No"
+            ],
+            "lets_encrypt_renewal" : [
+               "Enabled"
+            ],
             "home_directory" : [
                "/home/Virtualminantonio"
             ],
             "group_id" : [
                "1001"
             ],
-            "sub-servers_cannot_be_under_other_domains" : [
-               "No"
-            ],
-            "access_log" : [
-               ""
-            ],
-            "can_migrate_backups" : [
-               "No"
-            ],
-            "html_directory" : [
-               "/home/Virtualminantonio/public_html"
-            ],
-            "created_on" : [
-               "28/Mar/2022 10:17"
+            "maximum_mongrel_instances" : [
+               "Unlimited"
             ],
             "provisioning_for_mysql" : [
                "Local"
@@ -109,23 +110,26 @@
             "username" : [
                "Virtualminantonio"
             ],
-            "maximum_mongrel_instances" : [
-               "Unlimited"
+            "file" : [
+               "/etc/webmin/virtual-server/domains/1648455424134239"
             ],
             "user_id" : [
                "1001"
             ],
-            "file" : [
-               "/etc/webmin/virtual-server/domains/1648455424134239"
+            "can_migrate_backups" : [
+               "No"
             ],
-            "features" : [
-               "unix dir dns mail web logrotate"
+            "html_directory" : [
+               "/home/Virtualminantonio/public_html"
             ],
-            "user_quota" : [
-               "1 GiB"
+            "access_log" : [
+               ""
             ],
-            "user_block_quota" : [
-               "1048576"
+            "created_on" : [
+               "28/Mar/2022 10:17"
+            ],
+            "ssl_cert_expiry_time" : [
+               "1810121068"
             ],
             "allowed_scripts" : [
                "All"
@@ -136,11 +140,35 @@
             "id" : [
                "1648455424134239"
             ],
+            "user_quota" : [
+               "1 GiB"
+            ],
+            "features" : [
+               "unix dir dns mail web logrotate"
+            ],
+            "user_block_quota" : [
+               "1048576"
+            ],
+            "allowed_features" : [
+               "unix dir dns web"
+            ],
+            "php_max_execution_time" : [
+               "30"
+            ],
+            "password" : [
+               "XuRSTNAaSzG9TmJ"
+            ],
+            "type" : [
+               "Top-level server"
+            ],
             "ip_address" : [
                "10.0.0.5 (Shared)"
             ],
             "maximum_databases" : [
                "Unlimited"
+            ],
+            "ssl_cert_expiry" : [
+               "12/May/2027 13:24"
             ],
             "maximum_alias_servers" : [
                "*"
@@ -148,17 +176,20 @@
             "edit_capabilities" : [
                "users aliases passwd"
             ],
-            "php_max_execution_time" : [
-               "30"
+            "server_block_quota" : [
+               "1048576"
             ],
-            "allowed_features" : [
-               "unix dir dns web"
+            "template_id" : [
+               "0"
             ],
-            "password" : [
-               "XuRSTNAaSzG9TmJ"
+            "read-only_mode" : [
+               "No"
             ],
-            "type" : [
-               "Top-level server"
+            "sub-servers_inherit_ip_address" : [
+               "No"
+            ],
+            "plugins" : [
+               ""
             ],
             "description" : [
                "Host default domain"
@@ -168,79 +199,32 @@
             ],
             "sub-servers_must_be_under_main_domain" : [
                "No"
-            ],
-            "server_block_quota" : [
-               "1048576"
-            ],
-            "read-only_mode" : [
-               "No"
-            ],
-            "sub-servers_inherit_ip_address" : [
-               "No"
-            ],
-            "plugins" : [
-               ""
-            ],
-            "template_id" : [
-               "0"
             ]
          }
       },
       {
+         "name" : "drupalantonio.local",
          "values" : {
-            "maximum_alias_servers" : [
-               "*"
+            "features" : [
+               "unix dir dns web webalizer logrotate mysql webmin"
             ],
-            "edit_capabilities" : [
-               "users aliases passwd"
+            "user_quota" : [
+               "1 GiB"
             ],
-            "maximum_databases" : [
-               "Unlimited"
-            ],
-            "ip_address" : [
-               "10.0.0.5 (Shared)"
-            ],
-            "password" : [
-               "jiCEv2YV7ooj44F"
-            ],
-            "type" : [
-               "Top-level server"
-            ],
-            "allowed_features" : [
-               "unix dir dns web webalizer logrotate mysql virtualmin-awstats virtualmin-dav"
-            ],
-            "php_max_execution_time" : [
-               "30"
-            ],
-            "sub-servers_must_be_under_main_domain" : [
-               "No"
-            ],
-            "description" : [
-               ""
-            ],
-            "login_permissions" : [
-               "Email, FTP and SSH"
-            ],
-            "plugins" : [
-               "virtualmin-awstats virtualmin-dav"
-            ],
-            "read-only_mode" : [
-               "No"
-            ],
-            "sub-servers_inherit_ip_address" : [
-               "No"
-            ],
-            "password_for_mysql" : [
-               "jiCEv2YV7ooj44F"
-            ],
-            "template_id" : [
-               "0"
-            ],
-            "server_block_quota" : [
+            "user_block_quota" : [
                "1048576"
             ],
-            "created_on" : [
-               "28/Mar/2022 12:08"
+            "allowed_scripts" : [
+               "All"
+            ],
+            "username_for_mysql" : [
+               "drupalantonio"
+            ],
+            "shell_type" : [
+               "ssh"
+            ],
+            "id" : [
+               "1648462078154297"
             ],
             "remote_features" : [
                "mysql"
@@ -254,184 +238,23 @@
             "html_directory" : [
                "/home/drupalantonio/public_html"
             ],
+            "created_on" : [
+               "28/Mar/2022 12:08"
+            ],
+            "provisioning_for_mysql" : [
+               "Local"
+            ],
+            "username" : [
+               "drupalantonio"
+            ],
+            "maximum_mongrel_instances" : [
+               "Unlimited"
+            ],
             "file" : [
                "/etc/webmin/virtual-server/domains/1648462078154297"
             ],
             "user_id" : [
                "1004"
-            ],
-            "provisioning_for_mysql" : [
-               "Local"
-            ],
-            "username" : [
-               "drupalantonio"
-            ],
-            "maximum_mongrel_instances" : [
-               "Unlimited"
-            ],
-            "user_block_quota" : [
-               "1048576"
-            ],
-            "features" : [
-               "unix dir dns web webalizer logrotate mysql webmin"
-            ],
-            "user_quota" : [
-               "1 GiB"
-            ],
-            "id" : [
-               "1648462078154297"
-            ],
-            "allowed_scripts" : [
-               "All"
-            ],
-            "username_for_mysql" : [
-               "drupalantonio"
-            ],
-            "shell_type" : [
-               "ssh"
-            ],
-            "external_ip_address" : [
-               "154.47.132.33"
-            ],
-            "provisioning_for_spam" : [
-               "Local"
-            ],
-            "server_quota" : [
-               "1 GiB"
-            ],
-            "maximum_sub-servers" : [
-               "Cannot create"
-            ],
-            "url" : [
-               "http://drupalantonio.local/"
-            ],
-            "plan_id" : [
-               "0"
-            ],
-            "can_choose_database_names" : [
-               "Yes"
-            ],
-            "group_id" : [
-               "1004"
-            ],
-            "home_directory" : [
-               "/home/drupalantonio"
-            ],
-            "sub-servers_cannot_be_under_other_domains" : [
-               "No"
-            ],
-            "contact_address" : [
-               "drupalantonio@Virtualminantonio.local"
-            ],
-            "can_rename_servers" : [
-               "Yes"
-            ],
-            "provisioning_for_dns" : [
-               "Local"
-            ],
-            "contact_email" : [
-               "drupalantonio@Virtualminantonio.local"
-            ],
-            "plan" : [
-               "Default Plan"
-            ],
-            "maximum_non-alias_servers" : [
-               "*"
-            ],
-            "template" : [
-               "Default Settings"
-            ],
-            "mailbox_username_prefix" : [
-               "drupalantonio"
-            ],
-            "created_unix_time" : [
-               "1648462096"
-            ],
-            "shell_command" : [
-               "/bin/bash"
-            ],
-            "group_name" : [
-               "drupalantonio"
-            ],
-            "maximum_mailboxes" : [
-               "Unlimited"
-            ],
-            "error_log" : [
-               "/var/log/virtualmin/drupalantonio.local_error_log"
-            ],
-            "created_by" : [
-               "root"
-            ],
-            "provisioning_for_virus" : [
-               "Local"
-            ],
-            "php_execution_mode" : [
-               "fcgid"
-            ],
-            "maximum_aliases" : [
-               "Unlimited"
-            ],
-            "cgi_directory" : [
-               "/home/drupalantonio/cgi-bin"
-            ],
-            "password_storage" : [
-               "Plain text"
-            ]
-         },
-         "name" : "drupalantonio.local"
-      },
-      {
-         "values" : {
-            "features" : [
-               "unix dir dns web logrotate mysql webmin"
-            ],
-            "user_quota" : [
-               "1 GiB"
-            ],
-            "user_block_quota" : [
-               "1048576"
-            ],
-            "username_for_mysql" : [
-               "wordpressantonio2"
-            ],
-            "allowed_scripts" : [
-               "All"
-            ],
-            "shell_type" : [
-               "ssh"
-            ],
-            "id" : [
-               "1648455901138344"
-            ],
-            "remote_features" : [
-               "mysql"
-            ],
-            "access_log" : [
-               "/var/log/virtualmin/wordpressantonio2.local_access_log"
-            ],
-            "can_migrate_backups" : [
-               "No"
-            ],
-            "html_directory" : [
-               "/home/wordpressantonio2/public_html"
-            ],
-            "created_on" : [
-               "28/Mar/2022 10:25"
-            ],
-            "provisioning_for_mysql" : [
-               "Local"
-            ],
-            "username" : [
-               "wordpressantonio2"
-            ],
-            "maximum_mongrel_instances" : [
-               "Unlimited"
-            ],
-            "user_id" : [
-               "1003"
-            ],
-            "file" : [
-               "/etc/webmin/virtual-server/domains/1648455901138344"
             ],
             "description" : [
                ""
@@ -445,17 +268,17 @@
             "server_block_quota" : [
                "1048576"
             ],
-            "plugins" : [
-               "virtualmin-awstats virtualmin-dav"
+            "sub-servers_inherit_ip_address" : [
+               "No"
             ],
             "read-only_mode" : [
                "No"
             ],
-            "sub-servers_inherit_ip_address" : [
-               "No"
+            "plugins" : [
+               "virtualmin-awstats virtualmin-dav"
             ],
             "password_for_mysql" : [
-               "Sw8PnVw8OwURXyB"
+               "jiCEv2YV7ooj44F"
             ],
             "template_id" : [
                "0"
@@ -472,41 +295,41 @@
             "edit_capabilities" : [
                "users aliases passwd"
             ],
-            "allowed_features" : [
-               "unix dir dns web logrotate mysql virtualmin-awstats virtualmin-dav"
-            ],
             "php_max_execution_time" : [
                "30"
+            ],
+            "allowed_features" : [
+               "unix dir dns web webalizer logrotate mysql virtualmin-awstats virtualmin-dav"
+            ],
+            "password" : [
+               "jiCEv2YV7ooj44F"
             ],
             "type" : [
                "Top-level server"
             ],
-            "password" : [
-               "Sw8PnVw8OwURXyB"
-            ],
             "maximum_mailboxes" : [
                "Unlimited"
-            ],
-            "error_log" : [
-               "/var/log/virtualmin/wordpressantonio2.local_error_log"
             ],
             "created_by" : [
                "root"
             ],
+            "error_log" : [
+               "/var/log/virtualmin/drupalantonio.local_error_log"
+            ],
+            "created_unix_time" : [
+               "1648462096"
+            ],
             "shell_command" : [
                "/bin/bash"
             ],
-            "created_unix_time" : [
-               "1648455924"
-            ],
             "group_name" : [
-               "wordpressantonio2"
+               "drupalantonio"
             ],
             "maximum_aliases" : [
                "Unlimited"
             ],
             "cgi_directory" : [
-               "/home/wordpressantonio2/cgi-bin"
+               "/home/drupalantonio/cgi-bin"
             ],
             "password_storage" : [
                "Plain text"
@@ -518,22 +341,22 @@
                "fcgid"
             ],
             "contact_email" : [
-               "wordpressantonio2@Virtualminantonio.local"
+               "drupalantonio@Virtualminantonio.local"
             ],
             "plan" : [
                "Default Plan"
             ],
+            "contact_address" : [
+               "drupalantonio@Virtualminantonio.local"
+            ],
             "can_rename_servers" : [
                "Yes"
-            ],
-            "contact_address" : [
-               "wordpressantonio2@Virtualminantonio.local"
             ],
             "provisioning_for_dns" : [
                "Local"
             ],
             "mailbox_username_prefix" : [
-               "wordpressantonio2"
+               "drupalantonio"
             ],
             "maximum_non-alias_servers" : [
                "*"
@@ -542,10 +365,10 @@
                "Default Settings"
             ],
             "home_directory" : [
-               "/home/wordpressantonio2"
+               "/home/drupalantonio"
             ],
             "group_id" : [
-               "1003"
+               "1004"
             ],
             "sub-servers_cannot_be_under_other_domains" : [
                "No"
@@ -566,15 +389,207 @@
                "0"
             ],
             "url" : [
-               "http://wordpressantonio2.local/"
+               "http://drupalantonio.local/"
             ],
             "can_choose_database_names" : [
                "Yes"
             ]
-         },
-         "name" : "wordpressantonio2.local"
+         }
+      },
+      {
+         "name" : "wordpressantonio2.local",
+         "values" : {
+            "ip_address" : [
+               "10.0.0.5 (Shared)"
+            ],
+            "maximum_databases" : [
+               "Unlimited"
+            ],
+            "maximum_alias_servers" : [
+               "*"
+            ],
+            "edit_capabilities" : [
+               "users aliases passwd"
+            ],
+            "php_max_execution_time" : [
+               "30"
+            ],
+            "allowed_features" : [
+               "unix dir dns web logrotate mysql virtualmin-awstats virtualmin-dav"
+            ],
+            "password" : [
+               "Sw8PnVw8OwURXyB"
+            ],
+            "type" : [
+               "Top-level server"
+            ],
+            "description" : [
+               ""
+            ],
+            "login_permissions" : [
+               "Email, FTP and SSH"
+            ],
+            "sub-servers_must_be_under_main_domain" : [
+               "No"
+            ],
+            "server_block_quota" : [
+               "1048576"
+            ],
+            "template_id" : [
+               "0"
+            ],
+            "sub-servers_inherit_ip_address" : [
+               "No"
+            ],
+            "read-only_mode" : [
+               "No"
+            ],
+            "plugins" : [
+               "virtualmin-awstats virtualmin-dav"
+            ],
+            "password_for_mysql" : [
+               "Sw8PnVw8OwURXyB"
+            ],
+            "can_migrate_backups" : [
+               "No"
+            ],
+            "html_directory" : [
+               "/home/wordpressantonio2/public_html"
+            ],
+            "remote_features" : [
+               "mysql"
+            ],
+            "access_log" : [
+               "/var/log/virtualmin/wordpressantonio2.local_access_log"
+            ],
+            "created_on" : [
+               "28/Mar/2022 10:25"
+            ],
+            "maximum_mongrel_instances" : [
+               "Unlimited"
+            ],
+            "provisioning_for_mysql" : [
+               "Local"
+            ],
+            "username" : [
+               "wordpressantonio2"
+            ],
+            "file" : [
+               "/etc/webmin/virtual-server/domains/1648455901138344"
+            ],
+            "user_id" : [
+               "1003"
+            ],
+            "user_quota" : [
+               "1 GiB"
+            ],
+            "features" : [
+               "unix dir dns web logrotate mysql webmin"
+            ],
+            "user_block_quota" : [
+               "1048576"
+            ],
+            "allowed_scripts" : [
+               "All"
+            ],
+            "username_for_mysql" : [
+               "wordpressantonio2"
+            ],
+            "shell_type" : [
+               "ssh"
+            ],
+            "id" : [
+               "1648455901138344"
+            ],
+            "maximum_sub-servers" : [
+               "Cannot create"
+            ],
+            "provisioning_for_spam" : [
+               "Local"
+            ],
+            "server_quota" : [
+               "1 GiB"
+            ],
+            "external_ip_address" : [
+               "154.47.132.33"
+            ],
+            "plan_id" : [
+               "0"
+            ],
+            "url" : [
+               "http://wordpressantonio2.local/"
+            ],
+            "can_choose_database_names" : [
+               "Yes"
+            ],
+            "home_directory" : [
+               "/home/wordpressantonio2"
+            ],
+            "group_id" : [
+               "1003"
+            ],
+            "sub-servers_cannot_be_under_other_domains" : [
+               "No"
+            ],
+            "contact_email" : [
+               "wordpressantonio2@Virtualminantonio.local"
+            ],
+            "plan" : [
+               "Default Plan"
+            ],
+            "provisioning_for_dns" : [
+               "Local"
+            ],
+            "can_rename_servers" : [
+               "Yes"
+            ],
+            "contact_address" : [
+               "wordpressantonio2@Virtualminantonio.local"
+            ],
+            "mailbox_username_prefix" : [
+               "wordpressantonio2"
+            ],
+            "template" : [
+               "Default Settings"
+            ],
+            "maximum_non-alias_servers" : [
+               "*"
+            ],
+            "error_log" : [
+               "/var/log/virtualmin/wordpressantonio2.local_error_log"
+            ],
+            "created_by" : [
+               "root"
+            ],
+            "maximum_mailboxes" : [
+               "Unlimited"
+            ],
+            "group_name" : [
+               "wordpressantonio2"
+            ],
+            "created_unix_time" : [
+               "1648455924"
+            ],
+            "shell_command" : [
+               "/bin/bash"
+            ],
+            "password_storage" : [
+               "Plain text"
+            ],
+            "maximum_aliases" : [
+               "Unlimited"
+            ],
+            "cgi_directory" : [
+               "/home/wordpressantonio2/cgi-bin"
+            ],
+            "provisioning_for_virus" : [
+               "Local"
+            ],
+            "php_execution_mode" : [
+               "fcgid"
+            ]
+         }
       }
-   ],
-   "command" : "list-domains"
+   ]
 }
 

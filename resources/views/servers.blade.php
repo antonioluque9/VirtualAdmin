@@ -12,7 +12,7 @@
         <div class="container-xl pt-2 fs-5">
             <div class="float-end mb-3 mt-3 pt-5">
                 <button class="mx-auto btn btn-primary" type="submit">
-                    <a href="/loquesea" class="text-decoration-none text-white">
+                    <a href="/reload" class="text-decoration-none text-white">
                         Recargar Información
                     </a>
                 </button>
