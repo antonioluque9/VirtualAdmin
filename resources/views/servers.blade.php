@@ -46,6 +46,7 @@
                         </td>
                         <td>
                             <form method="post" action="">
+                                @csrf
                                 <button type="button" class="btn btn-success btn-sm btn-rounded">
                                     <a class="text-decoration-none text-white" target="_blank" href="{{$server->url}}">Acceder</a>
                                 </button>

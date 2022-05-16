@@ -23,13 +23,7 @@ class EmailSending implements ShouldQueue
      */
     public function __construct()
     {
-        $email = DB::table('users')->select('email')->get();
-        $failed = DB::table('backups')
-            ->where('status', 'FAILED')
-            ->where('started', '>', date('Y-m-d H:i:s',strtotime("-1 days")))
-            ->orWhere('status', 'PARTIAL')
-            ->where('started', '>', date('Y-m-d H:i:s',strtotime("-1 days")))->get();
-        Mail::to($email)->queue(new BackupsMail($failed));
+
     }
 
     /**
@@ -39,6 +33,18 @@ class EmailSending implements ShouldQueue
      */
     public function handle()
     {
-        //
+        if(!DB::table('backups')->where('status', 'FAILED')
+            ->where('started', '>', date('Y-m-d H:i:s',strtotime("-1 days")))
+            ->orWhere('status', 'PARTIAL')
+            ->where('started', '>', date('Y-m-d H:i:s',strtotime("-1 days")))->first()){
+        }else{
+            $email = DB::table('users')->select('email')->get();
+            $failed = DB::table('backups')
+                ->where('status', 'FAILED')
+                ->where('started', '>', date('Y-m-d H:i:s',strtotime("-1 days")))
+                ->orWhere('status', 'PARTIAL')
+                ->where('started', '>', date('Y-m-d H:i:s',strtotime("-1 days")))->get();
+            Mail::to($email)->queue(new BackupsMail($failed));
+        }
     }
 }

@@ -9,7 +9,7 @@ class ReloadInformation extends Controller
 {
     public function reloadInformation()
     {
-        new App\Jobs\ReloadInformation();
+        App\Jobs\ReloadInformationSched::dispatch();
         return redirect('servers');
     }
 }

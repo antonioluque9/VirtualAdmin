@@ -10,18 +10,27 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Crypt;
 use App;
-use Artisan;
 
-class ReloadInformation implements ShouldQueue
+class ReloadInformationSched implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     /**
-     * Create a new job instance
+     * Create a new job instance.
      *
      * @return void
      */
     public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Execute the job.
+     *
+     * @return void
+     */
+    public function handle()
     {
         $servers = App\Models\server::all();
         $functions = ["list-domains", "list-backup-logs"];
@@ -42,17 +51,5 @@ class ReloadInformation implements ShouldQueue
                     .$filename. ' '.$url.'" && php artisan db:seed');
             }
         }
-
-//        Artisan::call('db:seed');
-    }
-
-    /**
-     * Execute the job.
-     *
-     * @return void
-     */
-    public function handle()
-    {
-        //
     }
 }
