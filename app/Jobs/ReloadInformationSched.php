@@ -48,7 +48,7 @@ class ReloadInformationSched implements ShouldQueue
                 }
                 $filename = $rutasinpuntos."-".$function;
                 exec('bash -c "cd database/jsonfiles && wget -q -b --no-check-certificate --user='.$username.' --password='.$serverpassword.' -O '
-                    .$filename. ' '.$url.'" && php artisan db:seed');
+                    .$filename. ' '.$url.'" && php artisan db:seed --class=BackupSeeder && php artisan db:seed --class=VirtualhostSeeder');
             }
         }
     }

@@ -1,4 +1,5 @@
 {
+   "command" : "list-backup-logs",
    "data" : [
       {
          "value" : "",
@@ -7,20 +8,14 @@
       {
          "name" : "1650618022-217411-1:",
          "values" : {
-            "final_status" : [
-               "OK"
-            ],
-            "format" : [
-               "One file per server"
+            "encrypted" : [
+               "No"
             ],
             "incremental" : [
                "No"
             ],
-            "run_from" : [
-               "sched"
-            ],
-            "encrypted" : [
-               "No"
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
             ],
             "started" : [
                "22/Apr/2022 11:00"
@@ -28,36 +23,64 @@
             "ended" : [
                "22/Apr/2022 11:00"
             ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220422-1100"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "final_size" : [
-               "62965580"
-            ],
             "final_nice_size" : [
                "60.04 MiB"
             ],
-            "failed_domains" : [
-               "Virtualminantonio.local"
+            "run_from" : [
+               "sched"
             ],
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
-            "compression" : [
-               "tar.gz"
+            "format" : [
+               "One file per server"
+            ],
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220422-1100"
             ],
             "scheduled_backup_id" : [
                "1648541362259851"
+            ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "final_status" : [
+               "OK"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local"
+            ],
+            "final_size" : [
+               "62965580"
             ]
          }
       },
       {
+         "name" : "1648890028-679125-1:",
          "values" : {
+            "run_from" : [
+               "sched"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "started" : [
+               "02/Apr/2022 11:00"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "incremental" : [
+               "No"
+            ],
             "final_nice_size" : [
                "60.06 MiB"
+            ],
+            "ended" : [
+               "02/Apr/2022 11:00"
+            ],
+            "final_status" : [
+               "OK"
             ],
             "failed_domains" : [
                "Virtualminantonio.local"
@@ -65,74 +88,43 @@
             "final_size" : [
                "62980067"
             ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
+            "format" : [
+               "One file per server"
             ],
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "run_from" : [
-               "sched"
-            ],
-            "incremental" : [
-               "No"
-            ],
-            "final_status" : [
-               "OK"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "started" : [
-               "02/Apr/2022 11:00"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "ended" : [
-               "02/Apr/2022 11:00"
-            ],
             "destination" : [
                "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220402-1100"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "compression" : [
+               "tar.gz"
             ]
-         },
-         "name" : "1648890028-679125-1:"
+         }
       },
       {
          "name" : "1648544425-264310-1:",
          "values" : {
-            "incremental" : [
-               "No"
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
             "format" : [
                "One file per server"
             ],
-            "final_status" : [
-               "OK"
+            "compression" : [
+               "tar.gz"
             ],
-            "run_from" : [
-               "sched"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "started" : [
-               "29/Mar/2022 11:00"
+            "scheduled_backup_id" : [
+               "1648541362259851"
             ],
             "destination" : [
                "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220329-1100"
             ],
-            "ended" : [
-               "29/Mar/2022 11:00"
+            "final_status" : [
+               "OK"
             ],
             "final_size" : [
                "62987645"
@@ -140,8 +132,37 @@
             "failed_domains" : [
                "Virtualminantonio.local"
             ],
+            "incremental" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "started" : [
+               "29/Mar/2022 11:00"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "ended" : [
+               "29/Mar/2022 11:00"
+            ],
             "final_nice_size" : [
                "60.06 MiB"
+            ],
+            "run_from" : [
+               "sched"
+            ]
+         }
+      },
+      {
+         "name" : "1650272418-999522-1:",
+         "values" : {
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "format" : [
+               "One file per server"
             ],
             "scheduled_backup_id" : [
                "1648541362259851"
@@ -149,125 +170,155 @@
             "compression" : [
                "tar.gz"
             ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220418-1100"
+            ],
+            "final_status" : [
+               "OK"
+            ],
+            "final_size" : [
+               "62968041"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "started" : [
+               "18/Apr/2022 11:00"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "ended" : [
+               "18/Apr/2022 11:00"
+            ],
+            "final_nice_size" : [
+               "60.05 MiB"
+            ],
+            "run_from" : [
+               "sched"
             ]
          }
       },
       {
          "values" : {
-            "started" : [
-               "18/Apr/2022 11:00"
-            ],
-            "encrypted" : [
-               "No"
-            ],
             "ended" : [
-               "18/Apr/2022 11:00"
+               "09/Apr/2022 11:00"
             ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220418-1100"
+            "final_nice_size" : [
+               "60.05 MiB"
             ],
             "scheduled_destination" : [
                "/backup/virtualmin1"
-            ],
-            "run_from" : [
-               "sched"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "final_status" : [
-               "OK"
             ],
             "incremental" : [
                "No"
             ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local"
-            ],
-            "final_nice_size" : [
-               "60.05 MiB"
-            ],
-            "final_size" : [
-               "62968041"
-            ]
-         },
-         "name" : "1650272418-999522-1:"
-      },
-      {
-         "values" : {
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "final_size" : [
-               "62967625"
-            ],
-            "final_nice_size" : [
-               "60.05 MiB"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
+            "started" : [
+               "09/Apr/2022 11:00"
             ],
             "encrypted" : [
                "No"
             ],
-            "started" : [
-               "09/Apr/2022 11:00"
+            "run_from" : [
+               "sched"
+            ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
             ],
             "destination" : [
                "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220409-1100"
             ],
-            "ended" : [
-               "09/Apr/2022 11:00"
-            ],
-            "incremental" : [
-               "No"
-            ],
-            "final_status" : [
-               "OK"
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
             "format" : [
                "One file per server"
             ],
-            "run_from" : [
-               "sched"
+            "final_size" : [
+               "62967625"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local"
+            ],
+            "final_status" : [
+               "OK"
             ]
          },
          "name" : "1649494830-87979-1:"
       },
       {
-         "name" : "1650877246-534355-1:",
          "values" : {
+            "run_from" : [
+               "sched"
+            ],
+            "ended" : [
+               "25/Apr/2022 11:00"
+            ],
             "final_nice_size" : [
                "60.05 MiB"
             ],
-            "failed_domains" : [
-               "Virtualminantonio.local"
+            "incremental" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "started" : [
+               "25/Apr/2022 11:00"
+            ],
+            "encrypted" : [
+               "No"
             ],
             "final_size" : [
                "62968614"
             ],
+            "failed_domains" : [
+               "Virtualminantonio.local"
+            ],
+            "final_status" : [
+               "OK"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220425-1100"
+            ],
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "format" : [
+               "One file per server"
+            ]
+         },
+         "name" : "1650877246-534355-1:"
+      },
+      {
+         "name" : "1652259602-875863-1:",
+         "values" : {
+            "final_status" : [
+               "Failed"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "format" : [
+               "One file per server"
             ],
             "compression" : [
                "tar.gz"
@@ -275,211 +326,117 @@
             "scheduled_backup_id" : [
                "1648541362259851"
             ],
+            "destination" : [
+               "/backup/virtualmin1/20220511-1100"
+            ],
             "run_from" : [
                "sched"
-            ],
-            "final_status" : [
-               "OK"
-            ],
-            "format" : [
-               "One file per server"
             ],
             "incremental" : [
                "No"
             ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "started" : [
+               "11/May/2022 11:00"
+            ],
             "encrypted" : [
                "No"
             ],
-            "started" : [
-               "25/Apr/2022 11:00"
-            ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220425-1100"
-            ],
             "ended" : [
-               "25/Apr/2022 11:00"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
+               "11/May/2022 11:00"
             ]
          }
       },
       {
          "values" : {
-            "encrypted" : [
-               "No"
-            ],
-            "destination" : [
-               "/backup/virtualmin1/20220511-1100"
-            ],
-            "started" : [
-               "11/May/2022 11:00"
-            ],
-            "ended" : [
-               "11/May/2022 11:00"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "final_status" : [
-               "Failed"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "incremental" : [
-               "No"
-            ],
-            "run_from" : [
-               "sched"
-            ],
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ]
-         },
-         "name" : "1652259602-875863-1:"
-      },
-      {
-         "values" : {
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "ended" : [
-               "17/Apr/2022 11:00"
+            "format" : [
+               "One file per server"
             ],
             "destination" : [
                "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220417-1100"
             ],
-            "started" : [
-               "17/Apr/2022 11:00"
-            ],
-            "incremental" : [
-               "No"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "final_status" : [
-               "OK"
-            ],
-            "run_from" : [
-               "sched"
-            ],
             "scheduled_backup_id" : [
                "1648541362259851"
             ],
             "compression" : [
                "tar.gz"
             ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            "final_status" : [
+               "OK"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local"
             ],
             "final_size" : [
                "62966053"
             ],
+            "encrypted" : [
+               "No"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "started" : [
+               "17/Apr/2022 11:00"
+            ],
+            "ended" : [
+               "17/Apr/2022 11:00"
+            ],
             "final_nice_size" : [
                "60.04 MiB"
             ],
-            "failed_domains" : [
-               "Virtualminantonio.local"
+            "run_from" : [
+               "sched"
             ]
          },
          "name" : "1650186041-898454-1:"
       },
       {
+         "name" : "1652272332-30783-1:",
          "values" : {
-            "format" : [
-               "One file per server"
-            ],
-            "final_status" : [
-               "Failed"
-            ],
-            "incremental" : [
-               "No"
-            ],
             "run_from" : [
                "cgi"
             ],
             "encrypted" : [
                "No"
             ],
-            "destination" : [
-               "/backup/virtualmin1/20220511-1432"
-            ],
-            "started" : [
-               "11/May/2022 14:32"
-            ],
-            "ended" : [
-               "11/May/2022 14:32"
-            ],
             "scheduled_destination" : [
                "/backup/virtualmin1"
-            ],
-            "run_by_user" : [
-               "root"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ]
-         },
-         "name" : "1652272332-30783-1:"
-      },
-      {
-         "name" : "1651395609-298982-1:",
-         "values" : {
-            "final_status" : [
-               "Failed"
-            ],
-            "format" : [
-               "One file per server"
             ],
             "incremental" : [
                "No"
             ],
-            "run_from" : [
-               "sched"
+            "started" : [
+               "11/May/2022 14:32"
             ],
             "ended" : [
-               "01/May/2022 11:00"
+               "11/May/2022 14:32"
             ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220501-1100"
+            "run_by_user" : [
+               "root"
             ],
-            "encrypted" : [
-               "No"
-            ],
-            "started" : [
-               "01/May/2022 11:00"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
+            "final_status" : [
+               "Failed"
             ],
             "failed_domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "destination" : [
+               "/backup/virtualmin1/20220511-1432"
             ],
             "compression" : [
                "tar.gz"
@@ -491,8 +448,52 @@
       },
       {
          "values" : {
+            "ended" : [
+               "01/May/2022 11:00"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "started" : [
+               "01/May/2022 11:00"
+            ],
+            "run_from" : [
+               "sched"
+            ],
             "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/%Y%m%d-%H%M"
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220501-1100"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "final_status" : [
+               "Failed"
+            ]
+         },
+         "name" : "1651395609-298982-1:"
+      },
+      {
+         "values" : {
+            "run_by_user" : [
+               "root"
             ],
             "ended" : [
                "25/Apr/2022 11:53"
@@ -500,17 +501,20 @@
             "started" : [
                "25/Apr/2022 11:53"
             ],
+            "incremental" : [
+               "No"
+            ],
             "encrypted" : [
                "No"
             ],
             "run_from" : [
                "cgi"
             ],
-            "incremental" : [
-               "No"
+            "compression" : [
+               "tar.gz"
             ],
-            "final_status" : [
-               "Failed"
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/%Y%m%d-%H%M"
             ],
             "format" : [
                "One file per server"
@@ -518,14 +522,11 @@
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
-            "compression" : [
-               "tar.gz"
-            ],
             "failed_domains" : [
                "Virtualminantonio.local"
             ],
-            "run_by_user" : [
-               "root"
+            "final_status" : [
+               "Failed"
             ]
          },
          "name" : "1650880389-540071-1:"
@@ -533,8 +534,26 @@
       {
          "name" : "1649581233-189920-1:",
          "values" : {
+            "run_from" : [
+               "sched"
+            ],
             "final_nice_size" : [
                "60.05 MiB"
+            ],
+            "ended" : [
+               "10/Apr/2022 11:00"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "started" : [
+               "10/Apr/2022 11:00"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "incremental" : [
+               "No"
             ],
             "failed_domains" : [
                "Virtualminantonio.local"
@@ -542,76 +561,33 @@
             "final_size" : [
                "62968659"
             ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "run_from" : [
-               "sched"
-            ],
-            "incremental" : [
-               "No"
-            ],
             "final_status" : [
                "OK"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "started" : [
-               "10/Apr/2022 11:00"
-            ],
-            "encrypted" : [
-               "No"
             ],
             "destination" : [
                "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220410-1100"
             ],
-            "ended" : [
-               "10/Apr/2022 11:00"
-            ]
-         }
-      },
-      {
-         "name" : "1650790842-419220-1:",
-         "values" : {
-            "encrypted" : [
-               "No"
+            "compression" : [
+               "tar.gz"
             ],
-            "started" : [
-               "24/Apr/2022 11:00"
-            ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220424-1100"
-            ],
-            "ended" : [
-               "24/Apr/2022 11:00"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "run_from" : [
-               "sched"
-            ],
-            "final_status" : [
-               "OK"
+            "scheduled_backup_id" : [
+               "1648541362259851"
             ],
             "format" : [
                "One file per server"
             ],
-            "incremental" : [
-               "No"
-            ],
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ]
+         }
+      },
+      {
+         "values" : {
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "format" : [
+               "One file per server"
             ],
             "compression" : [
                "tar.gz"
@@ -619,78 +595,111 @@
             "scheduled_backup_id" : [
                "1648541362259851"
             ],
-            "final_nice_size" : [
-               "60.05 MiB"
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220424-1100"
+            ],
+            "final_status" : [
+               "OK"
+            ],
+            "final_size" : [
+               "62967297"
             ],
             "failed_domains" : [
                "Virtualminantonio.local"
             ],
-            "final_size" : [
-               "62967297"
+            "incremental" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "started" : [
+               "24/Apr/2022 11:00"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "ended" : [
+               "24/Apr/2022 11:00"
+            ],
+            "final_nice_size" : [
+               "60.05 MiB"
+            ],
+            "run_from" : [
+               "sched"
+            ]
+         },
+         "name" : "1650790842-419220-1:"
+      },
+      {
+         "name" : "1652340515-70972-1:",
+         "values" : {
+            "destination" : [
+               "/backup/virtualmin1"
+            ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "domains" : [
+               "drupalantonio.local"
+            ],
+            "failed_domains" : [
+               "drupalantonio.local"
+            ],
+            "final_status" : [
+               "Failed"
+            ],
+            "run_by_user" : [
+               "root"
+            ],
+            "ended" : [
+               "12/May/2022 09:28"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "started" : [
+               "12/May/2022 09:28"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "run_from" : [
+               "cgi"
             ]
          }
       },
       {
          "values" : {
-            "run_by_user" : [
-               "root"
-            ],
-            "failed_domains" : [
-               "drupalantonio.local"
-            ],
-            "domains" : [
-               "drupalantonio.local"
-            ],
             "compression" : [
                "tar.gz"
-            ],
-            "incremental" : [
-               "No"
-            ],
-            "final_status" : [
-               "Failed"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "run_from" : [
-               "cgi"
-            ],
-            "started" : [
-               "12/May/2022 09:28"
-            ],
-            "ended" : [
-               "12/May/2022 09:28"
-            ],
-            "destination" : [
-               "/backup/virtualmin1"
-            ],
-            "encrypted" : [
-               "No"
-            ]
-         },
-         "name" : "1652340515-70972-1:"
-      },
-      {
-         "name" : "1648541649-260610-1:",
-         "values" : {
-            "final_status" : [
-               "OK"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "incremental" : [
-               "No"
-            ],
-            "run_from" : [
-               "cgi"
             ],
             "destination" : [
                "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220329-1013"
             ],
-            "encrypted" : [
-               "No"
+            "format" : [
+               "One file per server"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "final_size" : [
+               "62986342"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local"
+            ],
+            "final_status" : [
+               "OK"
+            ],
+            "final_nice_size" : [
+               "60.06 MiB"
+            ],
+            "run_by_user" : [
+               "root"
             ],
             "ended" : [
                "29/Mar/2022 10:14"
@@ -698,48 +707,55 @@
             "started" : [
                "29/Mar/2022 10:13"
             ],
-            "final_size" : [
-               "62986342"
+            "incremental" : [
+               "No"
             ],
-            "run_by_user" : [
-               "root"
+            "encrypted" : [
+               "No"
             ],
-            "failed_domains" : [
-               "Virtualminantonio.local"
-            ],
-            "final_nice_size" : [
-               "60.06 MiB"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "compression" : [
-               "tar.gz"
+            "run_from" : [
+               "cgi"
             ]
-         }
+         },
+         "name" : "1648541649-260610-1:"
       },
       {
          "values" : {
-            "compression" : [
-               "tar.gz"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
+            "final_status" : [
+               "OK"
             ],
             "failed_domains" : [
                "Virtualminantonio.local"
-            ],
-            "final_nice_size" : [
-               "60.05 MiB"
             ],
             "final_size" : [
                "62968591"
             ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220426-1100"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "run_from" : [
+               "sched"
+            ],
             "encrypted" : [
                "No"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
             ],
             "started" : [
                "26/Apr/2022 11:00"
@@ -747,209 +763,116 @@
             "ended" : [
                "26/Apr/2022 11:00"
             ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220426-1100"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "run_from" : [
-               "sched"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "final_status" : [
-               "OK"
-            ],
-            "incremental" : [
-               "No"
+            "final_nice_size" : [
+               "60.05 MiB"
             ]
          },
          "name" : "1650963621-638775-1:"
       },
       {
-         "name" : "1650704431-317968-1:",
          "values" : {
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "started" : [
-               "23/Apr/2022 11:00"
-            ],
-            "ended" : [
-               "23/Apr/2022 11:00"
-            ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220423-1100"
-            ],
-            "incremental" : [
-               "No"
-            ],
             "final_status" : [
                "OK"
             ],
-            "format" : [
-               "One file per server"
-            ],
-            "run_from" : [
-               "sched"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "compression" : [
-               "tar.gz"
+            "failed_domains" : [
+               "Virtualminantonio.local"
             ],
             "final_size" : [
                "62968918"
             ],
-            "failed_domains" : [
-               "Virtualminantonio.local"
+            "format" : [
+               "One file per server"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220423-1100"
+            ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "run_from" : [
+               "sched"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "started" : [
+               "23/Apr/2022 11:00"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "incremental" : [
+               "No"
             ],
             "final_nice_size" : [
                "60.05 MiB"
+            ],
+            "ended" : [
+               "23/Apr/2022 11:00"
             ]
-         }
+         },
+         "name" : "1650704431-317968-1:"
       },
       {
          "name" : "1649754024-393602-1:",
          "values" : {
-            "final_size" : [
-               "62967044"
-            ],
-            "final_nice_size" : [
-               "60.05 MiB"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ],
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "incremental" : [
-               "No"
-            ],
-            "final_status" : [
-               "OK"
-            ],
             "format" : [
                "One file per server"
-            ],
-            "run_from" : [
-               "sched"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
             ],
             "destination" : [
                "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220412-1100"
             ],
-            "encrypted" : [
-               "No"
-            ],
-            "started" : [
-               "12/Apr/2022 11:00"
-            ],
-            "ended" : [
-               "12/Apr/2022 11:00"
-            ]
-         }
-      },
-      {
-         "name" : "1650358832-1117904-1:",
-         "values" : {
-            "encrypted" : [
-               "No"
-            ],
-            "started" : [
-               "19/Apr/2022 11:00"
-            ],
-            "ended" : [
-               "19/Apr/2022 11:00"
-            ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220419-1100"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "final_status" : [
-               "OK"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "incremental" : [
-               "No"
-            ],
-            "run_from" : [
-               "sched"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
             "compression" : [
                "tar.gz"
             ],
             "scheduled_backup_id" : [
                "1648541362259851"
             ],
+            "final_status" : [
+               "OK"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local"
+            ],
             "final_size" : [
-               "62968789"
+               "62967044"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "started" : [
+               "12/Apr/2022 11:00"
+            ],
+            "ended" : [
+               "12/Apr/2022 11:00"
             ],
             "final_nice_size" : [
                "60.05 MiB"
             ],
-            "failed_domains" : [
-               "Virtualminantonio.local"
+            "run_from" : [
+               "sched"
             ]
          }
       },
       {
-         "name" : "1651222810-98672-1:",
          "values" : {
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220429-1100"
-            ],
-            "started" : [
-               "29/Apr/2022 11:00"
-            ],
-            "ended" : [
-               "29/Apr/2022 11:00"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "incremental" : [
-               "No"
-            ],
-            "final_status" : [
-               "Failed"
-            ],
             "format" : [
                "One file per server"
-            ],
-            "run_from" : [
-               "sched"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
             ],
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
@@ -957,119 +880,190 @@
             "compression" : [
                "tar.gz"
             ],
-            "failed_domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ]
-         }
-      },
-      {
-         "values" : {
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "ended" : [
-               "04/Apr/2022 11:00"
-            ],
-            "started" : [
-               "04/Apr/2022 11:00"
+            "scheduled_backup_id" : [
+               "1648541362259851"
             ],
             "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220404-1100"
-            ],
-            "run_from" : [
-               "sched"
-            ],
-            "incremental" : [
-               "No"
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220419-1100"
             ],
             "final_status" : [
                "OK"
             ],
-            "format" : [
-               "One file per server"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "compression" : [
-               "tar.gz"
+            "final_size" : [
+               "62968789"
             ],
             "failed_domains" : [
                "Virtualminantonio.local"
             ],
+            "started" : [
+               "19/Apr/2022 11:00"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "encrypted" : [
+               "No"
+            ],
             "final_nice_size" : [
-               "60.04 MiB"
+               "60.05 MiB"
+            ],
+            "ended" : [
+               "19/Apr/2022 11:00"
+            ],
+            "run_from" : [
+               "sched"
+            ]
+         },
+         "name" : "1650358832-1117904-1:"
+      },
+      {
+         "name" : "1651222810-98672-1:",
+         "values" : {
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220429-1100"
+            ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "final_status" : [
+               "Failed"
+            ],
+            "ended" : [
+               "29/Apr/2022 11:00"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "started" : [
+               "29/Apr/2022 11:00"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "run_from" : [
+               "sched"
+            ]
+         }
+      },
+      {
+         "values" : {
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220404-1100"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "final_status" : [
+               "OK"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local"
             ],
             "final_size" : [
                "62958839"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "started" : [
+               "04/Apr/2022 11:00"
+            ],
+            "ended" : [
+               "04/Apr/2022 11:00"
+            ],
+            "final_nice_size" : [
+               "60.04 MiB"
+            ],
+            "run_from" : [
+               "sched"
             ]
          },
          "name" : "1649062824-883436-1:"
       },
       {
          "values" : {
+            "format" : [
+               "One file per server"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
             "scheduled_backup_id" : [
                "1648541362259851"
             ],
             "compression" : [
                "tar.gz"
             ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220507-1100"
+            ],
+            "final_status" : [
+               "Failed"
             ],
             "failed_domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
             "started" : [
                "07/May/2022 11:00"
-            ],
-            "ended" : [
-               "07/May/2022 11:00"
-            ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220507-1100"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "run_from" : [
-               "sched"
             ],
             "incremental" : [
                "No"
             ],
-            "format" : [
-               "One file per server"
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
             ],
-            "final_status" : [
-               "Failed"
+            "encrypted" : [
+               "No"
+            ],
+            "ended" : [
+               "07/May/2022 11:00"
+            ],
+            "run_from" : [
+               "sched"
             ]
          },
          "name" : "1651914009-705313-1:"
       },
       {
-         "name" : "1650885910-547593-1:",
          "values" : {
-            "run_from" : [
-               "cgi"
+            "encrypted" : [
+               "No"
             ],
             "incremental" : [
                "No"
-            ],
-            "final_status" : [
-               "Failed"
-            ],
-            "format" : [
-               "One file per server"
             ],
             "started" : [
                "25/Apr/2022 13:25"
@@ -1077,171 +1071,178 @@
             "ended" : [
                "25/Apr/2022 13:25"
             ],
-            "encrypted" : [
-               "No"
+            "run_by_user" : [
+               "root"
+            ],
+            "run_from" : [
+               "cgi"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "format" : [
+               "One file per server"
             ],
             "destination" : [
                "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/%Y%m%d-%H%M"
             ],
-            "failed_domains" : [
-               "Virtualminantonio.local"
-            ],
-            "run_by_user" : [
-               "root"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
             "compression" : [
                "tar.gz"
-            ]
-         }
-      },
-      {
-         "values" : {
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220509-1100"
-            ],
-            "ended" : [
-               "09/May/2022 11:00"
-            ],
-            "started" : [
-               "09/May/2022 11:00"
-            ],
-            "run_from" : [
-               "sched"
-            ],
-            "incremental" : [
-               "No"
             ],
             "final_status" : [
                "Failed"
             ],
-            "format" : [
-               "One file per server"
+            "failed_domains" : [
+               "Virtualminantonio.local"
             ]
          },
-         "name" : "1652086810-788688-1:"
+         "name" : "1650885910-547593-1:"
       },
       {
+         "name" : "1652086810-788688-1:",
          "values" : {
-            "compression" : [
-               "tar.gz"
-            ],
-            "domains" : [
+            "failed_domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "final_status" : [
+               "Failed"
             ],
             "scheduled_backup_id" : [
                "1648541362259851"
             ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220509-1100"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "run_from" : [
+               "sched"
+            ],
+            "ended" : [
+               "09/May/2022 11:00"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "started" : [
+               "09/May/2022 11:00"
+            ],
+            "encrypted" : [
+               "No"
+            ]
+         }
+      },
+      {
+         "name" : "1648623172-359312-1:",
+         "values" : {
+            "incremental" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "started" : [
+               "30/Mar/2022 08:52"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "ended" : [
+               "30/Mar/2022 08:52"
+            ],
             "run_by_user" : [
                "root"
+            ],
+            "final_nice_size" : [
+               "60.06 MiB"
+            ],
+            "run_from" : [
+               "cgi"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220330-0852"
+            ],
+            "final_status" : [
+               "OK"
             ],
             "final_size" : [
                "62985209"
             ],
             "failed_domains" : [
                "Virtualminantonio.local"
-            ],
-            "final_nice_size" : [
-               "60.06 MiB"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220330-0852"
-            ],
-            "started" : [
-               "30/Mar/2022 08:52"
-            ],
-            "ended" : [
-               "30/Mar/2022 08:52"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "final_status" : [
-               "OK"
-            ],
-            "incremental" : [
-               "No"
-            ],
-            "run_from" : [
-               "cgi"
             ]
-         },
-         "name" : "1648623172-359312-1:"
+         }
       },
       {
          "name" : "1651568409-499513-1:",
          "values" : {
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220503-1100"
-            ],
-            "started" : [
-               "03/May/2022 11:00"
-            ],
-            "ended" : [
-               "03/May/2022 11:00"
+            "run_from" : [
+               "sched"
             ],
             "encrypted" : [
                "No"
             ],
-            "run_from" : [
-               "sched"
+            "started" : [
+               "03/May/2022 11:00"
             ],
             "incremental" : [
                "No"
             ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "ended" : [
+               "03/May/2022 11:00"
+            ],
             "final_status" : [
                "Failed"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
             "format" : [
                "One file per server"
             ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ],
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220503-1100"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
             "compression" : [
                "tar.gz"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ]
          }
       },
       {
          "values" : {
-            "final_nice_size" : [
-               "60.05 MiB"
+            "final_status" : [
+               "OK"
             ],
             "failed_domains" : [
                "Virtualminantonio.local"
@@ -1249,49 +1250,49 @@
             "final_size" : [
                "62967885"
             ],
-            "compression" : [
-               "tar.gz"
-            ],
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ],
-            "run_from" : [
-               "sched"
             ],
             "format" : [
                "One file per server"
             ],
-            "final_status" : [
-               "OK"
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220416-1100"
             ],
-            "incremental" : [
-               "No"
+            "scheduled_backup_id" : [
+               "1648541362259851"
             ],
-            "started" : [
-               "16/Apr/2022 11:00"
+            "compression" : [
+               "tar.gz"
+            ],
+            "run_from" : [
+               "sched"
             ],
             "encrypted" : [
                "No"
             ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220416-1100"
+            "incremental" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "started" : [
+               "16/Apr/2022 11:00"
             ],
             "ended" : [
                "16/Apr/2022 11:00"
             ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
+            "final_nice_size" : [
+               "60.05 MiB"
             ]
          },
          "name" : "1650099625-797062-1:"
       },
       {
          "values" : {
-            "scheduled_backup_id" : [
-               "1648541362259851"
+            "format" : [
+               "One file per server"
             ],
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
@@ -1299,32 +1300,32 @@
             "compression" : [
                "tar.gz"
             ],
-            "failed_domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
+            "scheduled_backup_id" : [
+               "1648541362259851"
             ],
             "destination" : [
                "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220506-1100"
             ],
-            "ended" : [
-               "06/May/2022 11:00"
+            "final_status" : [
+               "Failed"
             ],
-            "encrypted" : [
-               "No"
+            "failed_domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
             "started" : [
                "06/May/2022 11:00"
             ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
             "incremental" : [
                "No"
             ],
-            "final_status" : [
-               "Failed"
+            "encrypted" : [
+               "No"
             ],
-            "format" : [
-               "One file per server"
+            "ended" : [
+               "06/May/2022 11:00"
             ],
             "run_from" : [
                "sched"
@@ -1333,19 +1334,39 @@
          "name" : "1651827611-663274-1:"
       },
       {
-         "name" : "1650013226-696667-1:",
          "values" : {
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
             "destination" : [
                "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220415-1100"
             ],
-            "encrypted" : [
-               "No"
+            "compression" : [
+               "tar.gz"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local"
+            ],
+            "final_size" : [
+               "62967129"
+            ],
+            "final_status" : [
+               "OK"
+            ],
+            "final_nice_size" : [
+               "60.05 MiB"
             ],
             "ended" : [
                "15/Apr/2022 11:00"
+            ],
+            "encrypted" : [
+               "No"
             ],
             "started" : [
                "15/Apr/2022 11:00"
@@ -1353,70 +1374,25 @@
             "incremental" : [
                "No"
             ],
-            "format" : [
-               "One file per server"
-            ],
-            "final_status" : [
-               "OK"
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
             ],
             "run_from" : [
                "sched"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "final_size" : [
-               "62967129"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local"
-            ],
-            "final_nice_size" : [
-               "60.05 MiB"
             ]
-         }
+         },
+         "name" : "1650013226-696667-1:"
       },
       {
-         "name" : "1652346083-74648-1:",
          "values" : {
-            "final_size" : [
-               "62169831"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local drupalantonio.local wordpressantonio2.local"
-            ],
-            "final_nice_size" : [
-               "59.28 MiB"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "compression" : [
-               "tar.gz"
-            ],
             "incremental" : [
                "No"
             ],
-            "final_status" : [
-               "OK"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "run_from" : [
-               "sched"
-            ],
             "scheduled_destination" : [
                "/backup/virtualmin1"
+            ],
+            "started" : [
+               "12/May/2022 11:00"
             ],
             "encrypted" : [
                "No"
@@ -1424,15 +1400,41 @@
             "ended" : [
                "12/May/2022 11:01"
             ],
-            "started" : [
-               "12/May/2022 11:00"
+            "final_nice_size" : [
+               "59.28 MiB"
+            ],
+            "run_from" : [
+               "sched"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "compression" : [
+               "tar.gz"
             ],
             "destination" : [
                "/backup/virtualmin1"
+            ],
+            "final_status" : [
+               "OK"
+            ],
+            "final_size" : [
+               "62169831"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local drupalantonio.local wordpressantonio2.local"
             ]
-         }
+         },
+         "name" : "1652346083-74648-1:"
       },
       {
+         "name" : "1651050029-742733-1:",
          "values" : {
             "final_size" : [
                "62968792"
@@ -1440,150 +1442,112 @@
             "failed_domains" : [
                "Virtualminantonio.local"
             ],
-            "final_nice_size" : [
-               "60.05 MiB"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            "final_status" : [
+               "OK"
             ],
             "compression" : [
                "tar.gz"
             ],
-            "incremental" : [
-               "No"
+            "scheduled_backup_id" : [
+               "1648541362259851"
             ],
-            "final_status" : [
-               "OK"
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220427-1100"
             ],
             "format" : [
                "One file per server"
             ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
             "run_from" : [
                "sched"
             ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "started" : [
-               "27/Apr/2022 11:00"
-            ],
-            "encrypted" : [
-               "No"
+            "final_nice_size" : [
+               "60.05 MiB"
             ],
             "ended" : [
                "27/Apr/2022 11:00"
             ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220427-1100"
-            ]
-         },
-         "name" : "1651050029-742733-1:"
-      },
-      {
-         "values" : {
+            "started" : [
+               "27/Apr/2022 11:00"
+            ],
             "scheduled_destination" : [
                "/backup/virtualmin1"
             ],
+            "incremental" : [
+               "No"
+            ],
             "encrypted" : [
                "No"
+            ]
+         }
+      },
+      {
+         "values" : {
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "format" : [
+               "One file per server"
             ],
             "destination" : [
                "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220407-1100"
             ],
-            "ended" : [
-               "07/Apr/2022 11:00"
-            ],
-            "started" : [
-               "07/Apr/2022 11:00"
-            ],
-            "incremental" : [
-               "No"
-            ],
-            "final_status" : [
-               "OK"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "run_from" : [
-               "sched"
-            ],
             "scheduled_backup_id" : [
                "1648541362259851"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
             "compression" : [
                "tar.gz"
             ],
+            "final_status" : [
+               "OK"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local"
+            ],
             "final_size" : [
                "62963496"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "started" : [
+               "07/Apr/2022 11:00"
+            ],
+            "ended" : [
+               "07/Apr/2022 11:00"
             ],
             "final_nice_size" : [
                "60.04 MiB"
             ],
-            "failed_domains" : [
-               "Virtualminantonio.local"
+            "run_from" : [
+               "sched"
             ]
          },
          "name" : "1649322030-33066-1:"
       },
       {
+         "name" : "1649149227-985476-1:",
          "values" : {
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220405-1100"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "ended" : [
-               "05/Apr/2022 11:00"
-            ],
-            "started" : [
-               "05/Apr/2022 11:00"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "run_from" : [
-               "sched"
-            ],
-            "format" : [
-               "One file per server"
-            ],
             "final_status" : [
                "OK"
             ],
-            "incremental" : [
-               "No"
-            ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
+            "final_size" : [
+               "62959783"
             ],
             "failed_domains" : [
                "Virtualminantonio.local"
             ],
-            "final_nice_size" : [
-               "60.04 MiB"
+            "format" : [
+               "One file per server"
             ],
-            "final_size" : [
-               "62959783"
-            ]
-         },
-         "name" : "1649149227-985476-1:"
-      },
-      {
-         "values" : {
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
@@ -1592,6 +1556,56 @@
             ],
             "scheduled_backup_id" : [
                "1648541362259851"
+            ],
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220405-1100"
+            ],
+            "run_from" : [
+               "sched"
+            ],
+            "started" : [
+               "05/Apr/2022 11:00"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "final_nice_size" : [
+               "60.04 MiB"
+            ],
+            "ended" : [
+               "05/Apr/2022 11:00"
+            ]
+         }
+      },
+      {
+         "name" : "1649408424-162876-1:",
+         "values" : {
+            "run_from" : [
+               "sched"
+            ],
+            "final_nice_size" : [
+               "60.05 MiB"
+            ],
+            "ended" : [
+               "08/Apr/2022 11:00"
+            ],
+            "started" : [
+               "08/Apr/2022 11:00"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "encrypted" : [
+               "No"
             ],
             "final_size" : [
                "62968431"
@@ -1599,139 +1613,138 @@
             "failed_domains" : [
                "Virtualminantonio.local"
             ],
-            "final_nice_size" : [
-               "60.05 MiB"
+            "final_status" : [
+               "OK"
             ],
-            "started" : [
-               "08/Apr/2022 11:00"
+            "scheduled_backup_id" : [
+               "1648541362259851"
             ],
-            "encrypted" : [
-               "No"
+            "compression" : [
+               "tar.gz"
             ],
             "destination" : [
                "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220408-1100"
             ],
-            "ended" : [
-               "08/Apr/2022 11:00"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "final_status" : [
-               "OK"
-            ],
             "format" : [
                "One file per server"
             ],
-            "incremental" : [
-               "No"
-            ],
-            "run_from" : [
-               "sched"
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ]
-         },
-         "name" : "1649408424-162876-1:"
+         }
       },
       {
          "name" : "1652432489-44437-1:",
          "values" : {
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "final_nice_size" : [
-               "59.29 MiB"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local drupalantonio.local wordpressantonio2.local"
-            ],
-            "final_size" : [
-               "62171281"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "ended" : [
-               "13/May/2022 11:01"
-            ],
-            "destination" : [
-               "/backup/virtualmin1"
+            "run_from" : [
+               "sched"
             ],
             "started" : [
                "13/May/2022 11:00"
             ],
-            "run_from" : [
-               "sched"
-            ],
             "incremental" : [
                "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "final_nice_size" : [
+               "59.29 MiB"
+            ],
+            "ended" : [
+               "13/May/2022 11:01"
+            ],
+            "final_status" : [
+               "OK"
+            ],
+            "final_size" : [
+               "62171281"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local drupalantonio.local wordpressantonio2.local"
             ],
             "format" : [
                "One file per server"
             ],
-            "final_status" : [
-               "OK"
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "destination" : [
+               "/backup/virtualmin1"
             ]
          }
       },
       {
-         "name" : "1652272438-31306-1:",
          "values" : {
             "final_status" : [
                "Failed"
             ],
+            "failed_domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
             "format" : [
                "One file per server"
             ],
-            "incremental" : [
-               "No"
+            "scheduled_backup_id" : [
+               "1648541362259851"
             ],
-            "run_from" : [
-               "cgi"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "started" : [
-               "11/May/2022 14:33"
-            ],
-            "ended" : [
-               "11/May/2022 14:33"
+            "compression" : [
+               "tar.gz"
             ],
             "destination" : [
                "/backup/virtualmin1/20220511-1433"
             ],
+            "run_from" : [
+               "cgi"
+            ],
+            "incremental" : [
+               "No"
+            ],
             "scheduled_destination" : [
                "/backup/virtualmin1"
             ],
+            "started" : [
+               "11/May/2022 14:33"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "ended" : [
+               "11/May/2022 14:33"
+            ],
             "run_by_user" : [
                "root"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
             ]
-         }
+         },
+         "name" : "1652272438-31306-1:"
       },
       {
          "name" : "1649235641-1106302-1:",
          "values" : {
+            "failed_domains" : [
+               "Virtualminantonio.local"
+            ],
+            "final_size" : [
+               "62959862"
+            ],
+            "final_status" : [
+               "OK"
+            ],
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220406-1100"
+            ],
             "scheduled_backup_id" : [
                "1648541362259851"
             ],
@@ -1741,72 +1754,57 @@
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
-            "failed_domains" : [
-               "Virtualminantonio.local"
-            ],
-            "final_nice_size" : [
-               "60.04 MiB"
-            ],
-            "final_size" : [
-               "62959862"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "started" : [
-               "06/Apr/2022 11:00"
-            ],
-            "ended" : [
-               "06/Apr/2022 11:00"
-            ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220406-1100"
+            "format" : [
+               "One file per server"
             ],
             "run_from" : [
                "sched"
             ],
+            "ended" : [
+               "06/Apr/2022 11:00"
+            ],
+            "final_nice_size" : [
+               "60.04 MiB"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
             "incremental" : [
                "No"
             ],
-            "format" : [
-               "One file per server"
-            ],
-            "final_status" : [
-               "OK"
+            "started" : [
+               "06/Apr/2022 11:00"
             ]
          }
       },
       {
          "values" : {
-            "incremental" : [
-               "No"
-            ],
-            "final_status" : [
-               "OK"
-            ],
-            "format" : [
-               "One file per server"
-            ],
             "run_from" : [
                "sched"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220420-1100"
-            ],
-            "encrypted" : [
-               "No"
             ],
             "started" : [
                "20/Apr/2022 11:00"
             ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "final_nice_size" : [
+               "60.05 MiB"
+            ],
             "ended" : [
                "20/Apr/2022 11:00"
+            ],
+            "final_status" : [
+               "OK"
             ],
             "final_size" : [
                "62969182"
@@ -1814,73 +1812,39 @@
             "failed_domains" : [
                "Virtualminantonio.local"
             ],
-            "final_nice_size" : [
-               "60.05 MiB"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
+            "format" : [
+               "One file per server"
             ],
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
             "compression" : [
                "tar.gz"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220420-1100"
             ]
          },
          "name" : "1650445219-1221183-1:"
       },
       {
+         "name" : "1652691703-209413-1:",
          "values" : {
-            "started" : [
-               "16/May/2022 11:00"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "destination" : [
-               "/backup/virtualmin1"
-            ],
-            "ended" : [
-               "16/May/2022 11:01"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "run_from" : [
-               "sched"
-            ],
             "final_status" : [
                "OK"
             ],
-            "format" : [
-               "One file per server"
-            ],
-            "incremental" : [
-               "No"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
+            "final_size" : [
+               "62168891"
             ],
             "failed_domains" : [
                "Virtualminantonio.local drupalantonio.local wordpressantonio2.local"
             ],
-            "final_nice_size" : [
-               "59.28 MiB"
+            "format" : [
+               "One file per server"
             ],
-            "final_size" : [
-               "62168891"
-            ]
-         },
-         "name" : "1652691703-209413-1:"
-      },
-      {
-         "values" : {
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
@@ -1890,117 +1854,113 @@
             "scheduled_backup_id" : [
                "1648541362259851"
             ],
-            "failed_domains" : [
-               "Virtualminantonio.local"
+            "destination" : [
+               "/backup/virtualmin1"
+            ],
+            "run_from" : [
+               "sched"
+            ],
+            "started" : [
+               "16/May/2022 11:00"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "final_nice_size" : [
+               "59.28 MiB"
+            ],
+            "ended" : [
+               "16/May/2022 11:01"
+            ]
+         }
+      },
+      {
+         "name" : "1650531627-108217-1:",
+         "values" : {
+            "run_from" : [
+               "sched"
+            ],
+            "ended" : [
+               "21/Apr/2022 11:00"
             ],
             "final_nice_size" : [
                "60.05 MiB"
             ],
-            "final_size" : [
-               "62969117"
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
             ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220421-1100"
-            ],
-            "encrypted" : [
+            "incremental" : [
                "No"
             ],
             "started" : [
                "21/Apr/2022 11:00"
             ],
-            "ended" : [
-               "21/Apr/2022 11:00"
+            "encrypted" : [
+               "No"
             ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
+            "final_size" : [
+               "62969117"
             ],
-            "run_from" : [
-               "sched"
+            "failed_domains" : [
+               "Virtualminantonio.local"
             ],
             "final_status" : [
                "OK"
             ],
-            "format" : [
-               "One file per server"
+            "scheduled_backup_id" : [
+               "1648541362259851"
             ],
-            "incremental" : [
-               "No"
-            ]
-         },
-         "name" : "1650531627-108217-1:"
-      },
-      {
-         "name" : "1652000410-747127-1:",
-         "values" : {
             "compression" : [
                "tar.gz"
+            ],
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220421-1100"
             ],
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220508-1100"
-            ],
-            "started" : [
-               "08/May/2022 11:00"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "ended" : [
-               "08/May/2022 11:00"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "run_from" : [
-               "sched"
-            ],
             "format" : [
                "One file per server"
-            ],
-            "final_status" : [
-               "Failed"
-            ],
-            "incremental" : [
-               "No"
             ]
          }
       },
       {
          "values" : {
+            "run_from" : [
+               "sched"
+            ],
             "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "ended" : [
-               "14/May/2022 11:01"
-            ],
-            "started" : [
-               "14/May/2022 11:00"
-            ],
-            "destination" : [
                "/backup/virtualmin1"
             ],
             "incremental" : [
                "No"
             ],
-            "format" : [
-               "One file per server"
+            "started" : [
+               "08/May/2022 11:00"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "ended" : [
+               "08/May/2022 11:00"
             ],
             "final_status" : [
-               "OK"
+               "Failed"
             ],
-            "run_from" : [
-               "sched"
+            "failed_domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "format" : [
+               "One file per server"
             ],
             "scheduled_backup_id" : [
                "1648541362259851"
@@ -2008,44 +1968,96 @@
             "compression" : [
                "tar.gz"
             ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "final_size" : [
-               "62171213"
-            ],
-            "final_nice_size" : [
-               "59.29 MiB"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local drupalantonio.local wordpressantonio2.local"
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220508-1100"
             ]
          },
-         "name" : "1652518886-100055-1:"
+         "name" : "1652000410-747127-1:"
       },
       {
-         "name" : "1652605287-154173-1:",
+         "name" : "1652518886-100055-1:",
          "values" : {
-            "final_status" : [
-               "OK"
-            ],
             "format" : [
                "One file per server"
             ],
-            "incremental" : [
-               "No"
-            ],
-            "run_from" : [
-               "sched"
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
             "destination" : [
                "/backup/virtualmin1"
             ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "final_status" : [
+               "OK"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local drupalantonio.local wordpressantonio2.local"
+            ],
+            "final_size" : [
+               "62171213"
+            ],
             "encrypted" : [
                "No"
             ],
+            "started" : [
+               "14/May/2022 11:00"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "final_nice_size" : [
+               "59.29 MiB"
+            ],
+            "ended" : [
+               "14/May/2022 11:01"
+            ],
+            "run_from" : [
+               "sched"
+            ]
+         }
+      },
+      {
+         "values" : {
+            "destination" : [
+               "/backup/virtualmin1"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local drupalantonio.local wordpressantonio2.local"
+            ],
+            "final_size" : [
+               "62169557"
+            ],
+            "final_status" : [
+               "OK"
+            ],
+            "final_nice_size" : [
+               "59.28 MiB"
+            ],
             "ended" : [
                "15/May/2022 11:01"
+            ],
+            "encrypted" : [
+               "No"
             ],
             "started" : [
                "15/May/2022 11:00"
@@ -2053,213 +2065,202 @@
             "scheduled_destination" : [
                "/backup/virtualmin1"
             ],
-            "final_size" : [
-               "62169557"
-            ],
-            "final_nice_size" : [
-               "59.28 MiB"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local drupalantonio.local wordpressantonio2.local"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ]
-         }
-      },
-      {
-         "values" : {
-            "failed_domains" : [
-               "Virtualminantonio.local"
-            ],
-            "final_nice_size" : [
-               "60.04 MiB"
-            ],
-            "final_size" : [
-               "62959048"
-            ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
+            "incremental" : [
+               "No"
             ],
             "run_from" : [
                "sched"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "final_status" : [
-               "OK"
-            ],
-            "incremental" : [
-               "No"
+            ]
+         },
+         "name" : "1652605287-154173-1:"
+      },
+      {
+         "values" : {
+            "run_from" : [
+               "sched"
             ],
             "encrypted" : [
                "No"
             ],
-            "ended" : [
-               "03/Apr/2022 11:00"
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
             ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220403-1100"
+            "incremental" : [
+               "No"
             ],
             "started" : [
                "03/Apr/2022 11:00"
             ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
+            "ended" : [
+               "03/Apr/2022 11:00"
+            ],
+            "final_nice_size" : [
+               "60.04 MiB"
+            ],
+            "final_status" : [
+               "OK"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local"
+            ],
+            "final_size" : [
+               "62959048"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220403-1100"
+            ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
             ]
          },
          "name" : "1648976429-781514-1:"
       },
       {
          "values" : {
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "started" : [
-               "13/Apr/2022 11:00"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220413-1100"
-            ],
-            "ended" : [
-               "13/Apr/2022 11:00"
-            ],
-            "run_from" : [
-               "sched"
-            ],
-            "incremental" : [
-               "No"
-            ],
             "final_status" : [
                "OK"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "compression" : [
-               "tar.gz"
             ],
             "failed_domains" : [
                "Virtualminantonio.local"
             ],
+            "final_size" : [
+               "62966622"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220413-1100"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "run_from" : [
+               "sched"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "started" : [
+               "13/Apr/2022 11:00"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
             "final_nice_size" : [
                "60.04 MiB"
             ],
-            "final_size" : [
-               "62966622"
+            "ended" : [
+               "13/Apr/2022 11:00"
             ]
          },
          "name" : "1649840423-495569-1:"
       },
       {
+         "name" : "1651309211-199117-1:",
          "values" : {
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "started" : [
-               "30/Apr/2022 11:00"
-            ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220430-1100"
+            "run_from" : [
+               "sched"
             ],
             "ended" : [
                "30/Apr/2022 11:00"
             ],
-            "encrypted" : [
-               "No"
+            "started" : [
+               "30/Apr/2022 11:00"
             ],
             "incremental" : [
                "No"
             ],
-            "format" : [
-               "One file per server"
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
             "final_status" : [
                "Failed"
             ],
-            "run_from" : [
-               "sched"
+            "compression" : [
+               "tar.gz"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220430-1100"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ]
-         },
-         "name" : "1651309211-199117-1:"
+         }
       },
       {
          "values" : {
-            "scheduled_backup_id" : [
-               "1648541362259851"
+            "format" : [
+               "One file per server"
             ],
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "final_size" : [
-               "62967485"
-            ],
-            "final_nice_size" : [
-               "60.05 MiB"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "encrypted" : [
-               "No"
-            ],
             "destination" : [
                "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220414-1100"
             ],
-            "ended" : [
-               "14/Apr/2022 11:00"
+            "compression" : [
+               "tar.gz"
             ],
-            "started" : [
-               "14/Apr/2022 11:00"
-            ],
-            "incremental" : [
-               "No"
+            "scheduled_backup_id" : [
+               "1648541362259851"
             ],
             "final_status" : [
                "OK"
             ],
-            "format" : [
-               "One file per server"
+            "failed_domains" : [
+               "Virtualminantonio.local"
+            ],
+            "final_size" : [
+               "62967485"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "started" : [
+               "14/Apr/2022 11:00"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "final_nice_size" : [
+               "60.05 MiB"
+            ],
+            "ended" : [
+               "14/Apr/2022 11:00"
             ],
             "run_from" : [
                "sched"
@@ -2270,8 +2271,17 @@
       {
          "name" : "1652272890-33510-1:",
          "values" : {
-            "scheduled_backup_id" : [
-               "1648541362259851"
+            "final_status" : [
+               "OK"
+            ],
+            "final_size" : [
+               "62166985"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local drupalantonio.local wordpressantonio2.local"
+            ],
+            "format" : [
+               "One file per server"
             ],
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
@@ -2279,29 +2289,8 @@
             "compression" : [
                "tar.gz"
             ],
-            "failed_domains" : [
-               "Virtualminantonio.local drupalantonio.local wordpressantonio2.local"
-            ],
-            "final_nice_size" : [
-               "59.28 MiB"
-            ],
-            "final_size" : [
-               "62166985"
-            ],
-            "run_by_user" : [
-               "root"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "started" : [
-               "11/May/2022 14:39"
-            ],
-            "ended" : [
-               "11/May/2022 14:41"
+            "scheduled_backup_id" : [
+               "1648541362259851"
             ],
             "destination" : [
                "/backup/virtualmin1"
@@ -2309,51 +2298,37 @@
             "run_from" : [
                "cgi"
             ],
-            "incremental" : [
-               "No"
-            ],
-            "final_status" : [
-               "OK"
-            ],
-            "format" : [
-               "One file per server"
-            ]
-         }
-      },
-      {
-         "values" : {
-            "final_status" : [
-               "OK"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "incremental" : [
-               "No"
-            ],
-            "run_from" : [
-               "sched"
-            ],
             "started" : [
-               "31/Mar/2022 11:00"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220331-1100"
-            ],
-            "ended" : [
-               "31/Mar/2022 11:00"
+               "11/May/2022 14:39"
             ],
             "scheduled_destination" : [
                "/backup/virtualmin1"
             ],
-            "final_size" : [
-               "62982918"
+            "incremental" : [
+               "No"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "run_by_user" : [
+               "root"
             ],
             "final_nice_size" : [
-               "60.06 MiB"
+               "59.28 MiB"
+            ],
+            "ended" : [
+               "11/May/2022 14:41"
+            ]
+         }
+      },
+      {
+         "name" : "1648717228-475726-1:",
+         "values" : {
+            "final_status" : [
+               "OK"
+            ],
+            "final_size" : [
+               "62982918"
             ],
             "failed_domains" : [
                "Virtualminantonio.local"
@@ -2361,20 +2336,73 @@
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
+            "format" : [
+               "One file per server"
+            ],
             "compression" : [
                "tar.gz"
             ],
             "scheduled_backup_id" : [
                "1648541362259851"
+            ],
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220331-1100"
+            ],
+            "run_from" : [
+               "sched"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "started" : [
+               "31/Mar/2022 11:00"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "ended" : [
+               "31/Mar/2022 11:00"
+            ],
+            "final_nice_size" : [
+               "60.06 MiB"
             ]
-         },
-         "name" : "1648717228-475726-1:"
+         }
       },
       {
          "name" : "1652173210-829863-1:",
          "values" : {
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
             "destination" : [
                "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220510-1100"
+            ],
+            "final_status" : [
+               "Failed"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "started" : [
+               "10/May/2022 11:00"
             ],
             "encrypted" : [
                "No"
@@ -2382,35 +2410,8 @@
             "ended" : [
                "10/May/2022 11:00"
             ],
-            "started" : [
-               "10/May/2022 11:00"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "final_status" : [
-               "Failed"
-            ],
-            "incremental" : [
-               "No"
-            ],
             "run_from" : [
                "sched"
-            ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ]
          }
       },
@@ -2420,38 +2421,38 @@
             "failed_domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
+            "final_status" : [
+               "Failed"
+            ],
             "scheduled_backup_id" : [
                "1648541362259851"
             ],
             "compression" : [
                "tar.gz"
             ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "incremental" : [
-               "No"
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220504-1100"
             ],
             "format" : [
                "One file per server"
             ],
-            "final_status" : [
-               "Failed"
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
             "run_from" : [
                "sched"
             ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
+            "ended" : [
+               "04/May/2022 11:00"
             ],
             "started" : [
                "04/May/2022 11:00"
             ],
-            "ended" : [
-               "04/May/2022 11:00"
+            "incremental" : [
+               "No"
             ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220504-1100"
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
             ],
             "encrypted" : [
                "No"
@@ -2461,152 +2462,163 @@
       {
          "name" : "1652272423-31197-1:",
          "values" : {
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            "run_from" : [
+               "sched"
             ],
-            "compression" : [
-               "tar.gz"
+            "encrypted" : [
+               "No"
             ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
+            "incremental" : [
+               "No"
             ],
-            "failed_domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
             ],
             "started" : [
                "11/May/2022 14:33"
             ],
             "ended" : [
                "11/May/2022 14:33"
+            ],
+            "final_status" : [
+               "Failed"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "format" : [
+               "One file per server"
             ],
             "destination" : [
                "/backup/virtualmin1/20220511-1433"
             ],
-            "encrypted" : [
-               "No"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "run_from" : [
-               "sched"
-            ],
-            "final_status" : [
-               "Failed"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "incremental" : [
-               "No"
-            ]
-         }
-      },
-      {
-         "name" : "1648630828-371769-1:",
-         "values" : {
-            "final_nice_size" : [
-               "60.06 MiB"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local"
-            ],
-            "final_size" : [
-               "62983567"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
             "compression" : [
                "tar.gz"
             ],
             "scheduled_backup_id" : [
                "1648541362259851"
+            ]
+         }
+      },
+      {
+         "values" : {
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "started" : [
+               "30/Mar/2022 11:00"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "ended" : [
+               "30/Mar/2022 11:00"
+            ],
+            "final_nice_size" : [
+               "60.06 MiB"
             ],
             "run_from" : [
                "sched"
             ],
-            "final_status" : [
-               "OK"
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
             "format" : [
                "One file per server"
             ],
-            "incremental" : [
-               "No"
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "compression" : [
+               "tar.gz"
             ],
             "destination" : [
                "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220330-1100"
             ],
-            "encrypted" : [
-               "No"
+            "final_status" : [
+               "OK"
             ],
-            "started" : [
-               "30/Mar/2022 11:00"
+            "final_size" : [
+               "62983567"
             ],
-            "ended" : [
-               "30/Mar/2022 11:00"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
+            "failed_domains" : [
+               "Virtualminantonio.local"
             ]
-         }
+         },
+         "name" : "1648630828-371769-1:"
       },
       {
          "values" : {
-            "run_from" : [
-               "sched"
+            "ended" : [
+               "05/May/2022 11:00"
             ],
-            "format" : [
-               "One file per server"
-            ],
-            "final_status" : [
-               "Failed"
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
             ],
             "incremental" : [
                "No"
             ],
-            "ended" : [
+            "started" : [
                "05/May/2022 11:00"
-            ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220505-1100"
             ],
             "encrypted" : [
                "No"
             ],
-            "started" : [
-               "05/May/2022 11:00"
-            ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
-            ],
-            "failed_domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            "run_from" : [
+               "sched"
             ],
             "compression" : [
                "tar.gz"
             ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220505-1100"
+            ],
             "domains" : [
                "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
+            "format" : [
+               "One file per server"
+            ],
+            "failed_domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            ],
+            "final_status" : [
+               "Failed"
             ]
          },
          "name" : "1651741210-622035-1:"
       },
       {
-         "name" : "1651482009-399253-1:",
          "values" : {
-            "format" : [
-               "One file per server"
+            "failed_domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
             "final_status" : [
                "Failed"
             ],
-            "incremental" : [
-               "No"
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220502-1100"
+            ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "scheduled_backup_id" : [
+               "1648541362259851"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
             "run_from" : [
                "sched"
@@ -2614,46 +2626,35 @@
             "ended" : [
                "02/May/2022 11:00"
             ],
-            "started" : [
-               "02/May/2022 11:00"
-            ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220502-1100"
-            ],
             "encrypted" : [
                "No"
+            ],
+            "started" : [
+               "02/May/2022 11:00"
             ],
             "scheduled_destination" : [
                "/backup/virtualmin1"
             ],
-            "failed_domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
-            "scheduled_backup_id" : [
-               "1648541362259851"
+            "incremental" : [
+               "No"
             ]
-         }
+         },
+         "name" : "1651482009-399253-1:"
       },
       {
          "name" : "1648803629-577199-1:",
          "values" : {
-            "final_size" : [
-               "62981718"
-            ],
             "failed_domains" : [
                "Virtualminantonio.local"
             ],
-            "final_nice_size" : [
-               "60.06 MiB"
+            "final_size" : [
+               "62981718"
             ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
+            "final_status" : [
+               "OK"
+            ],
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220401-1100"
             ],
             "compression" : [
                "tar.gz"
@@ -2661,87 +2662,86 @@
             "scheduled_backup_id" : [
                "1648541362259851"
             ],
-            "final_status" : [
-               "OK"
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
             "format" : [
                "One file per server"
             ],
-            "incremental" : [
-               "No"
-            ],
             "run_from" : [
                "sched"
-            ],
-            "encrypted" : [
-               "No"
             ],
             "ended" : [
                "01/Apr/2022 11:00"
             ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220401-1100"
+            "final_nice_size" : [
+               "60.06 MiB"
             ],
-            "started" : [
-               "01/Apr/2022 11:00"
+            "encrypted" : [
+               "No"
             ],
             "scheduled_destination" : [
                "/backup/virtualmin1"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "started" : [
+               "01/Apr/2022 11:00"
             ]
          }
       },
       {
          "values" : {
-            "failed_domains" : [
-               "Virtualminantonio.local"
-            ],
-            "final_nice_size" : [
-               "60.04 MiB"
-            ],
-            "final_size" : [
-               "62966367"
+            "destination" : [
+               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220411-1100"
             ],
             "scheduled_backup_id" : [
                "1648541362259851"
             ],
-            "domains" : [
-               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
-            ],
             "compression" : [
                "tar.gz"
             ],
-            "run_from" : [
-               "sched"
-            ],
-            "incremental" : [
-               "No"
-            ],
-            "final_status" : [
-               "OK"
+            "domains" : [
+               "Virtualminantonio.local wordpressantonio2.local drupalantonio.local"
             ],
             "format" : [
                "One file per server"
             ],
-            "scheduled_destination" : [
-               "/backup/virtualmin1"
+            "failed_domains" : [
+               "Virtualminantonio.local"
             ],
-            "encrypted" : [
-               "No"
+            "final_size" : [
+               "62966367"
             ],
-            "destination" : [
-               "ssh://root:admin-123@10.0.0.3:/backup/virtualmin1/20220411-1100"
+            "final_status" : [
+               "OK"
             ],
             "ended" : [
                "11/Apr/2022 11:00"
             ],
+            "final_nice_size" : [
+               "60.04 MiB"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "scheduled_destination" : [
+               "/backup/virtualmin1"
+            ],
             "started" : [
                "11/Apr/2022 11:00"
+            ],
+            "run_from" : [
+               "sched"
             ]
          },
          "name" : "1649667619-291188-1:"
       }
    ],
-   "status" : "success",
-   "command" : "list-backup-logs"
+   "status" : "success"
 }
 
