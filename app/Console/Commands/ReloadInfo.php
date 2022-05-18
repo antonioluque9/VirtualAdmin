@@ -1,34 +1,31 @@
 <?php
 
-namespace App\Jobs;
+namespace App\Console\Commands;
 
-use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldBeUnique;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Queue\SerializesModels;
+use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Crypt;
 use App;
 
-class ReloadInformationSched implements ShouldQueue
+class ReloadInfo extends Command
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-
     /**
-     * Create a new job instance.
+     * The name and signature of the console command.
      *
-     * @return void
+     * @var string
      */
-    public function __construct()
-    {
-        //
-    }
+    protected $signature = 'command:reload';
 
     /**
-     * Execute the job.
+     * The console command description.
      *
-     * @return void
+     * @var string
+     */
+    protected $description = 'Reload de information of the web';
+
+    /**
+     * Execute the console command.
+     *
+     * @return int
      */
     public function handle()
     {
@@ -47,8 +44,6 @@ class ReloadInformationSched implements ShouldQueue
                     .$filename. ' '.$url.'"');
             }
         }
-        //exec('powershell -c "cd c:\xampp\htdocs\VirtualAdmin\; php artisan db:seed --class=BackupSeeder; php artisan db:seed --class=VirtualhostSeeder"');
-        //exec('bash -c "php artisan db:seed --class=BackupSeeder && php artisan db:seed --class=VirtualhostSeeder"');
-        return exec('bash -c "php artisan db:seed --class=BackupSeeder && php artisan db:seed --class=VirtualhostSeeder"');
+        exec('powershell -c "cd c:\xampp\htdocs\VirtualAdmin\; php artisan db:seed --class=BackupSeeder; php artisan db:seed --class=VirtualhostSeeder"');
     }
 }

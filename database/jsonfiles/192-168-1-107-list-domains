@@ -1,286 +1,319 @@
 {
-   "status" : "success",
    "command" : "list-domains",
+   "status" : "success",
    "data" : [
       {
-         "name" : "servidorpruebas.local",
          "values" : {
-            "shell_type" : [
-               "ssh"
-            ],
-            "id" : [
-               "165121270172410"
-            ],
-            "password_storage" : [
-               "Plain text"
-            ],
-            "template_id" : [
-               "0"
-            ],
-            "sub-servers_must_be_under_main_domain" : [
-               "No"
-            ],
-            "external_ip_address" : [
-               "154.47.132.33"
-            ],
-            "username_for_mysql" : [
-               "prueba"
-            ],
-            "group_id" : [
-               "1000"
-            ],
             "home_directory" : [
                "/home/prueba"
-            ],
-            "user_id" : [
-               "1000"
-            ],
-            "maximum_sub-servers" : [
-               "Cannot create"
-            ],
-            "provisioning_for_virus" : [
-               "Local"
-            ],
-            "html_directory" : [
-               "/home/prueba/public_html"
-            ],
-            "maximum_non-alias_servers" : [
-               "*"
-            ],
-            "file" : [
-               "/etc/webmin/virtual-server/domains/165121270172410"
-            ],
-            "provisioning_for_spam" : [
-               "Local"
             ],
             "plan" : [
                "Default Plan"
             ],
-            "error_log" : [
-               "/var/log/virtualmin/servidorpruebas.local_error_log"
-            ],
-            "allowed_scripts" : [
-               "All"
-            ],
-            "allowed_features" : [
-               "unix dir dns web webalizer logrotate mysql virtualmin-awstats virtualmin-dav"
-            ],
-            "shell_command" : [
-               "/bin/bash"
-            ],
-            "created_unix_time" : [
-               "1651212710"
-            ],
-            "ip_address" : [
-               "192.168.1.107 (Shared)"
-            ],
-            "username" : [
+            "username_for_mysql" : [
                "prueba"
-            ],
-            "php_max_execution_time" : [
-               "30"
-            ],
-            "plugins" : [
-               "virtualmin-awstats virtualmin-dav"
-            ],
-            "password_for_mysql" : [
-               "admin-123"
-            ],
-            "created_on" : [
-               "29/Apr/2022 06:11"
-            ],
-            "can_rename_servers" : [
-               "Yes"
-            ],
-            "contact_address" : [
-               "prueba@virtualmin.192.168.1.11"
-            ],
-            "read-only_mode" : [
-               "No"
-            ],
-            "description" : [
-               "Este servidor esta dedicado a las pruebas de VirtualAdmin"
-            ],
-            "sub-servers_inherit_ip_address" : [
-               "No"
-            ],
-            "sub-servers_cannot_be_under_other_domains" : [
-               "No"
             ],
             "maximum_mailboxes" : [
                "Unlimited"
             ],
-            "contact_email" : [
-               "prueba@virtualmin.192.168.1.11"
-            ],
-            "edit_capabilities" : [
-               "users aliases passwd"
-            ],
-            "maximum_aliases" : [
-               "Unlimited"
-            ],
-            "type" : [
-               "Top-level server"
-            ],
-            "cgi_directory" : [
-               "/home/prueba/cgi-bin"
-            ],
-            "group_name" : [
-               "prueba"
-            ],
-            "mailbox_username_prefix" : [
-               "prueba"
-            ],
-            "maximum_databases" : [
-               "Unlimited"
-            ],
-            "can_migrate_backups" : [
-               "No"
-            ],
-            "php_execution_mode" : [
-               "fcgid"
-            ],
-            "maximum_mongrel_instances" : [
-               "Unlimited"
-            ],
-            "created_by" : [
-               "root"
-            ],
-            "template" : [
-               "Default Settings"
-            ],
-            "provisioning_for_dns" : [
-               "Local"
-            ],
-            "plan_id" : [
-               "0"
-            ],
-            "url" : [
-               "http://servidorpruebas.local/"
-            ],
-            "login_permissions" : [
-               "Email, FTP and SSH"
-            ],
-            "features" : [
-               "unix dir dns web webalizer logrotate mysql webmin"
-            ],
-            "password" : [
-               "admin-123"
-            ],
-            "maximum_alias_servers" : [
-               "*"
-            ],
-            "provisioning_for_mysql" : [
-               "Local"
+            "webmail_redirects" : [
+               "Yes"
             ],
             "can_choose_database_names" : [
                "Yes"
             ],
-            "access_log" : [
-               "/var/log/virtualmin/servidorpruebas.local_access_log"
-            ]
-         }
-      },
-      {
-         "values" : {
-            "php_execution_mode" : [
-               "fcgid"
-            ],
-            "html_directory" : [
-               "/home/prueba/domains/subservidorpruebas.com/public_html"
-            ],
-            "file" : [
-               "/etc/webmin/virtual-server/domains/165121292175049"
+            "default_website_for_ip" : [
+               "No"
             ],
             "template" : [
-               "Settings For Sub-Servers"
-            ],
-            "created_by" : [
-               "root"
-            ],
-            "provisioning_for_dns" : [
-               "Local"
-            ],
-            "parent_domain" : [
-               "servidorpruebas.local"
-            ],
-            "url" : [
-               "http://subservidorpruebas.com/"
-            ],
-            "provisioning_for_spam" : [
-               "Local"
-            ],
-            "plan_id" : [
-               "0"
-            ],
-            "plan" : [
-               "Default Plan"
-            ],
-            "error_log" : [
-               "/var/log/virtualmin/subservidorpruebas.com_error_log"
-            ],
-            "features" : [
-               "dir dns web webalizer logrotate mysql"
+               "Default Settings"
             ],
             "password" : [
                "admin-123"
             ],
-            "provisioning_for_mysql" : [
-               "Local"
+            "id" : [
+               "165121270172410"
             ],
             "created_unix_time" : [
-               "1651212926"
+               "1651212710"
             ],
-            "ip_address" : [
-               "192.168.1.107 (Shared)"
+            "maximum_databases" : [
+               "Unlimited"
             ],
-            "access_log" : [
-               "/var/log/virtualmin/subservidorpruebas.com_access_log"
-            ],
-            "username" : [
-               "prueba"
-            ],
-            "php_max_execution_time" : [
-               "30"
+            "allowed_scripts" : [
+               "All"
             ],
             "plugins" : [
                "virtualmin-awstats virtualmin-dav"
             ],
-            "template_id" : [
-               "1"
+            "server-side_includes" : [
+               "Global default"
+            ],
+            "edit_capabilities" : [
+               "users aliases passwd"
+            ],
+            "dmarc_dns_record" : [
+               "Disabled"
+            ],
+            "shell_command" : [
+               "/bin/bash"
+            ],
+            "can_rename_servers" : [
+               "Yes"
+            ],
+            "maximum_aliases" : [
+               "Unlimited"
+            ],
+            "ssl_cert_used_by" : [
+               "webmin",
+               "usermin"
+            ],
+            "plan_id" : [
+               "0"
             ],
             "contact_address" : [
                "prueba@virtualmin.192.168.1.11"
             ],
-            "id" : [
-               "165121292175049"
+            "databases_size" : [
+               "1 KiB"
             ],
-            "password_for_mysql" : [
-               "admin-123"
+            "php_version" : [
+               "7.4"
+            ],
+            "ssl_candidate_hostnames" : [
+               "servidorpruebas.local www.servidorpruebas.local admin.servidorpruebas.local webmail.servidorpruebas.local"
+            ],
+            "features" : [
+               "unix dir dns web webalizer logrotate mysql webmin"
+            ],
+            "username" : [
+               "prueba"
+            ],
+            "access_log" : [
+               "/var/log/virtualmin/servidorpruebas.local_access_log"
+            ],
+            "suexec_for_cgis" : [
+               "enabled"
+            ],
+            "sub-servers_must_be_under_main_domain" : [
+               "No"
             ],
             "password_storage" : [
                "Plain text"
             ],
-            "created_on" : [
-               "29/Apr/2022 06:15"
+            "match_all_web_sub-domains" : [
+               "No"
+            ],
+            "maximum_alias_servers" : [
+               "*"
+            ],
+            "group_name" : [
+               "prueba"
+            ],
+            "read-only_mode" : [
+               "No"
+            ],
+            "provisioning_for_virus" : [
+               "Local"
+            ],
+            "maximum_sub-servers" : [
+               "Cannot create"
+            ],
+            "password_for_mysql" : [
+               "admin-123"
+            ],
+            "description" : [
+               "Este servidor esta dedicado a las pruebas de VirtualAdmin"
+            ],
+            "maximum_non-alias_servers" : [
+               "*"
+            ],
+            "created_by" : [
+               "root"
             ],
             "external_ip_address" : [
                "154.47.132.33"
             ],
-            "username_for_mysql" : [
-               "prueba"
+            "databases_count" : [
+               "1"
             ],
-            "description" : [
-               "sub servidor"
+            "provisioning_for_spam" : [
+               "Local"
             ],
-            "contact_email" : [
-               "prueba@virtualmin.192.168.1.11"
+            "error_log" : [
+               "/var/log/virtualmin/servidorpruebas.local_error_log"
+            ],
+            "ip_address" : [
+               "192.168.1.107 (Shared)"
             ],
             "group_id" : [
                "1000"
             ],
+            "cgi_directory" : [
+               "/home/prueba/cgi-bin"
+            ],
+            "php_fcgid_subprocesses" : [
+               "20"
+            ],
+            "possible_php_execution_modes" : [
+               "none cgi fcgid fpm"
+            ],
+            "contact_email" : [
+               "prueba@virtualmin.192.168.1.11"
+            ],
+            "template_id" : [
+               "0"
+            ],
+            "provisioning_for_mysql" : [
+               "Local"
+            ],
+            "php_execution_mode" : [
+               "fcgid"
+            ],
+            "sub-servers_inherit_ip_address" : [
+               "No"
+            ],
+            "html_directory" : [
+               "/home/prueba/public_html"
+            ],
+            "user_id" : [
+               "1000"
+            ],
+            "can_migrate_backups" : [
+               "No"
+            ],
+            "allowed_features" : [
+               "unix dir dns web webalizer logrotate mysql virtualmin-awstats virtualmin-dav"
+            ],
+            "sub-servers_cannot_be_under_other_domains" : [
+               "No"
+            ],
+            "type" : [
+               "Top-level server"
+            ],
+            "mailbox_username_prefix" : [
+               "prueba"
+            ],
+            "spf_dns_record" : [
+               "Enabled"
+            ],
+            "php_max_execution_time" : [
+               "30"
+            ],
+            "provisioning_for_dns" : [
+               "Local"
+            ],
+            "file" : [
+               "/etc/webmin/virtual-server/domains/165121270172410"
+            ],
+            "url" : [
+               "http://servidorpruebas.local/"
+            ],
+            "databases_byte_size" : [
+               "1024"
+            ],
+            "allowed_mysql_hosts" : [
+               "localhost"
+            ],
+            "maximum_mongrel_instances" : [
+               "Unlimited"
+            ],
+            "shell_type" : [
+               "ssh"
+            ],
+            "created_on" : [
+               "29/Apr/2022 06:11"
+            ],
+            "login_permissions" : [
+               "Email, FTP and SSH"
+            ]
+         },
+         "name" : "servidorpruebas.local"
+      },
+      {
+         "name" : "subservidorpruebas.com",
+         "values" : {
+            "databases_size" : [
+               "1 KiB"
+            ],
+            "php_version" : [
+               "7.4"
+            ],
+            "plan_id" : [
+               "0"
+            ],
+            "contact_address" : [
+               "prueba@virtualmin.192.168.1.11"
+            ],
+            "features" : [
+               "dir dns web webalizer logrotate mysql"
+            ],
+            "username" : [
+               "prueba"
+            ],
+            "access_log" : [
+               "/var/log/virtualmin/subservidorpruebas.com_access_log"
+            ],
+            "suexec_for_cgis" : [
+               "enabled"
+            ],
+            "password_storage" : [
+               "Plain text"
+            ],
+            "ssl_candidate_hostnames" : [
+               "subservidorpruebas.com www.subservidorpruebas.com admin.subservidorpruebas.com webmail.subservidorpruebas.com"
+            ],
+            "provisioning_for_virus" : [
+               "Local"
+            ],
+            "match_all_web_sub-domains" : [
+               "No"
+            ],
+            "group_name" : [
+               "prueba"
+            ],
+            "password_for_mysql" : [
+               "admin-123"
+            ],
             "home_directory" : [
                "/home/prueba/domains/subservidorpruebas.com"
+            ],
+            "username_for_mysql" : [
+               "prueba"
+            ],
+            "plan" : [
+               "Default Plan"
+            ],
+            "webmail_redirects" : [
+               "Yes"
+            ],
+            "plugins" : [
+               "virtualmin-awstats virtualmin-dav"
+            ],
+            "default_website_for_ip" : [
+               "No"
+            ],
+            "template" : [
+               "Settings For Sub-Servers"
+            ],
+            "password" : [
+               "admin-123"
+            ],
+            "id" : [
+               "165121292175049"
+            ],
+            "created_unix_time" : [
+               "1651212926"
+            ],
+            "dmarc_dns_record" : [
+               "Disabled"
+            ],
+            "ssl_cert_used_by" : [
+               "webmin",
+               "usermin"
+            ],
+            "server-side_includes" : [
+               "Global default"
             ],
             "type" : [
                "Sub-server"
@@ -288,283 +321,277 @@
             "user_id" : [
                "1000"
             ],
-            "group_name" : [
-               "prueba"
-            ],
-            "cgi_directory" : [
-               "/home/prueba/domains/subservidorpruebas.com/cgi-bin"
-            ],
-            "provisioning_for_virus" : [
-               "Local"
-            ],
             "mailbox_username_prefix" : [
                "subservidorpruebas"
-            ]
-         },
-         "name" : "subservidorpruebas.com"
-      },
-      {
-         "name" : "pruebasvirtualadmin.com",
-         "values" : {
-            "plan" : [
-               "Default Plan"
             ],
-            "provisioning_for_spam" : [
-               "Local"
-            ],
-            "maximum_non-alias_servers" : [
-               "*"
-            ],
-            "file" : [
-               "/etc/webmin/virtual-server/domains/165121280073543"
-            ],
-            "html_directory" : [
-               "/home/virtualmin/public_html"
-            ],
-            "username" : [
-               "virtualmin"
-            ],
-            "shell_command" : [
-               "/bin/bash"
-            ],
-            "created_unix_time" : [
-               "1651212809"
-            ],
-            "ip_address" : [
-               "192.168.1.107 (Shared)"
-            ],
-            "error_log" : [
-               "/var/log/virtualmin/pruebasvirtualadmin.com_error_log"
-            ],
-            "allowed_features" : [
-               "unix dir dns web webalizer logrotate mysql virtualmin-awstats virtualmin-dav"
-            ],
-            "allowed_scripts" : [
-               "All"
-            ],
-            "username_for_mysql" : [
-               "virtualmin"
-            ],
-            "external_ip_address" : [
-               "154.47.132.33"
-            ],
-            "id" : [
-               "165121280073543"
-            ],
-            "password_storage" : [
-               "Plain text"
-            ],
-            "template_id" : [
-               "0"
-            ],
-            "sub-servers_must_be_under_main_domain" : [
-               "No"
-            ],
-            "shell_type" : [
-               "ssh"
-            ],
-            "provisioning_for_virus" : [
-               "Local"
-            ],
-            "user_id" : [
-               "1001"
-            ],
-            "maximum_sub-servers" : [
-               "Cannot create"
-            ],
-            "home_directory" : [
-               "/home/virtualmin"
-            ],
-            "group_id" : [
-               "1001"
-            ],
-            "plan_id" : [
-               "0"
-            ],
-            "url" : [
-               "http://pruebasvirtualadmin.com/"
-            ],
-            "login_permissions" : [
-               "Email, FTP and SSH"
-            ],
-            "created_by" : [
-               "root"
-            ],
-            "template" : [
-               "Default Settings"
+            "spf_dns_record" : [
+               "Enabled"
             ],
             "provisioning_for_dns" : [
                "Local"
             ],
-            "maximum_mongrel_instances" : [
-               "Unlimited"
+            "url" : [
+               "http://subservidorpruebas.com/"
             ],
-            "maximum_databases" : [
-               "Unlimited"
-            ],
-            "php_execution_mode" : [
-               "fcgid"
-            ],
-            "can_migrate_backups" : [
-               "No"
-            ],
-            "access_log" : [
-               "/var/log/virtualmin/pruebasvirtualadmin.com_access_log"
-            ],
-            "can_choose_database_names" : [
-               "Yes"
-            ],
-            "maximum_alias_servers" : [
-               "*"
-            ],
-            "provisioning_for_mysql" : [
-               "Local"
-            ],
-            "password" : [
-               "admin-123"
-            ],
-            "features" : [
-               "unix dir dns web webalizer logrotate mysql webmin"
-            ],
-            "description" : [
-               "El servidor de pruebas"
-            ],
-            "sub-servers_inherit_ip_address" : [
-               "No"
-            ],
-            "read-only_mode" : [
-               "No"
-            ],
-            "password_for_mysql" : [
-               "admin-123"
-            ],
-            "created_on" : [
-               "29/Apr/2022 06:13"
-            ],
-            "can_rename_servers" : [
-               "Yes"
-            ],
-            "contact_address" : [
-               "virtualmin@virtualmin.192.168.1.11"
+            "file" : [
+               "/etc/webmin/virtual-server/domains/165121292175049"
             ],
             "php_max_execution_time" : [
                "30"
             ],
-            "plugins" : [
-               "virtualmin-awstats virtualmin-dav"
-            ],
-            "mailbox_username_prefix" : [
-               "virtualmin"
-            ],
-            "cgi_directory" : [
-               "/home/virtualmin/cgi-bin"
-            ],
-            "group_name" : [
-               "virtualmin"
-            ],
-            "edit_capabilities" : [
-               "users aliases passwd"
-            ],
-            "maximum_aliases" : [
-               "Unlimited"
-            ],
-            "type" : [
-               "Top-level server"
-            ],
-            "sub-servers_cannot_be_under_other_domains" : [
-               "No"
-            ],
-            "contact_email" : [
-               "virtualmin@virtualmin.192.168.1.11"
-            ],
-            "maximum_mailboxes" : [
-               "Unlimited"
-            ]
-         }
-      },
-      {
-         "name" : "pruebasvirtualadmin.es",
-         "values" : {
-            "description" : [
-               "Alias de prueba"
-            ],
-            "external_ip_address" : [
-               "154.47.132.33"
-            ],
-            "id" : [
-               "165121287074567"
-            ],
             "created_on" : [
-               "29/Apr/2022 06:14"
+               "29/Apr/2022 06:15"
             ],
-            "password_storage" : [
-               "Plain text"
+            "parent_domain" : [
+               "servidorpruebas.local"
             ],
-            "mail_aliases_mode" : [
-               "Catchall"
+            "databases_byte_size" : [
+               "1024"
             ],
-            "template_id" : [
-               "0"
+            "databases_count" : [
+               "1"
             ],
-            "contact_address" : [
-               "virtualmin@virtualmin.192.168.1.11"
-            ],
-            "plugins" : [
-               ""
-            ],
-            "mailbox_username_prefix" : [
-               "pruebasvirtualadmin"
-            ],
-            "provisioning_for_virus" : [
-               "Local"
-            ],
-            "group_name" : [
-               "virtualmin"
-            ],
-            "cgi_directory" : [
-               "/home/virtualmin/cgi-bin"
-            ],
-            "user_id" : [
-               "1001"
-            ],
-            "type" : [
-               "Alias"
-            ],
-            "contact_email" : [
-               "virtualmin@virtualmin.192.168.1.11"
-            ],
-            "home_directory" : [
-               "/home/virtualmin/domains/pruebasvirtualadmin.es"
-            ],
-            "group_id" : [
-               "1001"
-            ],
-            "provisioning_for_spam" : [
-               "Local"
-            ],
-            "plan_id" : [
-               "0"
-            ],
-            "plan" : [
-               "Default Plan"
-            ],
-            "url" : [
-               "http://pruebasvirtualadmin.es/"
+            "description" : [
+               "sub servidor"
             ],
             "created_by" : [
                "root"
             ],
-            "template" : [
-               "Default Settings"
+            "external_ip_address" : [
+               "154.47.132.33"
+            ],
+            "cgi_directory" : [
+               "/home/prueba/domains/subservidorpruebas.com/cgi-bin"
+            ],
+            "provisioning_for_spam" : [
+               "Local"
+            ],
+            "error_log" : [
+               "/var/log/virtualmin/subservidorpruebas.com_error_log"
+            ],
+            "ip_address" : [
+               "192.168.1.107 (Shared)"
+            ],
+            "group_id" : [
+               "1000"
+            ],
+            "contact_email" : [
+               "prueba@virtualmin.192.168.1.11"
+            ],
+            "template_id" : [
+               "1"
+            ],
+            "php_fcgid_subprocesses" : [
+               "20"
+            ],
+            "possible_php_execution_modes" : [
+               "none cgi fcgid fpm"
+            ],
+            "provisioning_for_mysql" : [
+               "Local"
+            ],
+            "php_execution_mode" : [
+               "fcgid"
+            ],
+            "html_directory" : [
+               "/home/prueba/domains/subservidorpruebas.com/public_html"
+            ]
+         }
+      },
+      {
+         "values" : {
+            "provisioning_for_mysql" : [
+               "Local"
+            ],
+            "php_execution_mode" : [
+               "fcgid"
+            ],
+            "sub-servers_inherit_ip_address" : [
+               "No"
+            ],
+            "html_directory" : [
+               "/home/virtualmin/public_html"
+            ],
+            "contact_email" : [
+               "virtualmin@virtualmin.192.168.1.11"
+            ],
+            "template_id" : [
+               "0"
+            ],
+            "php_fcgid_subprocesses" : [
+               "20"
+            ],
+            "possible_php_execution_modes" : [
+               "none cgi fcgid fpm"
+            ],
+            "cgi_directory" : [
+               "/home/virtualmin/cgi-bin"
+            ],
+            "error_log" : [
+               "/var/log/virtualmin/pruebasvirtualadmin.com_error_log"
+            ],
+            "provisioning_for_spam" : [
+               "Local"
+            ],
+            "ip_address" : [
+               "192.168.1.107 (Shared)"
+            ],
+            "group_id" : [
+               "1001"
+            ],
+            "databases_count" : [
+               "1"
+            ],
+            "description" : [
+               "El servidor de pruebas"
+            ],
+            "maximum_non-alias_servers" : [
+               "*"
+            ],
+            "created_by" : [
+               "root"
+            ],
+            "external_ip_address" : [
+               "154.47.132.33"
+            ],
+            "created_on" : [
+               "29/Apr/2022 06:13"
+            ],
+            "shell_type" : [
+               "ssh"
+            ],
+            "login_permissions" : [
+               "Email, FTP and SSH"
+            ],
+            "databases_byte_size" : [
+               "1024"
+            ],
+            "allowed_mysql_hosts" : [
+               "localhost"
+            ],
+            "maximum_mongrel_instances" : [
+               "Unlimited"
             ],
             "provisioning_for_dns" : [
                "Local"
             ],
             "file" : [
-               "/etc/webmin/virtual-server/domains/165121287074567"
+               "/etc/webmin/virtual-server/domains/165121280073543"
             ],
-            "html_directory" : [
-               "/home/virtualmin/public_html"
+            "url" : [
+               "http://pruebasvirtualadmin.com/"
+            ],
+            "php_max_execution_time" : [
+               "30"
+            ],
+            "mailbox_username_prefix" : [
+               "virtualmin"
+            ],
+            "spf_dns_record" : [
+               "Enabled"
+            ],
+            "type" : [
+               "Top-level server"
+            ],
+            "user_id" : [
+               "1001"
+            ],
+            "allowed_features" : [
+               "unix dir dns web webalizer logrotate mysql virtualmin-awstats virtualmin-dav"
+            ],
+            "can_migrate_backups" : [
+               "No"
+            ],
+            "sub-servers_cannot_be_under_other_domains" : [
+               "No"
+            ],
+            "edit_capabilities" : [
+               "users aliases passwd"
+            ],
+            "dmarc_dns_record" : [
+               "Disabled"
+            ],
+            "maximum_aliases" : [
+               "Unlimited"
+            ],
+            "shell_command" : [
+               "/bin/bash"
+            ],
+            "can_rename_servers" : [
+               "Yes"
+            ],
+            "ssl_cert_used_by" : [
+               "webmin",
+               "usermin"
+            ],
+            "server-side_includes" : [
+               "Global default"
+            ],
+            "allowed_scripts" : [
+               "All"
+            ],
+            "maximum_databases" : [
+               "Unlimited"
+            ],
+            "plugins" : [
+               "virtualmin-awstats virtualmin-dav"
+            ],
+            "template" : [
+               "Default Settings"
+            ],
+            "default_website_for_ip" : [
+               "Yes"
+            ],
+            "password" : [
+               "admin-123"
+            ],
+            "created_unix_time" : [
+               "1651212809"
+            ],
+            "id" : [
+               "165121280073543"
+            ],
+            "can_choose_database_names" : [
+               "Yes"
+            ],
+            "webmail_redirects" : [
+               "Yes"
+            ],
+            "maximum_mailboxes" : [
+               "Unlimited"
+            ],
+            "home_directory" : [
+               "/home/virtualmin"
+            ],
+            "plan" : [
+               "Default Plan"
+            ],
+            "username_for_mysql" : [
+               "virtualmin"
+            ],
+            "password_for_mysql" : [
+               "admin-123"
+            ],
+            "maximum_sub-servers" : [
+               "Cannot create"
+            ],
+            "read-only_mode" : [
+               "No"
+            ],
+            "provisioning_for_virus" : [
+               "Local"
+            ],
+            "match_all_web_sub-domains" : [
+               "No"
+            ],
+            "maximum_alias_servers" : [
+               "*"
+            ],
+            "group_name" : [
+               "virtualmin"
+            ],
+            "features" : [
+               "unix dir dns web webalizer logrotate mysql webmin"
             ],
             "username" : [
                "virtualmin"
@@ -572,26 +599,156 @@
             "access_log" : [
                "/var/log/virtualmin/pruebasvirtualadmin.com_access_log"
             ],
-            "provisioning_for_mysql" : [
-               "Local"
+            "suexec_for_cgis" : [
+               "enabled"
             ],
-            "created_unix_time" : [
-               "1651212870"
+            "sub-servers_must_be_under_main_domain" : [
+               "No"
+            ],
+            "password_storage" : [
+               "Plain text"
+            ],
+            "ssl_candidate_hostnames" : [
+               "pruebasvirtualadmin.com www.pruebasvirtualadmin.com admin.pruebasvirtualadmin.com webmail.pruebasvirtualadmin.com pruebasvirtualadmin.es www.pruebasvirtualadmin.es"
+            ],
+            "databases_size" : [
+               "1 KiB"
+            ],
+            "php_version" : [
+               "7.4"
+            ],
+            "plan_id" : [
+               "0"
+            ],
+            "contact_address" : [
+               "virtualmin@virtualmin.192.168.1.11"
+            ]
+         },
+         "name" : "pruebasvirtualadmin.com"
+      },
+      {
+         "name" : "pruebasvirtualadmin.es",
+         "values" : {
+            "real_domain" : [
+               "pruebasvirtualadmin.com"
+            ],
+            "cgi_directory" : [
+               "/home/virtualmin/cgi-bin"
+            ],
+            "group_id" : [
+               "1001"
             ],
             "ip_address" : [
                "192.168.1.107 (Shared)"
             ],
-            "password" : [
-               "admin-123"
-            ],
-            "real_domain" : [
-               "pruebasvirtualadmin.com"
+            "provisioning_for_spam" : [
+               "Local"
             ],
             "error_log" : [
                "/var/log/virtualmin/pruebasvirtualadmin.com_error_log"
             ],
+            "plan" : [
+               "Default Plan"
+            ],
+            "external_ip_address" : [
+               "154.47.132.33"
+            ],
+            "created_by" : [
+               "root"
+            ],
+            "description" : [
+               "Alias de prueba"
+            ],
+            "home_directory" : [
+               "/home/virtualmin/domains/pruebasvirtualadmin.es"
+            ],
+            "ssl_cert_used_by" : [
+               "webmin",
+               "usermin"
+            ],
+            "dmarc_dns_record" : [
+               "Disabled"
+            ],
+            "html_directory" : [
+               "/home/virtualmin/public_html"
+            ],
+            "provisioning_for_mysql" : [
+               "Local"
+            ],
+            "plugins" : [
+               ""
+            ],
+            "template_id" : [
+               "0"
+            ],
+            "contact_email" : [
+               "virtualmin@virtualmin.192.168.1.11"
+            ],
+            "id" : [
+               "165121287074567"
+            ],
+            "created_unix_time" : [
+               "1651212870"
+            ],
+            "password" : [
+               "admin-123"
+            ],
+            "template" : [
+               "Default Settings"
+            ],
+            "password_storage" : [
+               "Plain text"
+            ],
+            "username" : [
+               "virtualmin"
+            ],
+            "access_log" : [
+               "/var/log/virtualmin/pruebasvirtualadmin.com_access_log"
+            ],
             "features" : [
                "dns web"
+            ],
+            "spf_dns_record" : [
+               "Enabled"
+            ],
+            "mail_aliases_mode" : [
+               "Catchall"
+            ],
+            "mailbox_username_prefix" : [
+               "pruebasvirtualadmin"
+            ],
+            "ssl_candidate_hostnames" : [
+               "pruebasvirtualadmin.es www.pruebasvirtualadmin.es"
+            ],
+            "type" : [
+               "Alias"
+            ],
+            "contact_address" : [
+               "virtualmin@virtualmin.192.168.1.11"
+            ],
+            "plan_id" : [
+               "0"
+            ],
+            "user_id" : [
+               "1001"
+            ],
+            "created_on" : [
+               "29/Apr/2022 06:14"
+            ],
+            "file" : [
+               "/etc/webmin/virtual-server/domains/165121287074567"
+            ],
+            "url" : [
+               "http://pruebasvirtualadmin.es/"
+            ],
+            "provisioning_for_dns" : [
+               "Local"
+            ],
+            "provisioning_for_virus" : [
+               "Local"
+            ],
+            "group_name" : [
+               "virtualmin"
             ]
          }
       }

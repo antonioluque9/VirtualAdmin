@@ -16,11 +16,15 @@ use App\Http\Livewire;
 | contains the "web" middleware group. Now create something great!
 |
 */
-if (!App\Models\User::all()->first()){
-    Route::get('/', function () {return view('register');})->middleware('guest');
-    Route::post('/register', [Auth\LoginController::class, 'resgister'])->name('register');
-}else{
-    Route::get('/', function () {return view('login');})->middleware('guest');
+
+    Route::get('/', function () {
+        if (!App\Models\User::all()->first()){
+            return view('register');
+        }else{
+            return view('login');
+        }})->middleware('guest');
+
+    Route::post('/register', [Auth\LoginController::class, 'register'])->name('register');
     Route::post('/login', [Auth\LoginController::class, 'login'])->name('login');
     Route::post('/logout', [Auth\LoginController::class, 'logout']);
 
@@ -37,6 +41,6 @@ if (!App\Models\User::all()->first()){
     Route::get('/servers', [Controllers\ServerController::class, 'read'])->name('servers.read')->middleware('auth');
 
     Route::get('/reload', [Controllers\ReloadInformation::class, 'reloadInformation'])->middleware('auth');
-}
+
 
 

@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
-    public function resgister(Request $request){
+    public function register(Request $request){
+        if(!App\Models\User::all()->first()){
         $validate = $request->validate([
             'name' => 'required',
             'email' => 'required|unique:users,email',
@@ -22,6 +23,10 @@ class LoginController extends Controller
         App\Models\User::create($data);
 
         return redirect('/');
+        }else{
+            throw \Illuminate\Validation\ValidationException::withMessages(
+                ['name' => ['No se puede registrar mas de un usuario']]);
+        }
     }
 
     public function login(Request $request){

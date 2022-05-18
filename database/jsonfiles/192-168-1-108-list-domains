@@ -1,595 +1,583 @@
 {
    "command" : "list-domains",
+   "status" : "success",
    "data" : [
       {
          "values" : {
-            "server_block_quota" : [
-               "1048576"
+            "contact_email" : [
+               "pruebasvirt3@virtualmin-3.192.168.1.11"
             ],
-            "password" : [
-               "XuRSTNAaSzG9TmJ"
+            "shell_type" : [
+               "ssh"
             ],
-            "contact_address" : [
-               "Virtualminantonio@Virtualminantonio.local"
+            "shell_command" : [
+               "/bin/bash"
             ],
-            "features" : [
-               "unix dir dns mail web logrotate"
+            "url" : [
+               "http://pruebasvirt3.local/"
             ],
-            "ssl_cert_expiry" : [
-               "12/May/2027 13:24"
+            "username" : [
+               "pruebasvirt3"
             ],
-            "allowed_scripts" : [
-               "All"
+            "read-only_mode" : [
+               "No"
             ],
-            "group_name" : [
-               "Virtualminantonio"
-            ],
-            "provisioning_for_spam" : [
-               "Local"
-            ],
-            "file" : [
-               "/etc/webmin/virtual-server/domains/1648455424134239"
-            ],
-            "id" : [
-               "1648455424134239"
-            ],
-            "plugins" : [
-               ""
-            ],
-            "maximum_databases" : [
-               "Unlimited"
-            ],
-            "cgi_directory" : [
-               "/home/Virtualminantonio/cgi-bin"
-            ],
-            "provisioning_for_virus" : [
-               "Local"
-            ],
-            "allowed_features" : [
-               "unix dir dns web"
-            ],
-            "user_quota" : [
-               "1 GiB"
-            ],
-            "can_choose_database_names" : [
+            "can_rename_servers" : [
                "Yes"
             ],
-            "can_migrate_backups" : [
+            "features" : [
+               "unix dir dns web logrotate"
+            ],
+            "match_all_web_sub-domains" : [
                "No"
             ],
             "sub-servers_must_be_under_main_domain" : [
                "No"
+            ],
+            "allowed_scripts" : [
+               "All"
+            ],
+            "created_by" : [
+               "root"
+            ],
+            "sub-servers_inherit_ip_address" : [
+               "No"
+            ],
+            "allowed_features" : [
+               "unix dir dns web logrotate"
+            ],
+            "contact_address" : [
+               "pruebasvirt3@virtualmin-3.192.168.1.11"
+            ],
+            "maximum_alias_servers" : [
+               "*"
+            ],
+            "provisioning_for_spam" : [
+               "Local"
+            ],
+            "maximum_non-alias_servers" : [
+               "*"
+            ],
+            "template" : [
+               "Default Settings"
+            ],
+            "error_log" : [
+               "/var/log/virtualmin/pruebasvirt3.local_error_log"
+            ],
+            "sub-servers_cannot_be_under_other_domains" : [
+               "No"
+            ],
+            "php_fcgid_subprocesses" : [
+               "20"
+            ],
+            "spf_dns_record" : [
+               "Enabled"
+            ],
+            "default_website_for_ip" : [
+               "Yes"
+            ],
+            "edit_capabilities" : [
+               "users aliases passwd"
+            ],
+            "provisioning_for_virus" : [
+               "Local"
+            ],
+            "maximum_sub-servers" : [
+               "Cannot create"
+            ],
+            "dmarc_dns_record" : [
+               "Disabled"
+            ],
+            "password_storage" : [
+               "Plain text"
+            ],
+            "password" : [
+               "admin-123"
+            ],
+            "php_version" : [
+               "7.4"
+            ],
+            "created_unix_time" : [
+               "1652861687"
+            ],
+            "file" : [
+               "/etc/webmin/virtual-server/domains/16528616781229"
+            ],
+            "maximum_databases" : [
+               "Unlimited"
+            ],
+            "provisioning_for_dns" : [
+               "Local"
+            ],
+            "access_log" : [
+               "/var/log/virtualmin/pruebasvirt3.local_access_log"
+            ],
+            "suexec_for_cgis" : [
+               "enabled"
+            ],
+            "plan" : [
+               "Default Plan"
+            ],
+            "group_id" : [
+               "1001"
+            ],
+            "created_on" : [
+               "18/May/2022 08:14"
+            ],
+            "can_migrate_backups" : [
+               "No"
+            ],
+            "possible_php_execution_modes" : [
+               "none cgi fcgid fpm"
+            ],
+            "mailbox_username_prefix" : [
+               "pruebasvirt3"
+            ],
+            "server-side_includes" : [
+               "Global default"
+            ],
+            "user_id" : [
+               "1001"
+            ],
+            "can_choose_database_names" : [
+               "Yes"
+            ],
+            "ssl_cert_used_by" : [
+               "webmin",
+               "usermin"
+            ],
+            "id" : [
+               "16528616781229"
+            ],
+            "ipv6_address" : [
+               "fe80::a093:9eff:feec:6475"
+            ],
+            "maximum_mailboxes" : [
+               "Unlimited"
+            ],
+            "ssl_candidate_hostnames" : [
+               "pruebasvirt3.local www.pruebasvirt3.local admin.pruebasvirt3.local webmail.pruebasvirt3.local"
+            ],
+            "cgi_directory" : [
+               "/home/pruebasvirt3/cgi-bin"
+            ],
+            "ip_address" : [
+               "192.168.1.108 (Shared)"
+            ],
+            "group_name" : [
+               "pruebasvirt3"
+            ],
+            "type" : [
+               "Top-level server"
+            ],
+            "description" : [
+               "Prueba"
+            ],
+            "maximum_aliases" : [
+               "Unlimited"
+            ],
+            "provisioning_for_mysql" : [
+               "Local"
+            ],
+            "webmail_redirects" : [
+               "Yes"
+            ],
+            "login_permissions" : [
+               "Email, FTP and SSH"
+            ],
+            "html_directory" : [
+               "/home/pruebasvirt3/public_html"
+            ],
+            "plan_id" : [
+               "0"
+            ],
+            "template_id" : [
+               "0"
+            ],
+            "external_ip_address" : [
+               "154.47.132.33"
+            ],
+            "maximum_mongrel_instances" : [
+               "Unlimited"
+            ],
+            "home_directory" : [
+               "/home/pruebasvirt3"
+            ],
+            "plugins" : [
+               ""
+            ],
+            "php_execution_mode" : [
+               "fcgid"
+            ],
+            "php_max_execution_time" : [
+               "30"
+            ]
+         },
+         "name" : "pruebasvirt3.local"
+      },
+      {
+         "values" : {
+            "username" : [
+               "pruebasvirt3"
+            ],
+            "url" : [
+               "http://virtual.pruebasvirt3.local/"
+            ],
+            "contact_email" : [
+               "pruebasvirt3@virtualmin-3.192.168.1.11"
+            ],
+            "features" : [
+               "dir dns web logrotate"
+            ],
+            "parent_dns_virtual_server" : [
+               "pruebasvirt3.local"
+            ],
+            "created_by" : [
+               "root"
+            ],
+            "match_all_web_sub-domains" : [
+               "No"
+            ],
+            "contact_address" : [
+               "pruebasvirt3@virtualmin-3.192.168.1.11"
+            ],
+            "template" : [
+               "Settings For Sub-Servers"
+            ],
+            "provisioning_for_spam" : [
+               "Local"
+            ],
+            "provisioning_for_virus" : [
+               "Local"
+            ],
+            "error_log" : [
+               "/var/log/virtualmin/virtual.pruebasvirt3.local_error_log"
+            ],
+            "php_fcgid_subprocesses" : [
+               "20"
+            ],
+            "default_website_for_ip" : [
+               "No"
+            ],
+            "created_unix_time" : [
+               "1652861741"
+            ],
+            "php_version" : [
+               "7.4"
+            ],
+            "file" : [
+               "/etc/webmin/virtual-server/domains/16528617371804"
+            ],
+            "password_storage" : [
+               "Plain text"
+            ],
+            "password" : [
+               "admin-123"
+            ],
+            "provisioning_for_dns" : [
+               "Local"
+            ],
+            "suexec_for_cgis" : [
+               "enabled"
+            ],
+            "access_log" : [
+               "/var/log/virtualmin/virtual.pruebasvirt3.local_access_log"
+            ],
+            "created_on" : [
+               "18/May/2022 08:15"
+            ],
+            "group_id" : [
+               "1001"
+            ],
+            "plan" : [
+               "Default Plan"
+            ],
+            "server-side_includes" : [
+               "Global default"
+            ],
+            "possible_php_execution_modes" : [
+               "none cgi fcgid fpm"
+            ],
+            "mailbox_username_prefix" : [
+               "virtual"
+            ],
+            "ssl_candidate_hostnames" : [
+               "virtual.pruebasvirt3.local www.virtual.pruebasvirt3.local admin.virtual.pruebasvirt3.local webmail.virtual.pruebasvirt3.local"
+            ],
+            "ipv6_address" : [
+               "fe80::a093:9eff:feec:6475"
+            ],
+            "id" : [
+               "16528617371804"
+            ],
+            "ssl_cert_used_by" : [
+               "webmin",
+               "usermin"
+            ],
+            "user_id" : [
+               "1001"
+            ],
+            "ip_address" : [
+               "192.168.1.108 (Shared)"
+            ],
+            "type" : [
+               "Sub-server"
+            ],
+            "group_name" : [
+               "pruebasvirt3"
+            ],
+            "cgi_directory" : [
+               "/home/pruebasvirt3/domains/virtual.pruebasvirt3.local/cgi-bin"
+            ],
+            "provisioning_for_mysql" : [
+               "Local"
+            ],
+            "description" : [
+               "Una prueba de un subserver"
+            ],
+            "html_directory" : [
+               "/home/pruebasvirt3/domains/virtual.pruebasvirt3.local/public_html"
+            ],
+            "webmail_redirects" : [
+               "Yes"
+            ],
+            "template_id" : [
+               "1"
+            ],
+            "plan_id" : [
+               "0"
+            ],
+            "parent_domain" : [
+               "pruebasvirt3.local"
+            ],
+            "home_directory" : [
+               "/home/pruebasvirt3/domains/virtual.pruebasvirt3.local"
+            ],
+            "external_ip_address" : [
+               "154.47.132.33"
+            ],
+            "php_max_execution_time" : [
+               "30"
+            ],
+            "php_execution_mode" : [
+               "fcgid"
+            ],
+            "plugins" : [
+               ""
+            ]
+         },
+         "name" : "virtual.pruebasvirt3.local"
+      },
+      {
+         "name" : "virtualmin3.local",
+         "values" : {
+            "plan" : [
+               "Default Plan"
+            ],
+            "created_on" : [
+               "18/May/2022 07:53"
+            ],
+            "group_id" : [
+               "1000"
+            ],
+            "can_migrate_backups" : [
+               "No"
+            ],
+            "possible_php_execution_modes" : [
+               "none cgi fcgid fpm"
+            ],
+            "mailbox_username_prefix" : [
+               "virtualmin3"
+            ],
+            "server-side_includes" : [
+               "Global default"
+            ],
+            "ssl_cert_used_by" : [
+               "webmin",
+               "usermin"
+            ],
+            "id" : [
+               "16528604262619"
+            ],
+            "can_choose_database_names" : [
+               "Yes"
+            ],
+            "user_id" : [
+               "1000"
+            ],
+            "ssl_candidate_hostnames" : [
+               "virtualmin3.local www.virtualmin3.local mail.virtualmin3.local admin.virtualmin3.local webmail.virtualmin3.local"
+            ],
+            "maximum_mailboxes" : [
+               "Unlimited"
+            ],
+            "cgi_directory" : [
+               "/home/virtualmin3/cgi-bin"
+            ],
+            "ip_address" : [
+               "192.168.1.108 (Shared)"
+            ],
+            "type" : [
+               "Top-level server"
+            ],
+            "group_name" : [
+               "virtualmin3"
             ],
             "description" : [
                "Host default domain"
             ],
-            "password_storage" : [
-               "Plain text"
-            ],
-            "plan" : [
-               "Default Plan"
-            ],
-            "template" : [
-               "Default Settings"
-            ],
-            "contact_email" : [
-               "Virtualminantonio@Virtualminantonio.local"
-            ],
-            "read-only_mode" : [
-               "No"
-            ],
-            "maximum_mongrel_instances" : [
-               "Unlimited"
-            ],
-            "user_block_quota" : [
-               "1048576"
-            ],
-            "username" : [
-               "Virtualminantonio"
-            ],
-            "can_rename_servers" : [
-               "Yes"
-            ],
-            "ssl_cert_file" : [
-               "/home/Virtualminantonio/ssl.cert"
-            ],
-            "plan_id" : [
-               "0"
-            ],
-            "provisioning_for_dns" : [
+            "provisioning_for_mysql" : [
                "Local"
             ],
-            "type" : [
-               "Top-level server"
+            "maximum_aliases" : [
+               "Unlimited"
             ],
-            "maximum_alias_servers" : [
-               "*"
-            ],
-            "mailbox_username_prefix" : [
-               "Virtualminantonio"
-            ],
-            "server_quota" : [
-               "1 GiB"
-            ],
-            "external_ip_address" : [
-               "154.47.132.33"
-            ],
-            "ip_address" : [
-               "10.0.0.5 (Shared)"
-            ],
-            "php_max_execution_time" : [
-               "30"
-            ],
-            "maximum_sub-servers" : [
-               "Cannot create"
+            "html_directory" : [
+               "/home/virtualmin3/public_html"
             ],
             "login_permissions" : [
                "Email, FTP and SSH"
             ],
+            "webmail_redirects" : [
+               "Yes"
+            ],
+            "template_id" : [
+               "0"
+            ],
+            "plan_id" : [
+               "0"
+            ],
+            "external_ip_address" : [
+               "154.47.132.33"
+            ],
+            "maximum_mongrel_instances" : [
+               "Unlimited"
+            ],
+            "home_directory" : [
+               "/home/virtualmin3"
+            ],
+            "plugins" : [
+               ""
+            ],
+            "php_max_execution_time" : [
+               "30"
+            ],
+            "php_execution_mode" : [
+               "fcgid"
+            ],
             "shell_command" : [
                "/bin/bash"
+            ],
+            "url" : [
+               "http://virtualmin3.local/"
             ],
             "shell_type" : [
                "ssh"
             ],
-            "url" : [
-               "http://Virtualminantonio.local/"
+            "contact_email" : [
+               "virtualmin3@virtualmin3.local"
             ],
-            "user_id" : [
-               "1001"
+            "read-only_mode" : [
+               "No"
             ],
-            "access_log" : [
-               ""
+            "username" : [
+               "virtualmin3"
+            ],
+            "can_rename_servers" : [
+               "Yes"
+            ],
+            "features" : [
+               "unix dir dns mail web logrotate"
+            ],
+            "match_all_web_sub-domains" : [
+               "No"
+            ],
+            "sub-servers_must_be_under_main_domain" : [
+               "No"
+            ],
+            "allowed_scripts" : [
+               "All"
             ],
             "created_by" : [
                "root"
             ],
-            "group_id" : [
-               "1001"
+            "sub-servers_inherit_ip_address" : [
+               "No"
+            ],
+            "contact_address" : [
+               "virtualmin3@virtualmin3.local"
+            ],
+            "allowed_features" : [
+               "unix dir dns web"
+            ],
+            "provisioning_for_spam" : [
+               "Local"
+            ],
+            "maximum_alias_servers" : [
+               "*"
+            ],
+            "template" : [
+               "Default Settings"
+            ],
+            "maximum_non-alias_servers" : [
+               "*"
             ],
             "sub-servers_cannot_be_under_other_domains" : [
                "No"
             ],
-            "edit_capabilities" : [
-               "users aliases passwd"
+            "error_log" : [
+               "/var/log/virtualmin/virtualmin3.local_error_log"
             ],
-            "lets_encrypt_renewal" : [
+            "spf_dns_record" : [
                "Enabled"
             ],
-            "created_unix_time" : [
-               "1648455435"
+            "php_fcgid_subprocesses" : [
+               "20"
             ],
-            "created_on" : [
-               "28/Mar/2022 10:17"
-            ],
-            "maximum_aliases" : [
-               "Unlimited"
-            ],
-            "ssl_key_file" : [
-               "/home/Virtualminantonio/ssl.key"
-            ],
-            "template_id" : [
-               "0"
-            ],
-            "maximum_non-alias_servers" : [
-               "*"
-            ],
-            "maximum_mailboxes" : [
-               "Unlimited"
-            ],
-            "html_directory" : [
-               "/home/Virtualminantonio/public_html"
-            ],
-            "home_directory" : [
-               "/home/Virtualminantonio"
-            ],
-            "sub-servers_inherit_ip_address" : [
+            "default_website_for_ip" : [
                "No"
-            ],
-            "php_execution_mode" : [
-               "mod_php"
-            ],
-            "error_log" : [
-               ""
-            ],
-            "provisioning_for_mysql" : [
-               "Local"
-            ],
-            "ssl_cert_expiry_time" : [
-               "1810121068"
-            ]
-         },
-         "name" : "Virtualminantonio.local"
-      },
-      {
-         "name" : "drupalantonio.local",
-         "values" : {
-            "maximum_aliases" : [
-               "Unlimited"
-            ],
-            "template_id" : [
-               "0"
-            ],
-            "group_id" : [
-               "1004"
-            ],
-            "edit_capabilities" : [
-               "users aliases passwd"
-            ],
-            "sub-servers_cannot_be_under_other_domains" : [
-               "No"
-            ],
-            "created_unix_time" : [
-               "1648462096"
-            ],
-            "created_on" : [
-               "28/Mar/2022 12:08"
-            ],
-            "php_execution_mode" : [
-               "fcgid"
-            ],
-            "error_log" : [
-               "/var/log/virtualmin/drupalantonio.local_error_log"
-            ],
-            "provisioning_for_mysql" : [
-               "Local"
-            ],
-            "maximum_non-alias_servers" : [
-               "*"
-            ],
-            "html_directory" : [
-               "/home/drupalantonio/public_html"
-            ],
-            "maximum_mailboxes" : [
-               "Unlimited"
-            ],
-            "home_directory" : [
-               "/home/drupalantonio"
-            ],
-            "sub-servers_inherit_ip_address" : [
-               "No"
-            ],
-            "plan_id" : [
-               "0"
-            ],
-            "username_for_mysql" : [
-               "drupalantonio"
-            ],
-            "provisioning_for_dns" : [
-               "Local"
-            ],
-            "type" : [
-               "Top-level server"
-            ],
-            "username" : [
-               "drupalantonio"
-            ],
-            "can_rename_servers" : [
-               "Yes"
-            ],
-            "shell_command" : [
-               "/bin/bash"
-            ],
-            "shell_type" : [
-               "ssh"
-            ],
-            "url" : [
-               "http://drupalantonio.local/"
-            ],
-            "user_id" : [
-               "1004"
-            ],
-            "access_log" : [
-               "/var/log/virtualmin/drupalantonio.local_access_log"
-            ],
-            "remote_features" : [
-               "mysql"
-            ],
-            "created_by" : [
-               "root"
-            ],
-            "maximum_alias_servers" : [
-               "*"
-            ],
-            "mailbox_username_prefix" : [
-               "drupalantonio"
-            ],
-            "external_ip_address" : [
-               "154.47.132.33"
-            ],
-            "server_quota" : [
-               "1 GiB"
-            ],
-            "ip_address" : [
-               "10.0.0.5 (Shared)"
-            ],
-            "php_max_execution_time" : [
-               "30"
-            ],
-            "maximum_sub-servers" : [
-               "Cannot create"
-            ],
-            "login_permissions" : [
-               "Email, FTP and SSH"
-            ],
-            "can_migrate_backups" : [
-               "No"
-            ],
-            "sub-servers_must_be_under_main_domain" : [
-               "No"
-            ],
-            "user_quota" : [
-               "1 GiB"
-            ],
-            "allowed_features" : [
-               "unix dir dns web webalizer logrotate mysql virtualmin-awstats virtualmin-dav"
-            ],
-            "can_choose_database_names" : [
-               "Yes"
-            ],
-            "plan" : [
-               "Default Plan"
-            ],
-            "template" : [
-               "Default Settings"
-            ],
-            "maximum_mongrel_instances" : [
-               "Unlimited"
-            ],
-            "read-only_mode" : [
-               "No"
-            ],
-            "contact_email" : [
-               "drupalantonio@Virtualminantonio.local"
-            ],
-            "user_block_quota" : [
-               "1048576"
-            ],
-            "description" : [
-               ""
-            ],
-            "password_storage" : [
-               "Plain text"
-            ],
-            "password" : [
-               "jiCEv2YV7ooj44F"
-            ],
-            "contact_address" : [
-               "drupalantonio@Virtualminantonio.local"
-            ],
-            "features" : [
-               "unix dir dns web webalizer logrotate mysql webmin"
-            ],
-            "password_for_mysql" : [
-               "jiCEv2YV7ooj44F"
-            ],
-            "server_block_quota" : [
-               "1048576"
-            ],
-            "plugins" : [
-               "virtualmin-awstats virtualmin-dav"
-            ],
-            "maximum_databases" : [
-               "Unlimited"
-            ],
-            "cgi_directory" : [
-               "/home/drupalantonio/cgi-bin"
             ],
             "provisioning_for_virus" : [
                "Local"
             ],
-            "allowed_scripts" : [
-               "All"
+            "edit_capabilities" : [
+               "users aliases passwd"
             ],
-            "group_name" : [
-               "drupalantonio"
+            "maximum_sub-servers" : [
+               "Cannot create"
             ],
-            "provisioning_for_spam" : [
-               "Local"
+            "dmarc_dns_record" : [
+               "Disabled"
+            ],
+            "password" : [
+               "HwobrWIXf1UywWC"
+            ],
+            "password_storage" : [
+               "Plain text"
+            ],
+            "created_unix_time" : [
+               "1652860432"
+            ],
+            "php_version" : [
+               "7.4"
             ],
             "file" : [
-               "/etc/webmin/virtual-server/domains/1648462078154297"
+               "/etc/webmin/virtual-server/domains/16528604262619"
             ],
-            "id" : [
-               "1648462078154297"
+            "maximum_databases" : [
+               "Unlimited"
+            ],
+            "suexec_for_cgis" : [
+               "enabled"
+            ],
+            "access_log" : [
+               "/var/log/virtualmin/virtualmin3.local_access_log"
+            ],
+            "provisioning_for_dns" : [
+               "Local"
             ]
          }
-      },
-      {
-         "values" : {
-            "type" : [
-               "Top-level server"
-            ],
-            "provisioning_for_dns" : [
-               "Local"
-            ],
-            "plan_id" : [
-               "0"
-            ],
-            "username_for_mysql" : [
-               "wordpressantonio2"
-            ],
-            "can_rename_servers" : [
-               "Yes"
-            ],
-            "username" : [
-               "wordpressantonio2"
-            ],
-            "access_log" : [
-               "/var/log/virtualmin/wordpressantonio2.local_access_log"
-            ],
-            "user_id" : [
-               "1003"
-            ],
-            "remote_features" : [
-               "mysql"
-            ],
-            "created_by" : [
-               "root"
-            ],
-            "shell_command" : [
-               "/bin/bash"
-            ],
-            "shell_type" : [
-               "ssh"
-            ],
-            "url" : [
-               "http://wordpressantonio2.local/"
-            ],
-            "maximum_sub-servers" : [
-               "Cannot create"
-            ],
-            "php_max_execution_time" : [
-               "30"
-            ],
-            "ip_address" : [
-               "10.0.0.5 (Shared)"
-            ],
-            "login_permissions" : [
-               "Email, FTP and SSH"
-            ],
-            "maximum_alias_servers" : [
-               "*"
-            ],
-            "external_ip_address" : [
-               "154.47.132.33"
-            ],
-            "mailbox_username_prefix" : [
-               "wordpressantonio2"
-            ],
-            "server_quota" : [
-               "1 GiB"
-            ],
-            "template_id" : [
-               "0"
-            ],
-            "maximum_aliases" : [
-               "Unlimited"
-            ],
-            "created_unix_time" : [
-               "1648455924"
-            ],
-            "created_on" : [
-               "28/Mar/2022 10:25"
-            ],
-            "group_id" : [
-               "1003"
-            ],
-            "sub-servers_cannot_be_under_other_domains" : [
-               "No"
-            ],
-            "edit_capabilities" : [
-               "users aliases passwd"
-            ],
-            "php_execution_mode" : [
-               "fcgid"
-            ],
-            "provisioning_for_mysql" : [
-               "Local"
-            ],
-            "error_log" : [
-               "/var/log/virtualmin/wordpressantonio2.local_error_log"
-            ],
-            "home_directory" : [
-               "/home/wordpressantonio2"
-            ],
-            "maximum_mailboxes" : [
-               "Unlimited"
-            ],
-            "html_directory" : [
-               "/home/wordpressantonio2/public_html"
-            ],
-            "sub-servers_inherit_ip_address" : [
-               "No"
-            ],
-            "maximum_non-alias_servers" : [
-               "*"
-            ],
-            "password" : [
-               "Sw8PnVw8OwURXyB"
-            ],
-            "features" : [
-               "unix dir dns web logrotate mysql webmin"
-            ],
-            "contact_address" : [
-               "wordpressantonio2@Virtualminantonio.local"
-            ],
-            "server_block_quota" : [
-               "1048576"
-            ],
-            "password_for_mysql" : [
-               "Sw8PnVw8OwURXyB"
-            ],
-            "cgi_directory" : [
-               "/home/wordpressantonio2/cgi-bin"
-            ],
-            "maximum_databases" : [
-               "Unlimited"
-            ],
-            "plugins" : [
-               "virtualmin-awstats virtualmin-dav"
-            ],
-            "provisioning_for_virus" : [
-               "Local"
-            ],
-            "id" : [
-               "1648455901138344"
-            ],
-            "file" : [
-               "/etc/webmin/virtual-server/domains/1648455901138344"
-            ],
-            "allowed_scripts" : [
-               "All"
-            ],
-            "provisioning_for_spam" : [
-               "Local"
-            ],
-            "group_name" : [
-               "wordpressantonio2"
-            ],
-            "can_migrate_backups" : [
-               "No"
-            ],
-            "sub-servers_must_be_under_main_domain" : [
-               "No"
-            ],
-            "can_choose_database_names" : [
-               "Yes"
-            ],
-            "allowed_features" : [
-               "unix dir dns web logrotate mysql virtualmin-awstats virtualmin-dav"
-            ],
-            "user_quota" : [
-               "1 GiB"
-            ],
-            "maximum_mongrel_instances" : [
-               "Unlimited"
-            ],
-            "read-only_mode" : [
-               "No"
-            ],
-            "contact_email" : [
-               "wordpressantonio2@Virtualminantonio.local"
-            ],
-            "user_block_quota" : [
-               "1048576"
-            ],
-            "plan" : [
-               "Default Plan"
-            ],
-            "template" : [
-               "Default Settings"
-            ],
-            "password_storage" : [
-               "Plain text"
-            ],
-            "description" : [
-               ""
-            ]
-         },
-         "name" : "wordpressantonio2.local"
       }
-   ],
-   "status" : "success"
+   ]
 }
 

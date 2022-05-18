@@ -26,7 +26,6 @@ class ServerController extends Controller
                 $password = $request->input('password');
                 $newserver->password = Crypt::encryptString($password);
                 $newserver->save();
-                new App\Jobs\ReloadInformation();
                 }else{
                     throw \Illuminate\Validation\ValidationException::withMessages(
                         ['name' => ['No se puede repetir el nombre de un servidor']]);
