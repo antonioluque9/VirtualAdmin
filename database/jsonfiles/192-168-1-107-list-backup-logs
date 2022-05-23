@@ -1,5 +1,4 @@
 {
-   "command" : "list-backup-logs",
    "data" : [
       {
          "value" : "",
@@ -7,14 +6,56 @@
       },
       {
          "values" : {
+            "started" : [
+               "18/May/2022 00:00"
+            ],
+            "final_nice_size" : [
+               "1.51 MiB"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "domains" : [
+               "pruebasvirtualadmin.es subservidorpruebas.com pruebasvirtualadmin.com servidorpruebas.local"
+            ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "final_size" : [
+               "1589417"
+            ],
+            "scheduled_destination" : [
+               "/backups/virtualmin"
+            ],
+            "run_from" : [
+               "sched"
+            ],
             "final_status" : [
                "OK"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "ended" : [
+               "18/May/2022 00:00"
             ],
             "destination" : [
                "/backups/virtualmin"
             ],
-            "scheduled_destination" : [
-               "/backups/virtualmin"
+            "scheduled_backup_id" : [
+               "165234891892502"
+            ]
+         },
+         "name" : "1652832007-15696-1:"
+      },
+      {
+         "name" : "1652745603-158743-1:",
+         "values" : {
+            "format" : [
+               "One file per server"
             ],
             "compression" : [
                "tar.gz"
@@ -22,82 +63,87 @@
             "domains" : [
                "pruebasvirtualadmin.es subservidorpruebas.com pruebasvirtualadmin.com servidorpruebas.local"
             ],
-            "final_size" : [
-               "1577909"
+            "incremental" : [
+               "No"
+            ],
+            "final_nice_size" : [
+               "1.5 MiB"
             ],
             "started" : [
+               "17/May/2022 00:00"
+            ],
+            "destination" : [
+               "/backups/virtualmin"
+            ],
+            "scheduled_backup_id" : [
+               "165234891892502"
+            ],
+            "ended" : [
                "17/May/2022 00:00"
             ],
             "encrypted" : [
                "No"
             ],
-            "format" : [
-               "One file per server"
-            ],
-            "final_nice_size" : [
-               "1.5 MiB"
-            ],
-            "ended" : [
-               "17/May/2022 00:00"
-            ],
-            "scheduled_backup_id" : [
-               "165234891892502"
-            ],
-            "incremental" : [
-               "No"
+            "final_status" : [
+               "OK"
             ],
             "run_from" : [
                "sched"
+            ],
+            "scheduled_destination" : [
+               "/backups/virtualmin"
+            ],
+            "final_size" : [
+               "1577909"
             ]
-         },
-         "name" : "1652745603-158743-1:"
+         }
       },
       {
          "values" : {
-            "incremental" : [
+            "ended" : [
+               "12/May/2022 09:48"
+            ],
+            "encrypted" : [
                "No"
+            ],
+            "final_status" : [
+               "OK"
             ],
             "run_from" : [
                "cgi"
             ],
-            "ended" : [
-               "12/May/2022 09:48"
-            ],
-            "final_nice_size" : [
-               "1.5 MiB"
-            ],
-            "scheduled_backup_id" : [
-               "165234891892502"
+            "scheduled_destination" : [
+               "/backups/virtualmin"
             ],
             "final_size" : [
                "1576882"
             ],
-            "started" : [
-               "12/May/2022 09:48"
-            ],
-            "domains" : [
-               "pruebasvirtualadmin.es subservidorpruebas.com pruebasvirtualadmin.com servidorpruebas.local"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "scheduled_destination" : [
-               "/backups/virtualmin"
-            ],
-            "final_status" : [
-               "OK"
+            "run_by_user" : [
+               "root"
             ],
             "destination" : [
                "/backups/virtualmin"
             ],
-            "run_by_user" : [
-               "root"
+            "scheduled_backup_id" : [
+               "165234891892502"
+            ],
+            "final_nice_size" : [
+               "1.5 MiB"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "started" : [
+               "12/May/2022 09:48"
+            ],
+            "format" : [
+               "One file per server"
             ],
             "compression" : [
                "tar.gz"
+            ],
+            "domains" : [
+               "pruebasvirtualadmin.es subservidorpruebas.com pruebasvirtualadmin.com servidorpruebas.local"
             ]
          },
          "name" : "1652348933-92575-1:"
@@ -105,157 +151,157 @@
       {
          "name" : "1652572804-89520-1:",
          "values" : {
+            "started" : [
+               "15/May/2022 00:00"
+            ],
             "incremental" : [
                "No"
-            ],
-            "run_from" : [
-               "sched"
-            ],
-            "ended" : [
-               "15/May/2022 00:00"
             ],
             "final_nice_size" : [
                "1.5 MiB"
             ],
-            "scheduled_backup_id" : [
-               "165234891892502"
+            "compression" : [
+               "tar.gz"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "domains" : [
+               "pruebasvirtualadmin.es subservidorpruebas.com pruebasvirtualadmin.com servidorpruebas.local"
+            ],
+            "final_status" : [
+               "OK"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "ended" : [
+               "15/May/2022 00:00"
             ],
             "final_size" : [
                "1576702"
             ],
-            "started" : [
-               "15/May/2022 00:00"
-            ],
-            "domains" : [
-               "pruebasvirtualadmin.es subservidorpruebas.com pruebasvirtualadmin.com servidorpruebas.local"
-            ],
-            "encrypted" : [
-               "No"
-            ],
-            "format" : [
-               "One file per server"
-            ],
             "scheduled_destination" : [
                "/backups/virtualmin"
-            ],
-            "final_status" : [
-               "OK"
-            ],
-            "destination" : [
-               "/backups/virtualmin"
-            ],
-            "compression" : [
-               "tar.gz"
-            ]
-         }
-      },
-      {
-         "name" : "1652486404-55630-1:",
-         "values" : {
-            "ended" : [
-               "14/May/2022 00:00"
-            ],
-            "final_nice_size" : [
-               "1.5 MiB"
-            ],
-            "scheduled_backup_id" : [
-               "165234891892502"
-            ],
-            "incremental" : [
-               "No"
             ],
             "run_from" : [
                "sched"
             ],
-            "scheduled_destination" : [
-               "/backups/virtualmin"
+            "scheduled_backup_id" : [
+               "165234891892502"
             ],
-            "final_status" : [
-               "OK"
+            "destination" : [
+               "/backups/virtualmin"
+            ]
+         }
+      },
+      {
+         "values" : {
+            "domains" : [
+               "pruebasvirtualadmin.es subservidorpruebas.com pruebasvirtualadmin.com servidorpruebas.local"
+            ],
+            "compression" : [
+               "tar.gz"
+            ],
+            "format" : [
+               "One file per server"
+            ],
+            "final_nice_size" : [
+               "1.5 MiB"
+            ],
+            "incremental" : [
+               "No"
+            ],
+            "started" : [
+               "14/May/2022 00:00"
+            ],
+            "scheduled_backup_id" : [
+               "165234891892502"
             ],
             "destination" : [
                "/backups/virtualmin"
             ],
-            "compression" : [
-               "tar.gz"
+            "scheduled_destination" : [
+               "/backups/virtualmin"
+            ],
+            "run_from" : [
+               "sched"
             ],
             "final_size" : [
                "1576667"
             ],
-            "started" : [
+            "encrypted" : [
+               "No"
+            ],
+            "ended" : [
                "14/May/2022 00:00"
             ],
-            "domains" : [
-               "pruebasvirtualadmin.es subservidorpruebas.com pruebasvirtualadmin.com servidorpruebas.local"
-            ],
-            "format" : [
-               "One file per server"
-            ],
-            "encrypted" : [
-               "No"
+            "final_status" : [
+               "OK"
             ]
-         }
+         },
+         "name" : "1652486404-55630-1:"
       },
       {
-         "name" : "1652659203-123464-1:",
          "values" : {
-            "encrypted" : [
+            "final_nice_size" : [
+               "1.5 MiB"
+            ],
+            "incremental" : [
                "No"
+            ],
+            "started" : [
+               "16/May/2022 00:00"
+            ],
+            "compression" : [
+               "tar.gz"
             ],
             "format" : [
                "One file per server"
             ],
             "domains" : [
                "pruebasvirtualadmin.es subservidorpruebas.com pruebasvirtualadmin.com servidorpruebas.local"
+            ],
+            "encrypted" : [
+               "No"
+            ],
+            "ended" : [
+               "16/May/2022 00:00"
+            ],
+            "final_status" : [
+               "OK"
+            ],
+            "run_from" : [
+               "sched"
+            ],
+            "scheduled_destination" : [
+               "/backups/virtualmin"
             ],
             "final_size" : [
                "1576687"
             ],
-            "started" : [
-               "16/May/2022 00:00"
-            ],
-            "compression" : [
-               "tar.gz"
-            ],
-            "final_status" : [
-               "OK"
+            "scheduled_backup_id" : [
+               "165234891892502"
             ],
             "destination" : [
                "/backups/virtualmin"
+            ]
+         },
+         "name" : "1652659203-123464-1:"
+      },
+      {
+         "values" : {
+            "final_size" : [
+               "1576706"
+            ],
+            "run_from" : [
+               "sched"
             ],
             "scheduled_destination" : [
                "/backups/virtualmin"
             ],
-            "run_from" : [
-               "sched"
-            ],
-            "incremental" : [
-               "No"
-            ],
-            "scheduled_backup_id" : [
-               "165234891892502"
-            ],
-            "final_nice_size" : [
-               "1.5 MiB"
-            ],
-            "ended" : [
-               "16/May/2022 00:00"
-            ]
-         }
-      },
-      {
-         "values" : {
-            "run_from" : [
-               "sched"
-            ],
-            "incremental" : [
-               "No"
-            ],
-            "scheduled_backup_id" : [
-               "165234891892502"
-            ],
-            "final_nice_size" : [
-               "1.5 MiB"
+            "final_status" : [
+               "OK"
             ],
             "ended" : [
                "13/May/2022 00:00"
@@ -263,34 +309,35 @@
             "encrypted" : [
                "No"
             ],
-            "format" : [
-               "One file per server"
+            "destination" : [
+               "/backups/virtualmin"
             ],
-            "domains" : [
-               "pruebasvirtualadmin.es subservidorpruebas.com pruebasvirtualadmin.com servidorpruebas.local"
-            ],
-            "final_size" : [
-               "1576706"
+            "scheduled_backup_id" : [
+               "165234891892502"
             ],
             "started" : [
                "13/May/2022 00:00"
             ],
+            "incremental" : [
+               "No"
+            ],
+            "final_nice_size" : [
+               "1.5 MiB"
+            ],
+            "domains" : [
+               "pruebasvirtualadmin.es subservidorpruebas.com pruebasvirtualadmin.com servidorpruebas.local"
+            ],
+            "format" : [
+               "One file per server"
+            ],
             "compression" : [
                "tar.gz"
-            ],
-            "destination" : [
-               "/backups/virtualmin"
-            ],
-            "final_status" : [
-               "OK"
-            ],
-            "scheduled_destination" : [
-               "/backups/virtualmin"
             ]
          },
          "name" : "1652400003-20795-1:"
       }
    ],
+   "command" : "list-backup-logs",
    "status" : "success"
 }
 
