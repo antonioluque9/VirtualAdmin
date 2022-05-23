@@ -47,8 +47,6 @@ class ReloadInformationSched implements ShouldQueue
                     .$filename. ' '.$url.'"');
             }
         }
-        //exec('powershell -c "cd c:\xampp\htdocs\VirtualAdmin\; php artisan db:seed --class=BackupSeeder; php artisan db:seed --class=VirtualhostSeeder"');
-        //exec('bash -c "php artisan db:seed --class=BackupSeeder && php artisan db:seed --class=VirtualhostSeeder"');
-        return exec('bash -c "php artisan db:seed --class=BackupSeeder && php artisan db:seed --class=VirtualhostSeeder"');
+        exec('bash -c "php artisan db:seed --class=BackupSeeder && php artisan db:seed --class=VirtualhostSeeder"');
     }
 }
