@@ -23,16 +23,15 @@ class BackupSeeder extends Seeder
             foreach ($functions as $function) {
                 $rutaSeparada = separateRoute($server->url);
                 $rutasinpuntos = str_replace('.', '-', $rutaSeparada[0]);
-                $filename = 'C:\xampp\htdocs\VirtualAdmin\database\jsonfiles\\'. $rutasinpuntos . '-' . $function;
+                $filename = '/var/www/html/database/jsonfiles/'. $rutasinpuntos . '-' . $function;
                 $jsonfile = File::get($filename);
                 $json = json_decode($jsonfile, true);
                 $separado = array_slice($json['data'], 1);
                 foreach ($separado as $data) {
                     $name = str_replace('-', '', $data['name']);
                     $name = explode(':', $name);
-
                     if (!App\Models\Backup::find($name[0])) {
-                        if (($data['values']['started'][0]) <= (date('Y-M-d H:i',strtotime("-1 month")))){
+                        if ((transformDate($data['values']['started'][0])) <= (date('d-m-Y H:i',strtotime("-1 month")))){
                             $backup = new App\Models\Backup;
                                 if ($data['values']['final_status'][0] === "OK"){
                                     if(isset($data['values']['failed_domains'][0])){

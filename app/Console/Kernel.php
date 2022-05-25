@@ -17,8 +17,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->job(new App\Jobs\ReloadInformationSched())->hourly();
+        $schedule->command('command:reload')->everyFifteenMinutes();
         $schedule->job(new App\Jobs\EmailSending())->dailyAt('9:00');
+	$schedule->job(new App\Jobs\DeleteLatest())->daily();
     }
 
     /**

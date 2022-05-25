@@ -49,7 +49,21 @@ class ServerController extends Controller
                 $server = App\Models\server::find($request->input('id'));
                 $server->url = $request->input('url');
                 $server->username = $request->input('username');
-                $server->servername = $request->input('servername');
+
+		$virtualhosts = DB::table('virtualhosts')->where('servername', $server->servername)->get();
+                foreach ($virtualhosts as $virtualhost){
+                    $server1 = App\Models\Virtualhost::find($virtualhost->id);
+                    $server1->servername = $request->input('servername');
+                    $server1->save();
+                }
+                $backups = DB::table('backups')->where('servername', $server->servername)->get();
+                foreach ($backups as $backup){
+                    $server2 = App\Models\Backup::find($backup->id);
+                    $server2->servername = $request->input('servername');
+                    $server2->save();
+                }
+
+		$server->servername = $request->input('servername');
                 $password = $request->input('password');
                 $server->password = Crypt::encryptString($password);
                 $server->save();
