@@ -14,6 +14,3 @@ usuario, contraseña, cifrado, etc)
 
 Tras esto lo unico que debes hacer es lanzar la ruta en la que se haye el proyecto, registrarte una unica vez y comenzar
 usar la web
-
-
-Correo de prueba=pruebasmtpcorreo342@gmail.com
