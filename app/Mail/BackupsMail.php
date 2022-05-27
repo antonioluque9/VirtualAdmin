@@ -32,6 +32,7 @@ class BackupsMail extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.backups');
+        return $this->from('pruebasmtpcorreo342@gmail.com', 'VirtualAdmin')->
+        view('emails.backups');
     }
 }
