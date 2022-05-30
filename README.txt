@@ -1,9 +1,11 @@
 Para lograr poner en funcionamiento este proyecto solo debes seguir unos sencillos pasos:
 -Crear una base de datos, ya sea local o remota pero debes especificarlo correctamente en el .env(ip, nombre de la base
 de datos, usuario, contraseña, ...), ademas debes asegurarte de que esten creados la base de datos y el usuario
-que vas a usar
+que vas a usar.
 -Lanzar composer install una vez que clones el proyecto para descargar todos los paquetes necesarios para el correcto
-funcionamiento de laravel
+funcionamiento de laravel, recuerda que debes tener todas las dependecias de php instaladas, para saber cuales necesita 
+laravel puedes mirar la documentacion de la web oficial.
+-Crear la carpeta jsonfiles en la carpeta database.
 -Generar una Key, simplemente escribe en la terminal "php artisan key:generate", ten en cuenta que esta clave es la que
 se usa para cifrar y descrifrar algunos de los datos que usa el programa para su funcionamiento, de modo que si se
 regenera esta clave algunos de los datos se perderan tambien y posiblemente se creen algunos conflictos
