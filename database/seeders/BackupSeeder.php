@@ -23,7 +23,7 @@ class BackupSeeder extends Seeder
             foreach ($functions as $function) {
                 $rutaSeparada = separateRoute($server->url);
                 $rutasinpuntos = str_replace('.', '-', $rutaSeparada[0]);
-                $filename = '/var/www/html/database/jsonfiles/'. $rutasinpuntos . '-' . $function;
+                $filename = 'database/jsonfiles/'. $rutasinpuntos . '-' . $function;
                 $jsonfile = File::get($filename);
                 $json = json_decode($jsonfile, true);
                 $separado = array_slice($json['data'], 1);
