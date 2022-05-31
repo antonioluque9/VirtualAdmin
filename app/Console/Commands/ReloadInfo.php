@@ -40,10 +40,10 @@ class ReloadInfo extends Command
                 $serverpassword = Crypt::decryptString($server->password);
                 $url = "'".$server->url."/virtual-server/remote.cgi?program=".$function."&multiline=&json=1'";
                 $filename = $rutasinpuntos."-".$function;
-                exec('cd /var/www/html/database/jsonfiles && wget --no-check-certificate --user='.$username.' --password='.$serverpassword.' -O '
+                exec('cd database/jsonfiles && wget --no-check-certificate --user='.$username.' --password='.$serverpassword.' -O '
                     .$filename. ' '.$url.'');
             }
         }
-        exec('cd /var/www/html && php artisan db:seed --class=BackupSeeder && php artisan db:seed --class=VirtualhostSeeder');
+        exec('php artisan db:seed --class=BackupSeeder && php artisan db:seed --class=VirtualhostSeeder');
     }
 }
