@@ -31,7 +31,7 @@ class BackupSeeder extends Seeder
                     $name = str_replace('-', '', $data['name']);
                     $name = explode(':', $name);
                     if (!App\Models\Backup::find($name[0])) {
-                        if ((transformDate($data['values']['started'][0])) <= (date('d-m-Y H:i',strtotime("-1 month")))){
+                        if ((transformDate($data['values']['started'][0])) >= (date('Y-m-d H:i:00',strtotime("-1 month")))){
                             $backup = new App\Models\Backup;
                                 if ($data['values']['final_status'][0] === "OK"){
                                     if(isset($data['values']['failed_domains'][0])){
