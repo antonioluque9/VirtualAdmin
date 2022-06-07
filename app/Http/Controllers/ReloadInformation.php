@@ -7,7 +7,7 @@ class ReloadInformation extends Controller
 {
     public function reloadInformation()
     {
-        \Artisan::call('command:reload');
-        return redirect('backups');
+	exec('cd .. && php artisan command:reload');
+	return redirect('backups');
     }
 }

@@ -11,7 +11,7 @@ class LiveVirtualhostsTable extends Component
     use WithPagination;
 
     public $search = '';
-    public $sortField = 'server';
+    public $sortField = 'type';
     public $sortDirection = 'desc';
 
     protected $paginationTheme = 'bootstrap';

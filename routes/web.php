@@ -38,6 +38,9 @@ use App\Http\Livewire;
     Route::post('/newserver/update', [Controllers\ServerController::class, 'update'])->name('servers.update')->middleware('auth');
     Route::get('/newserver/delete/{id}', [Controllers\ServerController::class, 'delete'])->middleware('auth');
 
+    Route::get('/newserver/editname', [Controllers\ServerController::class, 'editname'])->name('servers.editname')->middleware('auth');
+    Route::get('/changemail', [Controllers\User::class, 'changemail'])->name('user.changemail')->middleware('auth');
+
     Route::get('/servers', [Controllers\ServerController::class, 'read'])->name('servers.read')->middleware('auth');
 
     Route::get('/reload', [Controllers\ReloadInformation::class, 'reloadInformation'])->middleware('auth');

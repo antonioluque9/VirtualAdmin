@@ -12,7 +12,8 @@ class ServerController extends Controller
 {
     public function read(){
         $servers = App\Models\server::all();
-        return view('servers', compact('servers'));
+        $user = App\Models\User::all();
+        return view('servers', compact('servers', 'user'));
     }
 
     public function store(Request $request)
@@ -41,6 +42,28 @@ class ServerController extends Controller
     public function edit($id){
         $server = App\Models\server::find($id);
         return view('editserver', compact('server'));
+    }
+
+    public function editname(Request $request){
+        $server = App\Models\server::find($request->input('id'));
+
+        $virtualhosts = DB::table('virtualhosts')->where('servername', $server->servername)->get();
+        foreach ($virtualhosts as $virtualhost){
+            $server1 = App\Models\Virtualhost::find($virtualhost->id);
+            $server1->servername = $request->input('newname');
+            $server1->save();
+        }
+        $backups = DB::table('backups')->where('servername', $server->servername)->get();
+        foreach ($backups as $backup){
+            $server2 = App\Models\Backup::find($backup->id);
+            $server2->servername = $request->input('newname');
+            $server2->save();
+        }
+
+        $server->servername = $request->input('newname');
+        $server->save();
+
+        return redirect('servers');
     }
 
     public function update(Request $request){
@@ -81,7 +104,6 @@ class ServerController extends Controller
     public function delete($id){
         $server = App\Models\server::find($id);
         $ruta = separateRoute($server->url);
-        //$rutasinpuntos = str_replace('.', '-', $ruta[0]);
 
         $virtualhosts = DB::table('virtualhosts')->where('server', $ruta[0])->get();
         $numeroVirtualhosts = DB::table('virtualhosts')->where('server', $ruta[0])->count();

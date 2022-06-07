@@ -19,7 +19,6 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('command:reload')->everyFifteenMinutes();
         $schedule->job(new App\Jobs\EmailSending())->dailyAt('9:00');
-	$schedule->job(new App\Jobs\DeleteLatest())->daily();
     }
 
     /**

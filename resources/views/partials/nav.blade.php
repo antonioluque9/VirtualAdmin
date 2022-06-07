@@ -33,19 +33,42 @@
     </div>
     <div class="me-2" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <form method="post" action="/logout">
-                    @csrf
-                    <a class="nav-link" href="#" onclick="this.closest('form').submit()">Cerrar Sesión</a>
-                </form>
+            <li class="nav-item dropstart">
+                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                    <i class="bi bi-person-fill" style="font-size: 20px"></i>
+                </button>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start" aria-labelledby="navbarDropdown">
+                        <li>
+                            <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#gmail">Cambiar Correo</button>
+                        </li>
+                        <li>
+                            <form method="post" action="/logout">
+                                @csrf
+                                <a class="dropdown-item" href="#" onclick="this.closest('form').submit()">Cerrar Sesión</a>
+                            </form>
+                        </li>
+                    </ul>
             </li>
-{{--            <li class="nav-item mt-2">--}}
-{{--                <label>Selecciona modo: </label>--}}
-{{--                <select class="nav-item">--}}
-{{--                    <option>Administrador</option>--}}
-{{--                    <option onclick="">Lector</option>--}}
-{{--                </select>--}}
-{{--            </li>--}}
         </ul>
     </div>
 </nav>
+<div class="modal fade" id="gmail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Cambiar Correo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="get" action="/changemail">
+                    @csrf
+                    <input type="email" name="mail" required autofocus class="m-2 mb-3 form-control"/>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -34,7 +34,20 @@ class VirtualhostSeeder extends Seeder
                         $virtualhost->virtualhost = $data['name'];
                         $virtualhost->username = $data['values']['username'][0];
                         $virtualhost->description = $data['values']['description'][0];
-                        $virtualhost->save();
+                        $virtualhost->type = $data['values']['type'][0];
+                        if(isset($data['values']['parent_domain'][0])){
+                            $virtualhost->parent = $data['values']['parent_domain'][0];
+                            $virtualhost->phpversion = $data['values']['php_version'][0];
+                            $virtualhost->save();
+                        }else{
+                            if(isset($data['values']['php_version'][0])){
+                            $virtualhost->phpversion = $data['values']['php_version'][0];
+                            $virtualhost->save();
+                        }else{
+                                $virtualhost->real_domain = $data['values']['real_domain'][0];
+                                $virtualhost->save();
+                            }
+                        }
                     } else {
                         continue;
                     }

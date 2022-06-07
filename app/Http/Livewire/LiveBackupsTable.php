@@ -35,6 +35,7 @@ class LiveBackupsTable extends Component
             'backups' => Backup::where('servername', 'like', '%'.$this->search.'%')
                 ->orWhere('domains', 'like', '%'.$this->search.'%')
                 ->orWhere('status', 'like', '%'.$this->search.'%')
+                ->orWhere('started', 'like', '%'.$this->search.'%')
                 ->orderBy($this->sortField, $this->sortDirection)
                 ->paginate(8)
         ])->extends('layouts.app');

@@ -24,15 +24,34 @@
                     </a>
                 </th>
                 <th>
+                    <a wire:click="sortBy('type')" role="button" href="#" class="text-decoration-none text-black">
+                        Tipo
+                        <i class="bi bi-arrow-down-up"></i>
+                    </a>
+                </th>
+                <th>
+                    <a wire:click="sortBy('parent')" role="button" href="#" class="text-decoration-none text-black">
+                        Servidor Padre
+                        <i class="bi bi-arrow-down-up"></i>
+                    </a>
+                </th>
+                <th>
                     <a wire:click="sortBy('username')" role="button" href="#" class="text-decoration-none text-black">
                         Usuario
                         <i class="bi bi-arrow-down-up"></i>
                     </a>
                 </th>
                 <th>Descripción</th>
+                <th>
+                    <a wire:click="sortBy('phpversion')" role="button" href="#" class="text-decoration-none text-black">
+                        Version PHP
+                        <i class="bi bi-arrow-down-up"></i>
+                    </a>
+                </th>
                 </thead>
                 <tbody wire:loading.class.delay="opacity-50">
                 @foreach($virtualhosts as $virtualhost)
+                    @if($virtualhost->type == "Principal")
                     <tr>
                         <td>
                             <div class="d-flex align-items-center">
@@ -45,12 +64,78 @@
                             <p class="fw-normal mb-1">{{$virtualhost->virtualhost}}</p>
                         </td>
                         <td>
+                            <p class="fw-normal mb-1">{{$virtualhost->type}}</p>
+                        </td>
+                        <td>
+                            <p class="fw-normal mb-1">{{$virtualhost->parent}}</p>
+                        </td>
+                        <td>
                             <p class="fw-normal mb-1">{{$virtualhost->username}}</p>
                         </td>
                         <td>
                             <p class="fw-normal mb-1">{{$virtualhost->description}}</p>
                         </td>
+                        <td>
+                            <p class="fw-normal mb-1">{{$virtualhost->phpversion}}</p>
+                        </td>
                     </tr>
+                    @elseif($virtualhost->type == "SubServidor")
+                        <tr style="background-color:lightgrey;">
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="ms-3">
+                                        <p class="fw-bold mb-1">{{$virtualhost->servername}}</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$virtualhost->virtualhost}}</p>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$virtualhost->type}}</p>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$virtualhost->parent}}</p>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$virtualhost->username}}</p>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$virtualhost->description}}</p>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$virtualhost->phpversion}}</p>
+                            </td>
+                        </tr>
+                    @else
+                        <tr style="background-color:lightcyan ">
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="ms-3">
+                                        <p class="fw-bold mb-1">{{$virtualhost->servername}}</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$virtualhost->virtualhost}}</p>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$virtualhost->type}}</p>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$virtualhost->real_domain}}</p>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$virtualhost->username}}</p>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$virtualhost->description}}</p>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{$virtualhost->phpversion}}</p>
+                            </td>
+                        </tr>
+                    @endif
                 @endforeach
                 </tbody>
             </table>

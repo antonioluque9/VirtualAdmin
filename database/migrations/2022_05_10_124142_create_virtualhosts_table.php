@@ -20,6 +20,11 @@ return new class extends Migration
             $table->string('virtualhost');
             $table->string('username');
             $table->string('description');
+            $table->string('type');
+            $table->string('parent')->nullable();
+            $table->string('real_domain')->nullable();
+            $table->string('phpversion')->nullable();
+
             $table->timestamps();
         });
     }
