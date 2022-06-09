@@ -26,7 +26,7 @@ use App\Http\Livewire;
 
     Route::post('/register', [Auth\LoginController::class, 'register'])->name('register');
     Route::post('/login', [Auth\LoginController::class, 'login'])->name('login');
-    Route::post('/logout', [Auth\LoginController::class, 'logout']);
+    Route::get('/logout', [Auth\LoginController::class, 'logout']);
 
     Route::get('/virtualhosts', Livewire\LiveVirtualhostsTable::class)->middleware('auth');
 
@@ -40,6 +40,7 @@ use App\Http\Livewire;
 
     Route::get('/newserver/editname', [Controllers\ServerController::class, 'editname'])->name('servers.editname')->middleware('auth');
     Route::get('/changemail', [Controllers\User::class, 'changemail'])->name('user.changemail')->middleware('auth');
+    Route::get('/changepasswd', [Auth\LoginController::class, 'changepasswd'])->name('user.changepasswd')->middleware('auth');
 
     Route::get('/servers', [Controllers\ServerController::class, 'read'])->name('servers.read')->middleware('auth');
 

@@ -12,10 +12,27 @@
     <body>
         @include('partials.nav')
         <div class="container-xl pt-2 fs-5">
+            <div class="mt-5 pt-3">
+                @if( session('status'))
+                    <div class="alert alert-success h-auto" role="alert">
+                        {{ session('status') }}
+                    </div>
+                @elseif( session('error'))
+                    <div class="alert alert-danger h-auto" role="alert">
+                        {{ session('error') }}
+                    </div>
+                @elseif ($errors->any())
+                    <div class="alert alert-danger h-auto">
+                            @foreach ($errors->all() as $error)
+                                {{ $error }}
+                            @endforeach
+                    </div>
+                @endif
+            </div>
             @foreach($user as $user)
-            <div class="float-start mt-3 pt-5"><p>Correo: {{$user->email}}</p></div>
+            <div class="float-start "><p>Correo: {{$user->email}}</p></div>
             @endforeach
-            <div class="float-end mb-3 mt-3 pt-5">
+            <div class="float-end mb-3">
                 <button class="mx-auto btn btn-primary" type="submit">
                     <a href="/reload" class="text-decoration-none text-white">
                         Recargar Información
@@ -82,7 +99,7 @@
                                     <a class="text-decoration-none text-white" href="/newserver/edit/{{{$server->id}}}">Editar</a>
                                 </button>
                                 <button type="button" class="btn btn-danger btn-sm btn-rounded">
-                                    <a class="text-decoration-none text-white" href="/newserver/delete/{{{$server->id}}}" onclick="return confirm('Seguro que deseas elimiar el servidor {{$server->url}}')">Borrar</a>
+                                    <a class="text-decoration-none text-white" href="/newserver/delete/{{{$server->id}}}" onclick="return confirm('Seguro que deseas elimiar el servidor {{$server->servername}}')">Borrar</a>
                                 </button>
                             </form>
                         </td>

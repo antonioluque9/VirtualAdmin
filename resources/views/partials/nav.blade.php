@@ -42,9 +42,12 @@
                             <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#gmail">Cambiar Correo</button>
                         </li>
                         <li>
-                            <form method="post" action="/logout">
+                            <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#passwd">Cambiar Contraseña</button>
+                        </li>
+                        <li>
+                            <form method="get" action="/logout">
                                 @csrf
-                                <a class="dropdown-item" href="#" onclick="this.closest('form').submit()">Cerrar Sesión</a>
+                                <a class="dropdown-item" href="/logout" onclick="return confirm('Seguro que deseas salir')">Cerrar Sesión</a>
                             </form>
                         </li>
                     </ul>
@@ -52,6 +55,8 @@
         </ul>
     </div>
 </nav>
+
+{{--Modal de cambio de correo--}}
 <div class="modal fade" id="gmail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -72,3 +77,38 @@
         </div>
     </div>
 </div>
+
+{{--Modal de cambio de contraseña--}}
+<div class="modal fade" id="passwd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Cambiar Correo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="get" action="/changepasswd">
+                    @csrf
+                    <div class="form-floating mb-3">
+                        <input name="currentpassword" type="password" required class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Contraseña actual</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input name="newpassword" type="password" required class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Nueva Contraseña</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input name="confirm-newpassword" type="password" required class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Repetir Nueva Contraseña</label>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

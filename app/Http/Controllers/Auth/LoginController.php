@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Database\Eloquent\Concerns\HasGlobalScopes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App;
@@ -27,6 +28,25 @@ class LoginController extends Controller
             throw \Illuminate\Validation\ValidationException::withMessages(
                 ['name' => ['No se puede registrar mas de un usuario']]);
         }
+    }
+
+    public function changepasswd(Request $request){
+        if(!Hash::check($request->input('currentpassword'), auth()->user()->password)){
+            return redirect('servers')->with('error', 'La contraseña actual no coincide');
+        }
+
+        if($request->input('newpassword') == $request->input('confirm-newpassword')){
+        $validation = $request->validate([
+            'newpassword' => 'required',
+            'confirm-newpassword' => 'required|same:newpassword'
+        ]);}else{
+            return redirect('servers')->with('error', 'La nueva contraseña no coincide');
+        }
+
+        App\Models\User::whereId(auth()->user()->id)->update([
+           'password' => Hash::make($request->newpassword)
+        ]);
+        return redirect('servers')->with('status', 'La contraseña se ha cambiado');
     }
 
     public function login(Request $request){
