@@ -32,7 +32,7 @@ class BackupsMail extends Mailable
      */
     public function build()
     {
-        return $this->from('pruebasmtpcorreo342@gmail.com', 'VirtualAdmin')->
+        return $this->from('sistemas@innoforma.info', 'VirtualAdmin')->
         view('emails.backups');
     }
 }

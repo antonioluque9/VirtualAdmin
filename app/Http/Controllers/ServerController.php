@@ -20,6 +20,8 @@ class ServerController extends Controller
     {
         if (!DB::table('servers')->where('url', $request->input('url'))->first()){
             if (!DB::table('servers')->where('servername', $request->input('servername'))->first()){
+                exec("wget --user=".$request->input('username')." --password=".$request->input('password')." --no-check-certificate ".$request->input('url')."/virtual-server/remote.cgi?program=list-domains", $output, $exitcode);
+                if ($exitcode == 0 or $exitcode == 3){
                 $newserver = new App\Models\server;
                 $newserver->url = $request->input('url');
                 $newserver->username = $request->input('username');
@@ -29,11 +31,15 @@ class ServerController extends Controller
                 $newserver->save();
                 }else{
                     throw \Illuminate\Validation\ValidationException::withMessages(
-                        ['name' => ['No se puede repetir el nombre de un servidor']]);
+                        ['name' => ['El usuario o la contraseña son incorrectos']]);
                 }
             }else{
                 throw \Illuminate\Validation\ValidationException::withMessages(
-                    ['name' => ['Ese servidor ya esta incluido en la base de datos']]);
+                    ['name' => ['No se puede repetir el nombre de un servidor']]);
+            }
+        }else{
+            throw \Illuminate\Validation\ValidationException::withMessages(
+                ['name' => ['Ese servidor ya esta incluido en la base de datos']]);
             }
         return redirect('servers');
     }

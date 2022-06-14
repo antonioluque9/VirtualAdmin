@@ -1,0 +1,186 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: url(img/La\ Rioja.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+    background-attachment: fixed;
+}
+
+#container{
+    width: 1200px ;
+    margin: 0px auto; 
+    text-align: center;
+    min-height: 881px;
+}
+
+header{ 
+    height: 100px;
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    line-height: 100px;
+    background-color: white;
+    color: black;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #13293d;
+    
+} 
+
+li{
+    float: left;
+}  
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: #111;
+}
+.active{
+    background-color: #2970ca;
+}
+
+.clearfix{
+    clear:both;
+}
+
+#content{
+    background-color: #2970ca;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    text-align: left;
+    min-height: 714px;
+}
+
+footer{
+    background: ivory;
+    width: calc(1200px - 20px);
+    margin: 0px auto;
+    background: #13293d;
+    color: white;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(71, 71, 71);
+}
+.video{
+    text-align: center;
+}
+.article{
+    padding: 15px;
+    border-bottom: 1px solid white;
+}
+.title{
+    padding: 15px;
+    text-align: center;
+}
+.web{
+    text-align: center;
+    padding: 10px;
+}
+iframe{
+    width: 1180px;
+}
+.article:last-child{
+    border-bottom: none;
+}
+#estadisticas{
+    border-bottom: none;
+}
+#grafica{
+    width: 1180px;
+}
+table{
+    width: 100%;
+    empty-cells: hide;
+    border-collapse: collapse;
+}
+table td, table th{
+    border-bottom: 1px solid white;
+    padding: 15px;
+    text-align: center;
+
+}
+table tr:hover{
+    background-color:#13293d;
+}
+table th{
+    color: white;
+}
+form{
+    padding: 60px;
+    max-width: 800px;
+    background-color: #245ca7;
+    margin: 0 auto;
+    border-radius: 8px;
+    text-align: left;
+}
+.input, form textarea{
+    margin-bottom: 15px;
+    width: 95%;
+    padding: 10px;
+    box-sizing: border-box; 
+    border: none;
+    color: #525c66; 
+    font-size: 1em;
+    border-radius: 4px;
+}
+form button{
+    display: block;
+    background-color:#245ca7;
+    border: 0;
+    color:white;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+form button:hover{
+    background-color: #13293d;
+    border-radius: 4px;
+}
+fieldset{
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+}
+abbr{
+    text-decoration: none;
+    color: red;
+    padding: 10px;
+    cursor: pointer;
+}
+select{
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.button{
+    vertical-align: middle;
+}
+.radio{
+    padding:4px;
+}
+#especial{
+    text-decoration: none;
+    color: rgb(0, 60, 255);
+}
+

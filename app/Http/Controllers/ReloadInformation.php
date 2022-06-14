@@ -7,7 +7,7 @@ class ReloadInformation extends Controller
 {
     public function reloadInformation()
     {
-	exec('cd .. && php artisan command:reload');
+	exec('cd ../VirtualAdmin && php artisan command:reload');
 	return redirect('backups');
     }
 }
