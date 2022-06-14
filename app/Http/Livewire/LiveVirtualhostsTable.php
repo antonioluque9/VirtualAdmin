@@ -35,7 +35,7 @@ class LiveVirtualhostsTable extends Component
         'virtualhosts' => Virtualhost::where('servername', 'like', '%'.$this->search.'%')
             ->orWhere('virtualhost', 'like', '%'.$this->search.'%')
             ->orderBy($this->sortField, $this->sortDirection)
-            ->paginate(10),
+            ->paginate(15),
     ])->extends('layouts.app');
     }
 }

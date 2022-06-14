@@ -44,6 +44,6 @@ class ReloadInfo extends Command
                     .$filename. ' '.$url.'');
             }
         }
-        exec('php artisan db:seed --class=BackupSeeder && php artisan db:seed --class=VirtualhostSeeder');
+        exec('php artisan db:seed --class=VirtualhostSeeder && php artisan db:seed --class=BackupSeeder');
     }
 }

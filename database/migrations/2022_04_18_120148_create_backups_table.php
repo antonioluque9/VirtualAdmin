@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('server');
             $table->string('servername');
-            $table->string('domains');
+            $table->text('domains');
             $table->string('size')->default("NULL");
             $table->string('type');
-            $table->string('failed');
+            $table->text('failed');
             $table->string('status');
             $table->datetime('started');
             $table->datetime('ended');

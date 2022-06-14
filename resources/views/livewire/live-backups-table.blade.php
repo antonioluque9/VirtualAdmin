@@ -17,7 +17,7 @@
                             <i class="bi bi-arrow-down-up"></i>
                         </a>
                     </th>
-                    <th>VirtualHosts</th>
+                    <th class="col-md-3">VirtualHosts</th>
                     <th class="col-2">VirtualHosts fallidos</th>
                     <th>
                         <a wire:click="sortBy('status')" role="button" href="#" class="text-decoration-none text-black">
@@ -62,12 +62,21 @@
                                 </div>
                             </div>
                         </td>
-                        <td>
-                            <p class="fw-normal mb-1">{{$backup->domains}}</p>
+                        <td x-data="{ hover: false, open: true}">
+                            <button x-on:click="hover = true, open = false" class="btn btn-light"><p class="fw-normal mb-1" style="height: 25px; overflow: hidden">{{$backup->domains}}</p><i x-show="open" class="bi bi-caret-down-fill"></i></button>
+                            <button class="btn btn-light" x-show="hover" x-on:click="hover = false, open = true">{{$backup->domains}}<i class="bi bi-caret-up-fill"></i></button>
                         </td>
-                        <td>
-                            <p class="fw-normal mb-1">{{$backup->failed}}</p>
-                        </td>
+
+                        @if($backup->failed == null)
+                            <td>
+                                <p class="fw-normal mb-1" style="height: 25px; overflow: auto">{{$backup->failed}}</p>
+                            </td>
+                        @else
+                            <td x-data="{ hover: false, open: true}">
+                                <button x-on:click="hover = true, open = false" class="btn btn-light"><p on class="fw-normal mb-1" style="height: 25px; overflow: hidden">{{$backup->failed}}</p><i x-show="open" class="bi bi-caret-down-fill"></i></button>
+                                <button class="btn btn-light" x-show="hover" x-on:click="hover = false, open = true"><p>{{$backup->failed}}</p><i class="bi bi-caret-up-fill"></i></button>
+                            </td>
+                        @endif
                         <td>
                             @if($backup->status === "OK")
 {{--                                <p class="fw-normal mb-1 text-success">{{$backup->status}}</p>--}}

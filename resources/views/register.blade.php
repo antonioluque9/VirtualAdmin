@@ -3,7 +3,7 @@
 @section('route')"register"@endsection
 
 @section('form')
-    <div><p>Este sera tu primer y unico registro</p></div>
+    <div><p>Esta web solo tendrá un usuario</p></div>
 
     <div class="form-floating mb-3">
         <input name="name" type="username" required autofocus class="form-control" id="floatingInput" value="{{ old('name') }}" placeholder="Username">

@@ -33,7 +33,7 @@ class BackupSeeder extends Seeder
                     if (!App\Models\Backup::find($name[0])) {
                         //if ((transformDate($data['values']['started'][0])) >= (date('Y-m-d H:i:00',strtotime("-1 month")))){
                             $backup = new App\Models\Backup;
-                                if ($data['values']['final_status'][0] === "OK"){
+                                //if ($data['values']['final_status'][0] === "OK"){
                                     if(isset($data['values']['failed_domains'][0])){
                                         if(strlen($data['values']['failed_domains'][0]) === strlen($data['values']['domains'][0])){
                                             $backup->failed = $data['values']['failed_domains'][0];
@@ -46,10 +46,10 @@ class BackupSeeder extends Seeder
                                         $backup->failed = "";
                                         $status = "OK";
                                     }
-                                }else{
-                                    $backup->failed = $data['values']['failed_domains'][0];
-                                    $status = "FAILED";
-                                }
+                                //}else{
+                               //     $backup->failed = $data['values']['failed_domains'][0];
+                                //    $status = "FAILED";
+                               // }
 
                             $backup->id = $name[0];
                             $backup->server = $rutaSeparada[0];
@@ -61,7 +61,9 @@ class BackupSeeder extends Seeder
                             $backup->started = transformDate($data['values']['started'][0]);
                             $backup->ended = transformDate($data['values']['ended'][0]);
                             if ($status === "OK" or $status === "PARTIAL"){
+                            	if(isset($data['values']['final_nice_size'][0])){
                                 $backup->size = $data['values']['final_nice_size'][0];
+                                }
                                 $backup->save();
                             }else{
                                 $backup->save();
