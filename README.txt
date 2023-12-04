@@ -1,4 +1,7 @@
-Para lograr poner en funcionamiento este proyecto solo debes seguir unos sencillos pasos:
+Este proyecto en laravel fue creado como trabajo de fin de curso, lo hice basandome en las necesidades de la empresa en 
+la que hice las practicas, basicamente es una web que sirve para centralizar el software Virtualmin usando su API
+
+Para lograr poner en funcionamiento este proyecto debes seguir estos pasos:
 -Crear una base de datos, ya sea local o remota pero debes especificarlo correctamente en el .env(ip, nombre de la base
 de datos, usuario, contraseña, ...), ademas debes asegurarte de que esten creados la base de datos y el usuario
 que vas a usar.
